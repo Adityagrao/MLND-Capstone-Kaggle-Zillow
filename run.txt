@@ -1,0 +1,1 @@
+floyd run --gpu --data adityagrao12/datasets/capstone/1:input "python main.py"

@@ -1,0 +1,9 @@
+redis
+NumPy
+Pandas
+matplotlib
+scikit-learn
+xgboost
+lightgbm 
+catboost
+seaborn

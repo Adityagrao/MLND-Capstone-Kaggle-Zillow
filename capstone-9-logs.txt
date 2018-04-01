@@ -1,0 +1,1757 @@
+2018-03-31 09:56:43,426 INFO - Preparing to run TaskInstance <TaskInstance: adityagrao12/projects/capstone/9 (id: QzKgPStavJKFYyBKaTucoZ)
+2018-03-31 09:56:43,443 INFO - Starting attempt 1 at 2018-03-31 16:56:43.433762
+2018-03-31 09:56:43,460 INFO - Downloading and setting up data sources
+2018-03-31 09:56:43,470 INFO - Downloading and mounting dataset. ETA: 28 seconds
+2018-03-31 09:56:57,076 INFO - Pulling Docker image: floydhub/tensorflow:1.1.0-gpu-py3_aws.7
+2018-03-31 09:56:58,193 INFO - Starting container...
+2018-03-31 09:56:58,367 INFO - 
+################################################################################
+
+2018-03-31 09:56:58,369 INFO - Run Output:
+2018-03-31 09:57:02,053 INFO - Collecting redis (from -r floyd_requirements.txt (line 1))
+2018-03-31 09:57:02,171 INFO - Downloading redis-2.10.6-py2.py3-none-any.whl (64kB)
+2018-03-31 09:57:02,254 INFO - Requirement already satisfied: NumPy in /usr/local/lib/python3.5/site-packages (from -r floyd_requirements.txt (line 2))
+2018-03-31 09:57:02,256 INFO - Requirement already satisfied: Pandas in /usr/local/lib/python3.5/site-packages (from -r floyd_requirements.txt (line 3))
+2018-03-31 09:57:02,262 INFO - Requirement already satisfied: matplotlib in /usr/local/lib/python3.5/site-packages (from -r floyd_requirements.txt (line 4))
+2018-03-31 09:57:02,271 INFO - Requirement already satisfied: scikit-learn in /usr/local/lib/python3.5/site-packages (from -r floyd_requirements.txt (line 5))
+2018-03-31 09:57:02,276 INFO - Requirement already satisfied: xgboost in /usr/local/lib/python3.5/site-packages/xgboost-0.6-py3.5.egg (from -r floyd_requirements.txt (line 6))
+2018-03-31 09:57:02,329 INFO - Collecting lightgbm (from -r floyd_requirements.txt (line 7))
+2018-03-31 09:57:02,367 INFO - Downloading lightgbm-2.1.0-py2.py3-none-manylinux1_x86_64.whl (660kB)
+2018-03-31 09:57:02,621 INFO - Collecting catboost (from -r floyd_requirements.txt (line 8))
+2018-03-31 09:57:02,704 INFO - Downloading catboost-0.7-cp35-none-manylinux1_x86_64.whl (33.1MB)
+2018-03-31 09:57:06,368 INFO - Collecting seaborn (from -r floyd_requirements.txt (line 9))
+2018-03-31 09:57:06,395 INFO - Downloading seaborn-0.8.1.tar.gz (178kB)
+2018-03-31 09:57:07,651 INFO - Requirement already satisfied: python-dateutil>=2 in /usr/local/lib/python3.5/site-packages (from Pandas->-r floyd_requirements.txt (line 3))
+2018-03-31 09:57:07,655 INFO - Requirement already satisfied: pytz>=2011k in /usr/local/lib/python3.5/site-packages (from Pandas->-r floyd_requirements.txt (line 3))
+2018-03-31 09:57:07,660 INFO - Requirement already satisfied: pyparsing!=2.0.0,!=2.0.4,!=2.1.2,!=2.1.6,>=1.5.6 in /usr/local/lib/python3.5/site-packages (from matplotlib->-r floyd_requirements.txt (line 4))
+2018-03-31 09:57:07,663 INFO - Requirement already satisfied: six>=1.10 in /usr/local/lib/python3.5/site-packages (from matplotlib->-r floyd_requirements.txt (line 4))
+2018-03-31 09:57:07,666 INFO - Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.5/site-packages (from matplotlib->-r floyd_requirements.txt (line 4))
+2018-03-31 09:57:07,669 INFO - Requirement already satisfied: scipy in /usr/local/lib/python3.5/site-packages (from xgboost->-r floyd_requirements.txt (line 6))
+2018-03-31 09:57:07,672 INFO - Building wheels for collected packages: seaborn
+2018-03-31 09:57:07,672 INFO - Running setup.py bdist_wheel for seaborn: started
+2018-03-31 09:57:08,609 INFO - Running setup.py bdist_wheel for seaborn: finished with status 'done'
+2018-03-31 09:57:08,610 INFO - Stored in directory: /root/.cache/pip/wheels/29/af/4b/ac6b04ec3e2da1a450e74c6a0e86ade83807b4aaf40466ecda
+2018-03-31 09:57:08,629 INFO - Successfully built seaborn
+2018-03-31 09:57:08,630 INFO - Installing collected packages: redis, lightgbm, catboost, seaborn
+2018-03-31 09:57:09,303 INFO - Successfully installed catboost-0.7 lightgbm-2.1.0 redis-2.10.6 seaborn-0.8.1
+2018-03-31 09:57:09,458 INFO - You are using pip version 9.0.1, however version 9.0.3 is available.
+2018-03-31 09:57:09,459 INFO - You should consider upgrading via the 'pip install --upgrade pip' command.
+2018-03-31 09:57:13,573 INFO - /usr/local/lib/python3.5/site-packages/ipywidgets/widgets/widget_link.py:19: DeprecationWarning: Traits should be given as instances, not types (for example, `Int()`, not `Int`) Passing types is deprecated in traitlets 4.1.
+2018-03-31 09:57:13,573 INFO - super(WidgetTraitTuple, self).__init__(Instance(Widget), Unicode, **kwargs)
+2018-03-31 09:57:13,573 INFO - /usr/local/lib/python3.5/site-packages/ipywidgets/widgets/widget_link.py:19: DeprecationWarning: Traits should be given as instances, not types (for example, `Int()`, not `Int`) Passing types is deprecated in traitlets 4.1.
+2018-03-31 09:57:13,573 INFO - super(WidgetTraitTuple, self).__init__(Instance(Widget), Unicode, **kwargs)
+2018-03-31 09:57:15,673 INFO - Starting
+2018-03-31 09:57:15,674 INFO - 
+2018-03-31 09:57:15,674 INFO - Read in data.
+2018-03-31 09:57:34,878 INFO - Binding to float32
+2018-03-31 09:58:07,462 INFO - Binding to float32
+2018-03-31 09:58:20,599 INFO - File sample shape: (2985217, 4)
+2018-03-31 09:58:20,599 INFO - Read_in train set shape: (167888, 60)
+2018-03-31 09:58:20,600 INFO - Read_in test set shape: (2985217, 57)
+2018-03-31 09:58:20,901 INFO - Preprocessing.
+2018-03-31 09:58:44,033 INFO - Outlier upper bound is 0.20045000000000002
+2018-03-31 09:58:44,033 INFO - Outlier lower bound is -0.18655
+2018-03-31 10:02:00,677 INFO - (156529, 107)
+2018-03-31 10:02:15,744 INFO - (2985217, 104)
+2018-03-31 10:02:40,049 INFO - airconditioningtypeid  basementsqft  bathroomcnt  bedroomcnt  \
+2018-03-31 10:02:40,049 INFO - 0                    1.0           0.0          2.0         3.0
+2018-03-31 10:02:40,049 INFO - 1                    5.0           0.0          3.5         4.0
+2018-03-31 10:02:40,049 INFO - 2                    1.0           0.0          3.0         2.0
+2018-03-31 10:02:40,050 INFO - 3                    1.0           0.0          2.0         2.0
+2018-03-31 10:02:40,050 INFO - 4                    5.0           0.0          2.5         4.0
+2018-03-31 10:02:40,050 INFO - 
+2018-03-31 10:02:40,050 INFO - buildingclasstypeid  buildingqualitytypeid  calculatedbathnbr  decktypeid  \
+2018-03-31 10:02:40,050 INFO - 0                  0.0                    4.0                2.0         0.0
+2018-03-31 10:02:40,050 INFO - 1                  0.0                    0.0                3.5         0.0
+2018-03-31 10:02:40,050 INFO - 2                  0.0                    4.0                3.0         0.0
+2018-03-31 10:02:40,051 INFO - 3                  0.0                    4.0                2.0         0.0
+2018-03-31 10:02:40,051 INFO - 4                  0.0                    0.0                2.5         0.0
+2018-03-31 10:02:40,051 INFO - 
+2018-03-31 10:02:40,051 INFO - finishedfloor1squarefeet  calculatedfinishedsquarefeet  ...    \
+2018-03-31 10:02:40,051 INFO - 0                       0.0                      7.428927  ...
+2018-03-31 10:02:40,051 INFO - 1                       0.0                      7.724447  ...
+2018-03-31 10:02:40,051 INFO - 2                       0.0                      7.703910  ...
+2018-03-31 10:02:40,052 INFO - 3                       0.0                      6.732211  ...
+2018-03-31 10:02:40,052 INFO - 4                       0.0                      7.733246  ...
+2018-03-31 10:02:40,052 INFO - 
+2018-03-31 10:02:40,052 INFO - landtaxvaluedollarcnt_d_taxvaluedollarcnt  \
+2018-03-31 10:02:40,052 INFO - 0                                   0.659178
+2018-03-31 10:02:40,052 INFO - 1                                   0.408299
+2018-03-31 10:02:40,053 INFO - 2                                   0.482978
+2018-03-31 10:02:40,053 INFO - 3                                   0.299583
+2018-03-31 10:02:40,053 INFO - 4                                   0.609772
+2018-03-31 10:02:40,053 INFO - 
+2018-03-31 10:02:40,053 INFO - taxamount_d_structuretaxvaluedollarcnt  \
+2018-03-31 10:02:40,053 INFO - 0                                0.054873
+2018-03-31 10:02:40,053 INFO - 1                                0.029305
+2018-03-31 10:02:40,054 INFO - 2                                0.185251
+2018-03-31 10:02:40,054 INFO - 3                                0.017775
+2018-03-31 10:02:40,054 INFO - 4                                0.032369
+2018-03-31 10:02:40,054 INFO - 
+2018-03-31 10:02:40,054 INFO - structuretaxvaluedollarcnt_d_landtaxvaluedollarcnt  \
+2018-03-31 10:02:40,054 INFO - 0                                           0.517042
+2018-03-31 10:02:40,054 INFO - 1                                           1.449185
+2018-03-31 10:02:40,055 INFO - 2                                           1.070486
+2018-03-31 10:02:40,055 INFO - 3                                           2.337968
+2018-03-31 10:02:40,055 INFO - 4                                           0.639957
+2018-03-31 10:02:40,055 INFO - 
+2018-03-31 10:02:40,055 INFO - bedroomcnt_d_bathroomcnt  calculatedfinishedsquarefeet_d_roomcnt  \
+2018-03-31 10:02:40,055 INFO - 0                  1.500000                                   0.000
+2018-03-31 10:02:40,055 INFO - 1                  1.142857                                   0.000
+2018-03-31 10:02:40,056 INFO - 2                  0.666667                                   0.000
+2018-03-31 10:02:40,056 INFO - 3                  1.000000                                   0.000
+2018-03-31 10:02:40,056 INFO - 4                  1.600000                                 285.375
+2018-03-31 10:02:40,056 INFO - 
+2018-03-31 10:02:40,056 INFO - roomcnt_d_bedroomcnt  latitude_m_longitude  latitude_a_longitude  year  \
+2018-03-31 10:02:40,056 INFO - 0                   0.0          -4061.904297            -84.207542  2016
+2018-03-31 10:02:40,056 INFO - 1                   0.0          -3961.982178            -84.009430  2016
+2018-03-31 10:02:40,057 INFO - 2                   0.0          -4034.059570            -84.038727  2016
+2018-03-31 10:02:40,057 INFO - 3                   0.0          -3993.614746            -84.553200  2016
+2018-03-31 10:02:40,057 INFO - 4                   2.0          -3941.268311            -84.214584  2016
+2018-03-31 10:02:40,057 INFO - 
+2018-03-31 10:02:40,057 INFO - month
+2018-03-31 10:02:40,057 INFO - 0      1
+2018-03-31 10:02:40,057 INFO - 1      1
+2018-03-31 10:02:40,057 INFO - 2      1
+2018-03-31 10:02:40,058 INFO - 3      1
+2018-03-31 10:02:40,058 INFO - 4      1
+2018-03-31 10:02:40,058 INFO - 
+2018-03-31 10:02:40,058 INFO - [5 rows x 106 columns]
+2018-03-31 10:02:40,061 INFO - airconditioningtypeid  basementsqft  bathroomcnt  bedroomcnt  \
+2018-03-31 10:02:40,061 INFO - 0                    5.0           0.0          0.0         0.0
+2018-03-31 10:02:40,062 INFO - 1                    5.0           0.0          0.0         0.0
+2018-03-31 10:02:40,062 INFO - 2                    5.0           0.0          0.0         0.0
+2018-03-31 10:02:40,062 INFO - 3                    5.0           0.0          0.0         0.0
+2018-03-31 10:02:40,062 INFO - 4                    5.0           0.0          0.0         0.0
+2018-03-31 10:02:40,062 INFO - 
+2018-03-31 10:02:40,062 INFO - buildingclasstypeid  buildingqualitytypeid  calculatedbathnbr  decktypeid  \
+2018-03-31 10:02:40,063 INFO - 0                  0.0                    0.0                0.0         0.0
+2018-03-31 10:02:40,063 INFO - 1                  0.0                    0.0                0.0         0.0
+2018-03-31 10:02:40,063 INFO - 2                  0.0                    0.0                0.0         0.0
+2018-03-31 10:02:40,063 INFO - 3                  3.0                    7.0                0.0         0.0
+2018-03-31 10:02:40,063 INFO - 4                  4.0                    0.0                0.0         0.0
+2018-03-31 10:02:40,063 INFO - 
+2018-03-31 10:02:40,063 INFO - finishedfloor1squarefeet  calculatedfinishedsquarefeet  \
+2018-03-31 10:02:40,064 INFO - 0                       0.0                     -2.302585
+2018-03-31 10:02:40,064 INFO - 1                       0.0                     -2.302585
+2018-03-31 10:02:40,064 INFO - 2                       0.0                     11.198571
+2018-03-31 10:02:40,064 INFO - 3                       0.0                      8.530702
+2018-03-31 10:02:40,064 INFO - 4                       0.0                      7.482119
+2018-03-31 10:02:40,064 INFO - 
+2018-03-31 10:02:40,064 INFO - ...           calculatedfinishedsquarefeet_d_lotsizesquarefeet  \
+2018-03-31 10:02:40,064 INFO - 0          ...                                                   0.000000
+2018-03-31 10:02:40,065 INFO - 1          ...                                                   0.000000
+2018-03-31 10:02:40,065 INFO - 2          ...                                                   1.157581
+2018-03-31 10:02:40,065 INFO - 3          ...                                                   0.673847
+2018-03-31 10:02:40,065 INFO - 4          ...                                                   0.208647
+2018-03-31 10:02:40,065 INFO - 
+2018-03-31 10:02:40,065 INFO - taxvaluedollarcnt_d_taxamount  landtaxvaluedollarcnt_d_taxvaluedollarcnt  \
+2018-03-31 10:02:40,065 INFO - 0                       0.001503                                   1.000000
+2018-03-31 10:02:40,066 INFO - 1                       4.594028                                   1.000000
+2018-03-31 10:02:40,066 INFO - 2                      67.950089                                   0.539577
+2018-03-31 10:02:40,066 INFO - 3                      79.466148                                   0.506112
+2018-03-31 10:02:40,066 INFO - 4                      75.716705                                   0.552941
+2018-03-31 10:02:40,066 INFO - 
+2018-03-31 10:02:40,066 INFO - taxamount_d_structuretaxvaluedollarcnt  \
+2018-03-31 10:02:40,066 INFO - 0                                0.032491
+2018-03-31 10:02:40,066 INFO - 1                                0.032491
+2018-03-31 10:02:40,067 INFO - 2                                0.031963
+2018-03-31 10:02:40,067 INFO - 3                                0.025479
+2018-03-31 10:02:40,067 INFO - 4                                0.029542
+2018-03-31 10:02:40,067 INFO - 
+2018-03-31 10:02:40,067 INFO - structuretaxvaluedollarcnt_d_landtaxvaluedollarcnt  \
+2018-03-31 10:02:40,067 INFO - 0                                       20482.888672
+2018-03-31 10:02:40,067 INFO - 1                                           6.699593
+2018-03-31 10:02:40,067 INFO - 2                                           0.853304
+2018-03-31 10:02:40,068 INFO - 3                                           0.975846
+2018-03-31 10:02:40,068 INFO - 4                                           0.808511
+2018-03-31 10:02:40,068 INFO - 
+2018-03-31 10:02:40,068 INFO - bedroomcnt_d_bathroomcnt  calculatedfinishedsquarefeet_d_roomcnt  \
+2018-03-31 10:02:40,068 INFO - 0                       0.0                                     0.0
+2018-03-31 10:02:40,068 INFO - 1                       0.0                                     0.0
+2018-03-31 10:02:40,068 INFO - 2                       0.0                                     0.0
+2018-03-31 10:02:40,068 INFO - 3                       0.0                                     0.0
+2018-03-31 10:02:40,069 INFO - 4                       0.0                                     0.0
+2018-03-31 10:02:40,069 INFO - 
+2018-03-31 10:02:40,069 INFO - roomcnt_d_bedroomcnt  latitude_m_longitude  latitude_a_longitude
+2018-03-31 10:02:40,069 INFO - 0                   0.0          -4051.377197            -84.509644
+2018-03-31 10:02:40,069 INFO - 1                   0.0          -4049.920898            -84.484924
+2018-03-31 10:02:40,069 INFO - 2                   0.0          -4024.157715            -84.405273
+2018-03-31 10:02:40,069 INFO - 3                   0.0          -4044.496338            -84.288345
+2018-03-31 10:02:40,069 INFO - 4                   0.0          -4048.104492            -84.191650
+2018-03-31 10:02:40,070 INFO - 
+2018-03-31 10:02:40,070 INFO - [5 rows x 104 columns]
+2018-03-31 10:02:40,070 INFO - Writing Train and Testing file
+2018-03-31 10:10:31,616 INFO - After pre-processing, train set shape: (156529, 106)
+2018-03-31 10:10:31,616 INFO - After pre-processing, test set shape: (2985217, 104)
+2018-03-31 10:10:31,722 INFO - 
+2018-03-31 10:10:31,722 INFO - x_Training set has 125223 rows, 106 columns.
+2018-03-31 10:10:31,722 INFO - x_Test set has 31306 rows, 106 columns.
+2018-03-31 10:10:31,723 INFO - 
+2018-03-31 10:10:35,014 INFO - 0:	learn: 0.0418438	total: 246ms	remaining: 2m 46s
+2018-03-31 10:10:35,174 INFO - 1:	learn: 0.0416242	total: 406ms	remaining: 2m 16s
+2018-03-31 10:10:35,356 INFO - 2:	learn: 0.0414606	total: 589ms	remaining: 2m 11s
+2018-03-31 10:10:35,560 INFO - 3:	learn: 0.0413320	total: 792ms	remaining: 2m 12s
+2018-03-31 10:10:35,719 INFO - 4:	learn: 0.0412513	total: 951ms	remaining: 2m 7s
+2018-03-31 10:10:35,945 INFO - 5:	learn: 0.0411784	total: 1.18s	remaining: 2m 11s
+2018-03-31 10:10:36,104 INFO - 6:	learn: 0.0411231	total: 1.33s	remaining: 2m 7s
+2018-03-31 10:10:36,263 INFO - 7:	learn: 0.0410774	total: 1.49s	remaining: 2m 4s
+2018-03-31 10:10:36,423 INFO - 8:	learn: 0.0410390	total: 1.65s	remaining: 2m 2s
+2018-03-31 10:10:36,672 INFO - 9:	learn: 0.0410046	total: 1.9s	remaining: 2m 6s
+2018-03-31 10:10:36,851 INFO - 10:	learn: 0.0409760	total: 2.08s	remaining: 2m 5s
+2018-03-31 10:10:37,017 INFO - 11:	learn: 0.0409546	total: 2.25s	remaining: 2m 4s
+2018-03-31 10:10:37,239 INFO - 12:	learn: 0.0409333	total: 2.47s	remaining: 2m 5s
+2018-03-31 10:10:37,423 INFO - 13:	learn: 0.0409128	total: 2.65s	remaining: 2m 5s
+2018-03-31 10:10:37,636 INFO - 14:	learn: 0.0408937	total: 2.87s	remaining: 2m 6s
+2018-03-31 10:10:37,826 INFO - 15:	learn: 0.0408785	total: 3.06s	remaining: 2m 5s
+2018-03-31 10:10:37,989 INFO - 16:	learn: 0.0408641	total: 3.22s	remaining: 2m 4s
+2018-03-31 10:10:38,153 INFO - 17:	learn: 0.0408460	total: 3.38s	remaining: 2m 3s
+2018-03-31 10:10:38,362 INFO - 18:	learn: 0.0408267	total: 3.59s	remaining: 2m 3s
+2018-03-31 10:10:38,550 INFO - 19:	learn: 0.0408042	total: 3.78s	remaining: 2m 3s
+2018-03-31 10:10:38,730 INFO - 20:	learn: 0.0407950	total: 3.96s	remaining: 2m 3s
+2018-03-31 10:10:38,921 INFO - 21:	learn: 0.0407833	total: 4.15s	remaining: 2m 3s
+2018-03-31 10:10:39,115 INFO - 22:	learn: 0.0407696	total: 4.34s	remaining: 2m 3s
+2018-03-31 10:10:39,290 INFO - 23:	learn: 0.0407578	total: 4.52s	remaining: 2m 2s
+2018-03-31 10:10:39,471 INFO - 24:	learn: 0.0407453	total: 4.7s	remaining: 2m 2s
+2018-03-31 10:10:39,661 INFO - 25:	learn: 0.0407381	total: 4.89s	remaining: 2m 2s
+2018-03-31 10:10:39,824 INFO - 26:	learn: 0.0407273	total: 5.05s	remaining: 2m 1s
+2018-03-31 10:10:39,988 INFO - 27:	learn: 0.0407088	total: 5.21s	remaining: 2m
+2018-03-31 10:10:40,151 INFO - 28:	learn: 0.0406986	total: 5.38s	remaining: 1m 59s
+2018-03-31 10:10:40,333 INFO - 29:	learn: 0.0406836	total: 5.56s	remaining: 1m 59s
+2018-03-31 10:10:40,506 INFO - 30:	learn: 0.0406693	total: 5.73s	remaining: 1m 59s
+2018-03-31 10:10:40,693 INFO - 31:	learn: 0.0406621	total: 5.92s	remaining: 1m 58s
+2018-03-31 10:10:40,934 INFO - 32:	learn: 0.0406525	total: 6.16s	remaining: 1m 59s
+2018-03-31 10:10:41,118 INFO - 33:	learn: 0.0406475	total: 6.34s	remaining: 1m 59s
+2018-03-31 10:10:41,296 INFO - 34:	learn: 0.0406348	total: 6.52s	remaining: 1m 59s
+2018-03-31 10:10:41,543 INFO - 35:	learn: 0.0406242	total: 6.77s	remaining: 2m
+2018-03-31 10:10:41,786 INFO - 36:	learn: 0.0406148	total: 7.01s	remaining: 2m
+2018-03-31 10:10:41,971 INFO - 37:	learn: 0.0406088	total: 7.2s	remaining: 2m
+2018-03-31 10:10:42,134 INFO - 38:	learn: 0.0405987	total: 7.36s	remaining: 2m
+2018-03-31 10:10:42,297 INFO - 39:	learn: 0.0405904	total: 7.52s	remaining: 1m 59s
+2018-03-31 10:10:42,500 INFO - 40:	learn: 0.0405748	total: 7.72s	remaining: 1m 59s
+2018-03-31 10:10:42,701 INFO - 41:	learn: 0.0405608	total: 7.92s	remaining: 1m 59s
+2018-03-31 10:10:42,868 INFO - 42:	learn: 0.0405526	total: 8.09s	remaining: 1m 58s
+2018-03-31 10:10:43,028 INFO - 43:	learn: 0.0405459	total: 8.25s	remaining: 1m 58s
+2018-03-31 10:10:43,186 INFO - 44:	learn: 0.0405353	total: 8.41s	remaining: 1m 57s
+2018-03-31 10:10:43,348 INFO - 45:	learn: 0.0405294	total: 8.57s	remaining: 1m 57s
+2018-03-31 10:10:43,530 INFO - 46:	learn: 0.0405239	total: 8.75s	remaining: 1m 56s
+2018-03-31 10:10:43,753 INFO - 47:	learn: 0.0405172	total: 8.98s	remaining: 1m 57s
+2018-03-31 10:10:43,911 INFO - 48:	learn: 0.0405143	total: 9.13s	remaining: 1m 56s
+2018-03-31 10:10:44,069 INFO - 49:	learn: 0.0405029	total: 9.29s	remaining: 1m 56s
+2018-03-31 10:10:44,292 INFO - 50:	learn: 0.0404961	total: 9.51s	remaining: 1m 56s
+2018-03-31 10:10:44,512 INFO - 51:	learn: 0.0404905	total: 9.73s	remaining: 1m 56s
+2018-03-31 10:10:44,672 INFO - 52:	learn: 0.0404834	total: 9.89s	remaining: 1m 56s
+2018-03-31 10:10:44,889 INFO - 53:	learn: 0.0404781	total: 10.1s	remaining: 1m 56s
+2018-03-31 10:10:45,047 INFO - 54:	learn: 0.0404697	total: 10.3s	remaining: 1m 55s
+2018-03-31 10:10:45,261 INFO - 55:	learn: 0.0404652	total: 10.5s	remaining: 1m 55s
+2018-03-31 10:10:45,497 INFO - 56:	learn: 0.0404577	total: 10.7s	remaining: 1m 56s
+2018-03-31 10:10:45,697 INFO - 57:	learn: 0.0404522	total: 10.9s	remaining: 1m 56s
+2018-03-31 10:10:45,889 INFO - 58:	learn: 0.0404487	total: 11.1s	remaining: 1m 56s
+2018-03-31 10:10:46,071 INFO - 59:	learn: 0.0404417	total: 11.3s	remaining: 1m 55s
+2018-03-31 10:10:46,262 INFO - 60:	learn: 0.0404364	total: 11.5s	remaining: 1m 55s
+2018-03-31 10:10:46,499 INFO - 61:	learn: 0.0404291	total: 11.7s	remaining: 1m 55s
+2018-03-31 10:10:46,668 INFO - 62:	learn: 0.0404230	total: 11.9s	remaining: 1m 55s
+2018-03-31 10:10:46,873 INFO - 63:	learn: 0.0404173	total: 12.1s	remaining: 1m 55s
+2018-03-31 10:10:47,050 INFO - 64:	learn: 0.0404112	total: 12.3s	remaining: 1m 55s
+2018-03-31 10:10:47,226 INFO - 65:	learn: 0.0404025	total: 12.4s	remaining: 1m 54s
+2018-03-31 10:10:47,455 INFO - 66:	learn: 0.0403956	total: 12.7s	remaining: 1m 55s
+2018-03-31 10:10:47,693 INFO - 67:	learn: 0.0403897	total: 12.9s	remaining: 1m 55s
+2018-03-31 10:10:47,853 INFO - 68:	learn: 0.0403823	total: 13.1s	remaining: 1m 54s
+2018-03-31 10:10:48,051 INFO - 69:	learn: 0.0403788	total: 13.3s	remaining: 1m 54s
+2018-03-31 10:10:48,239 INFO - 70:	learn: 0.0403708	total: 13.5s	remaining: 1m 54s
+2018-03-31 10:10:48,398 INFO - 71:	learn: 0.0403623	total: 13.6s	remaining: 1m 54s
+2018-03-31 10:10:48,570 INFO - 72:	learn: 0.0403566	total: 13.8s	remaining: 1m 53s
+2018-03-31 10:10:48,729 INFO - 73:	learn: 0.0403471	total: 13.9s	remaining: 1m 53s
+2018-03-31 10:10:48,891 INFO - 74:	learn: 0.0403436	total: 14.1s	remaining: 1m 52s
+2018-03-31 10:10:49,053 INFO - 75:	learn: 0.0403368	total: 14.3s	remaining: 1m 52s
+2018-03-31 10:10:49,214 INFO - 76:	learn: 0.0403316	total: 14.4s	remaining: 1m 52s
+2018-03-31 10:10:49,373 INFO - 77:	learn: 0.0403260	total: 14.6s	remaining: 1m 51s
+2018-03-31 10:10:49,512 INFO - 78:	learn: 0.0403234	total: 14.7s	remaining: 1m 51s
+2018-03-31 10:10:49,638 INFO - 79:	learn: 0.0403126	total: 14.9s	remaining: 1m 50s
+2018-03-31 10:10:49,769 INFO - 80:	learn: 0.0403091	total: 15s	remaining: 1m 49s
+2018-03-31 10:10:49,907 INFO - 81:	learn: 0.0403016	total: 15.1s	remaining: 1m 49s
+2018-03-31 10:10:50,038 INFO - 82:	learn: 0.0402986	total: 15.3s	remaining: 1m 48s
+2018-03-31 10:10:50,170 INFO - 83:	learn: 0.0402929	total: 15.4s	remaining: 1m 48s
+2018-03-31 10:10:50,297 INFO - 84:	learn: 0.0402889	total: 15.5s	remaining: 1m 47s
+2018-03-31 10:10:50,424 INFO - 85:	learn: 0.0402828	total: 15.6s	remaining: 1m 47s
+2018-03-31 10:10:50,564 INFO - 86:	learn: 0.0402768	total: 15.8s	remaining: 1m 46s
+2018-03-31 10:10:50,692 INFO - 87:	learn: 0.0402736	total: 15.9s	remaining: 1m 46s
+2018-03-31 10:10:50,820 INFO - 88:	learn: 0.0402690	total: 16s	remaining: 1m 45s
+2018-03-31 10:10:50,947 INFO - 89:	learn: 0.0402643	total: 16.2s	remaining: 1m 45s
+2018-03-31 10:10:51,077 INFO - 90:	learn: 0.0402608	total: 16.3s	remaining: 1m 44s
+2018-03-31 10:10:51,204 INFO - 91:	learn: 0.0402524	total: 16.4s	remaining: 1m 44s
+2018-03-31 10:10:51,331 INFO - 92:	learn: 0.0402467	total: 16.5s	remaining: 1m 43s
+2018-03-31 10:10:51,469 INFO - 93:	learn: 0.0402415	total: 16.7s	remaining: 1m 43s
+2018-03-31 10:10:51,599 INFO - 94:	learn: 0.0402354	total: 16.8s	remaining: 1m 42s
+2018-03-31 10:10:51,729 INFO - 95:	learn: 0.0402308	total: 16.9s	remaining: 1m 42s
+2018-03-31 10:10:51,857 INFO - 96:	learn: 0.0402249	total: 17.1s	remaining: 1m 41s
+2018-03-31 10:10:51,986 INFO - 97:	learn: 0.0402197	total: 17.2s	remaining: 1m 41s
+2018-03-31 10:10:52,118 INFO - 98:	learn: 0.0402114	total: 17.3s	remaining: 1m 40s
+2018-03-31 10:10:52,250 INFO - 99:	learn: 0.0402022	total: 17.5s	remaining: 1m 40s
+2018-03-31 10:10:52,379 INFO - 100:	learn: 0.0401962	total: 17.6s	remaining: 1m 39s
+2018-03-31 10:10:52,519 INFO - 101:	learn: 0.0401936	total: 17.7s	remaining: 1m 39s
+2018-03-31 10:10:52,647 INFO - 102:	learn: 0.0401859	total: 17.9s	remaining: 1m 39s
+2018-03-31 10:10:52,779 INFO - 103:	learn: 0.0401780	total: 18s	remaining: 1m 38s
+2018-03-31 10:10:52,911 INFO - 104:	learn: 0.0401723	total: 18.1s	remaining: 1m 38s
+2018-03-31 10:10:53,038 INFO - 105:	learn: 0.0401641	total: 18.2s	remaining: 1m 37s
+2018-03-31 10:10:53,166 INFO - 106:	learn: 0.0401568	total: 18.4s	remaining: 1m 37s
+2018-03-31 10:10:53,297 INFO - 107:	learn: 0.0401504	total: 18.5s	remaining: 1m 37s
+2018-03-31 10:10:53,428 INFO - 108:	learn: 0.0401458	total: 18.6s	remaining: 1m 36s
+2018-03-31 10:10:53,568 INFO - 109:	learn: 0.0401415	total: 18.8s	remaining: 1m 36s
+2018-03-31 10:10:53,696 INFO - 110:	learn: 0.0401354	total: 18.9s	remaining: 1m 36s
+2018-03-31 10:10:53,827 INFO - 111:	learn: 0.0401284	total: 19s	remaining: 1m 35s
+2018-03-31 10:10:53,958 INFO - 112:	learn: 0.0401246	total: 19.2s	remaining: 1m 35s
+2018-03-31 10:10:54,088 INFO - 113:	learn: 0.0401202	total: 19.3s	remaining: 1m 34s
+2018-03-31 10:10:54,222 INFO - 114:	learn: 0.0401087	total: 19.4s	remaining: 1m 34s
+2018-03-31 10:10:54,353 INFO - 115:	learn: 0.0401041	total: 19.6s	remaining: 1m 34s
+2018-03-31 10:10:54,492 INFO - 116:	learn: 0.0401005	total: 19.7s	remaining: 1m 33s
+2018-03-31 10:10:54,621 INFO - 117:	learn: 0.0400924	total: 19.8s	remaining: 1m 33s
+2018-03-31 10:10:54,749 INFO - 118:	learn: 0.0400868	total: 20s	remaining: 1m 33s
+2018-03-31 10:10:54,878 INFO - 119:	learn: 0.0400846	total: 20.1s	remaining: 1m 32s
+2018-03-31 10:10:55,005 INFO - 120:	learn: 0.0400754	total: 20.2s	remaining: 1m 32s
+2018-03-31 10:10:55,136 INFO - 121:	learn: 0.0400694	total: 20.3s	remaining: 1m 32s
+2018-03-31 10:10:55,267 INFO - 122:	learn: 0.0400649	total: 20.5s	remaining: 1m 31s
+2018-03-31 10:10:55,397 INFO - 123:	learn: 0.0400583	total: 20.6s	remaining: 1m 31s
+2018-03-31 10:10:55,537 INFO - 124:	learn: 0.0400535	total: 20.7s	remaining: 1m 31s
+2018-03-31 10:10:55,669 INFO - 125:	learn: 0.0400472	total: 20.9s	remaining: 1m 30s
+2018-03-31 10:10:55,802 INFO - 126:	learn: 0.0400402	total: 21s	remaining: 1m 30s
+2018-03-31 10:10:55,931 INFO - 127:	learn: 0.0400320	total: 21.1s	remaining: 1m 30s
+2018-03-31 10:10:56,061 INFO - 128:	learn: 0.0400282	total: 21.3s	remaining: 1m 30s
+2018-03-31 10:10:56,194 INFO - 129:	learn: 0.0400231	total: 21.4s	remaining: 1m 29s
+2018-03-31 10:10:56,329 INFO - 130:	learn: 0.0400161	total: 21.5s	remaining: 1m 29s
+2018-03-31 10:10:56,471 INFO - 131:	learn: 0.0400105	total: 21.7s	remaining: 1m 29s
+2018-03-31 10:10:56,604 INFO - 132:	learn: 0.0400057	total: 21.8s	remaining: 1m 28s
+2018-03-31 10:10:56,737 INFO - 133:	learn: 0.0400011	total: 21.9s	remaining: 1m 28s
+2018-03-31 10:10:56,869 INFO - 134:	learn: 0.0399959	total: 22.1s	remaining: 1m 28s
+2018-03-31 10:10:56,995 INFO - 135:	learn: 0.0399879	total: 22.2s	remaining: 1m 27s
+2018-03-31 10:10:57,123 INFO - 136:	learn: 0.0399863	total: 22.3s	remaining: 1m 27s
+2018-03-31 10:10:57,249 INFO - 137:	learn: 0.0399836	total: 22.5s	remaining: 1m 27s
+2018-03-31 10:10:57,376 INFO - 138:	learn: 0.0399771	total: 22.6s	remaining: 1m 27s
+2018-03-31 10:10:57,519 INFO - 139:	learn: 0.0399747	total: 22.7s	remaining: 1m 26s
+2018-03-31 10:10:57,644 INFO - 140:	learn: 0.0399715	total: 22.8s	remaining: 1m 26s
+2018-03-31 10:10:57,773 INFO - 141:	learn: 0.0399678	total: 23s	remaining: 1m 26s
+2018-03-31 10:10:57,903 INFO - 142:	learn: 0.0399656	total: 23.1s	remaining: 1m 25s
+2018-03-31 10:10:58,031 INFO - 143:	learn: 0.0399627	total: 23.2s	remaining: 1m 25s
+2018-03-31 10:10:58,158 INFO - 144:	learn: 0.0399591	total: 23.4s	remaining: 1m 25s
+2018-03-31 10:10:58,293 INFO - 145:	learn: 0.0399527	total: 23.5s	remaining: 1m 25s
+2018-03-31 10:10:58,421 INFO - 146:	learn: 0.0399489	total: 23.6s	remaining: 1m 24s
+2018-03-31 10:10:58,558 INFO - 147:	learn: 0.0399444	total: 23.8s	remaining: 1m 24s
+2018-03-31 10:10:58,685 INFO - 148:	learn: 0.0399413	total: 23.9s	remaining: 1m 24s
+2018-03-31 10:10:58,813 INFO - 149:	learn: 0.0399331	total: 24s	remaining: 1m 24s
+2018-03-31 10:10:58,941 INFO - 150:	learn: 0.0399244	total: 24.1s	remaining: 1m 23s
+2018-03-31 10:10:59,069 INFO - 151:	learn: 0.0399205	total: 24.3s	remaining: 1m 23s
+2018-03-31 10:10:59,197 INFO - 152:	learn: 0.0399131	total: 24.4s	remaining: 1m 23s
+2018-03-31 10:10:59,325 INFO - 153:	learn: 0.0399120	total: 24.5s	remaining: 1m 22s
+2018-03-31 10:10:59,460 INFO - 154:	learn: 0.0399054	total: 24.7s	remaining: 1m 22s
+2018-03-31 10:10:59,587 INFO - 155:	learn: 0.0399005	total: 24.8s	remaining: 1m 22s
+2018-03-31 10:10:59,719 INFO - 156:	learn: 0.0398974	total: 24.9s	remaining: 1m 22s
+2018-03-31 10:10:59,850 INFO - 157:	learn: 0.0398909	total: 25.1s	remaining: 1m 21s
+2018-03-31 10:10:59,983 INFO - 158:	learn: 0.0398836	total: 25.2s	remaining: 1m 21s
+2018-03-31 10:11:00,110 INFO - 159:	learn: 0.0398757	total: 25.3s	remaining: 1m 21s
+2018-03-31 10:11:00,240 INFO - 160:	learn: 0.0398728	total: 25.4s	remaining: 1m 21s
+2018-03-31 10:11:00,380 INFO - 161:	learn: 0.0398678	total: 25.6s	remaining: 1m 21s
+2018-03-31 10:11:00,535 INFO - 162:	learn: 0.0398664	total: 25.7s	remaining: 1m 20s
+2018-03-31 10:11:00,689 INFO - 163:	learn: 0.0398623	total: 25.9s	remaining: 1m 20s
+2018-03-31 10:11:00,820 INFO - 164:	learn: 0.0398570	total: 26s	remaining: 1m 20s
+2018-03-31 10:11:00,955 INFO - 165:	learn: 0.0398543	total: 26.2s	remaining: 1m 20s
+2018-03-31 10:11:01,087 INFO - 166:	learn: 0.0398513	total: 26.3s	remaining: 1m 19s
+2018-03-31 10:11:01,219 INFO - 167:	learn: 0.0398476	total: 26.4s	remaining: 1m 19s
+2018-03-31 10:11:01,348 INFO - 168:	learn: 0.0398446	total: 26.5s	remaining: 1m 19s
+2018-03-31 10:11:01,490 INFO - 169:	learn: 0.0398418	total: 26.7s	remaining: 1m 19s
+2018-03-31 10:11:01,621 INFO - 170:	learn: 0.0398384	total: 26.8s	remaining: 1m 19s
+2018-03-31 10:11:01,752 INFO - 171:	learn: 0.0398359	total: 26.9s	remaining: 1m 18s
+2018-03-31 10:11:09,887 INFO - 172:	learn: 0.0398280	total: 27.1s	remaining: 1m 18s
+2018-03-31 10:11:09,926 INFO - 173:	learn: 0.0398257	total: 27.2s	remaining: 1m 18s
+2018-03-31 10:11:09,927 INFO - 174:	learn: 0.0398229	total: 27.3s	remaining: 1m 18s
+2018-03-31 10:11:09,927 INFO - 175:	learn: 0.0398190	total: 27.5s	remaining: 1m 17s
+2018-03-31 10:11:09,927 INFO - 176:	learn: 0.0398131	total: 27.6s	remaining: 1m 17s
+2018-03-31 10:11:09,928 INFO - 177:	learn: 0.0398086	total: 27.7s	remaining: 1m 17s
+2018-03-31 10:11:09,928 INFO - 178:	learn: 0.0398046	total: 27.9s	remaining: 1m 17s
+2018-03-31 10:11:09,928 INFO - 179:	learn: 0.0397994	total: 28s	remaining: 1m 17s
+2018-03-31 10:11:09,928 INFO - 180:	learn: 0.0397877	total: 28.1s	remaining: 1m 16s
+2018-03-31 10:11:09,929 INFO - 181:	learn: 0.0397844	total: 28.3s	remaining: 1m 16s
+2018-03-31 10:11:09,929 INFO - 182:	learn: 0.0397747	total: 28.4s	remaining: 1m 16s
+2018-03-31 10:11:09,929 INFO - 183:	learn: 0.0397719	total: 28.5s	remaining: 1m 16s
+2018-03-31 10:11:09,929 INFO - 184:	learn: 0.0397669	total: 28.7s	remaining: 1m 15s
+2018-03-31 10:11:09,930 INFO - 185:	learn: 0.0397634	total: 28.8s	remaining: 1m 15s
+2018-03-31 10:11:09,930 INFO - 186:	learn: 0.0397583	total: 28.9s	remaining: 1m 15s
+2018-03-31 10:11:09,930 INFO - 187:	learn: 0.0397503	total: 29.1s	remaining: 1m 15s
+2018-03-31 10:11:09,930 INFO - 188:	learn: 0.0397437	total: 29.2s	remaining: 1m 15s
+2018-03-31 10:11:09,931 INFO - 189:	learn: 0.0397412	total: 29.3s	remaining: 1m 14s
+2018-03-31 10:11:09,931 INFO - 190:	learn: 0.0397354	total: 29.5s	remaining: 1m 14s
+2018-03-31 10:11:09,931 INFO - 191:	learn: 0.0397342	total: 29.6s	remaining: 1m 14s
+2018-03-31 10:11:09,931 INFO - 192:	learn: 0.0397287	total: 29.7s	remaining: 1m 14s
+2018-03-31 10:11:09,932 INFO - 193:	learn: 0.0397232	total: 29.9s	remaining: 1m 14s
+2018-03-31 10:11:09,932 INFO - 194:	learn: 0.0397171	total: 30s	remaining: 1m 13s
+2018-03-31 10:11:09,932 INFO - 195:	learn: 0.0397116	total: 30.1s	remaining: 1m 13s
+2018-03-31 10:11:09,932 INFO - 196:	learn: 0.0397064	total: 30.3s	remaining: 1m 13s
+2018-03-31 10:11:09,933 INFO - 197:	learn: 0.0397000	total: 30.4s	remaining: 1m 13s
+2018-03-31 10:11:09,933 INFO - 198:	learn: 0.0396966	total: 30.5s	remaining: 1m 13s
+2018-03-31 10:11:09,933 INFO - 199:	learn: 0.0396864	total: 30.7s	remaining: 1m 12s
+2018-03-31 10:11:09,933 INFO - 200:	learn: 0.0396790	total: 30.8s	remaining: 1m 12s
+2018-03-31 10:11:09,934 INFO - 201:	learn: 0.0396750	total: 30.9s	remaining: 1m 12s
+2018-03-31 10:11:09,934 INFO - 202:	learn: 0.0396685	total: 31.1s	remaining: 1m 12s
+2018-03-31 10:11:09,934 INFO - 203:	learn: 0.0396635	total: 31.2s	remaining: 1m 12s
+2018-03-31 10:11:09,935 INFO - 204:	learn: 0.0396580	total: 31.3s	remaining: 1m 11s
+2018-03-31 10:11:09,935 INFO - 205:	learn: 0.0396525	total: 31.5s	remaining: 1m 11s
+2018-03-31 10:11:09,935 INFO - 206:	learn: 0.0396476	total: 31.6s	remaining: 1m 11s
+2018-03-31 10:11:09,935 INFO - 207:	learn: 0.0396433	total: 31.7s	remaining: 1m 11s
+2018-03-31 10:11:09,936 INFO - 208:	learn: 0.0396378	total: 31.9s	remaining: 1m 11s
+2018-03-31 10:11:09,936 INFO - 209:	learn: 0.0396341	total: 32s	remaining: 1m 10s
+2018-03-31 10:11:09,936 INFO - 210:	learn: 0.0396302	total: 32.1s	remaining: 1m 10s
+2018-03-31 10:11:09,936 INFO - 211:	learn: 0.0396261	total: 32.3s	remaining: 1m 10s
+2018-03-31 10:11:09,937 INFO - 212:	learn: 0.0396208	total: 32.4s	remaining: 1m 10s
+2018-03-31 10:11:09,937 INFO - 213:	learn: 0.0396174	total: 32.5s	remaining: 1m 10s
+2018-03-31 10:11:09,937 INFO - 214:	learn: 0.0396125	total: 32.7s	remaining: 1m 9s
+2018-03-31 10:11:09,937 INFO - 215:	learn: 0.0396105	total: 32.8s	remaining: 1m 9s
+2018-03-31 10:11:09,937 INFO - 216:	learn: 0.0396055	total: 32.9s	remaining: 1m 9s
+2018-03-31 10:11:09,938 INFO - 217:	learn: 0.0396028	total: 33.1s	remaining: 1m 9s
+2018-03-31 10:11:09,938 INFO - 218:	learn: 0.0395997	total: 33.2s	remaining: 1m 9s
+2018-03-31 10:11:09,938 INFO - 219:	learn: 0.0395967	total: 33.3s	remaining: 1m 8s
+2018-03-31 10:11:09,938 INFO - 220:	learn: 0.0395925	total: 33.5s	remaining: 1m 8s
+2018-03-31 10:11:09,939 INFO - 221:	learn: 0.0395883	total: 33.6s	remaining: 1m 8s
+2018-03-31 10:11:09,939 INFO - 222:	learn: 0.0395840	total: 33.7s	remaining: 1m 8s
+2018-03-31 10:11:09,939 INFO - 223:	learn: 0.0395822	total: 33.9s	remaining: 1m 8s
+2018-03-31 10:11:09,939 INFO - 224:	learn: 0.0395771	total: 34s	remaining: 1m 7s
+2018-03-31 10:11:09,939 INFO - 225:	learn: 0.0395729	total: 34.1s	remaining: 1m 7s
+2018-03-31 10:11:09,939 INFO - 226:	learn: 0.0395688	total: 34.3s	remaining: 1m 7s
+2018-03-31 10:11:09,939 INFO - 227:	learn: 0.0395650	total: 34.4s	remaining: 1m 7s
+2018-03-31 10:11:09,940 INFO - 228:	learn: 0.0395610	total: 34.5s	remaining: 1m 7s
+2018-03-31 10:11:09,940 INFO - 229:	learn: 0.0395552	total: 34.7s	remaining: 1m 7s
+2018-03-31 10:11:09,940 INFO - 230:	learn: 0.0395512	total: 34.8s	remaining: 1m 6s
+2018-03-31 10:11:09,940 INFO - 231:	learn: 0.0395470	total: 34.9s	remaining: 1m 6s
+2018-03-31 10:11:09,940 INFO - 232:	learn: 0.0395420	total: 35.1s	remaining: 1m 6s
+2018-03-31 10:11:10,028 INFO - 233:	learn: 0.0395382	total: 35.2s	remaining: 1m 6s
+2018-03-31 10:11:10,167 INFO - 234:	learn: 0.0395330	total: 35.4s	remaining: 1m 6s
+2018-03-31 10:11:10,319 INFO - 235:	learn: 0.0395301	total: 35.5s	remaining: 1m 6s
+2018-03-31 10:11:10,474 INFO - 236:	learn: 0.0395240	total: 35.7s	remaining: 1m 5s
+2018-03-31 10:11:10,598 INFO - 237:	learn: 0.0395222	total: 35.8s	remaining: 1m 5s
+2018-03-31 10:11:10,725 INFO - 238:	learn: 0.0395205	total: 35.9s	remaining: 1m 5s
+2018-03-31 10:11:10,850 INFO - 239:	learn: 0.0395160	total: 36s	remaining: 1m 5s
+2018-03-31 10:11:10,970 INFO - 240:	learn: 0.0395133	total: 36.2s	remaining: 1m 5s
+2018-03-31 10:11:11,091 INFO - 241:	learn: 0.0395097	total: 36.3s	remaining: 1m 4s
+2018-03-31 10:11:11,215 INFO - 242:	learn: 0.0395030	total: 36.4s	remaining: 1m 4s
+2018-03-31 10:11:11,336 INFO - 243:	learn: 0.0394979	total: 36.5s	remaining: 1m 4s
+2018-03-31 10:11:11,467 INFO - 244:	learn: 0.0394938	total: 36.7s	remaining: 1m 4s
+2018-03-31 10:11:11,589 INFO - 245:	learn: 0.0394878	total: 36.8s	remaining: 1m 4s
+2018-03-31 10:11:11,709 INFO - 246:	learn: 0.0394821	total: 36.9s	remaining: 1m 3s
+2018-03-31 10:11:11,831 INFO - 247:	learn: 0.0394769	total: 37s	remaining: 1m 3s
+2018-03-31 10:11:11,953 INFO - 248:	learn: 0.0394751	total: 37.1s	remaining: 1m 3s
+2018-03-31 10:11:12,074 INFO - 249:	learn: 0.0394705	total: 37.3s	remaining: 1m 3s
+2018-03-31 10:11:12,195 INFO - 250:	learn: 0.0394647	total: 37.4s	remaining: 1m 3s
+2018-03-31 10:11:12,316 INFO - 251:	learn: 0.0394564	total: 37.5s	remaining: 1m 2s
+2018-03-31 10:11:12,445 INFO - 252:	learn: 0.0394495	total: 37.6s	remaining: 1m 2s
+2018-03-31 10:11:12,572 INFO - 253:	learn: 0.0394453	total: 37.8s	remaining: 1m 2s
+2018-03-31 10:11:12,694 INFO - 254:	learn: 0.0394421	total: 37.9s	remaining: 1m 2s
+2018-03-31 10:11:12,818 INFO - 255:	learn: 0.0394382	total: 38s	remaining: 1m 2s
+2018-03-31 10:11:12,939 INFO - 256:	learn: 0.0394343	total: 38.1s	remaining: 1m 2s
+2018-03-31 10:11:13,059 INFO - 257:	learn: 0.0394299	total: 38.2s	remaining: 1m 1s
+2018-03-31 10:11:13,180 INFO - 258:	learn: 0.0394229	total: 38.4s	remaining: 1m 1s
+2018-03-31 10:11:13,301 INFO - 259:	learn: 0.0394166	total: 38.5s	remaining: 1m 1s
+2018-03-31 10:11:13,421 INFO - 260:	learn: 0.0394104	total: 38.6s	remaining: 1m 1s
+2018-03-31 10:11:13,554 INFO - 261:	learn: 0.0394091	total: 38.7s	remaining: 1m 1s
+2018-03-31 10:11:13,676 INFO - 262:	learn: 0.0394063	total: 38.9s	remaining: 1m
+2018-03-31 10:11:13,796 INFO - 263:	learn: 0.0394013	total: 39s	remaining: 1m
+2018-03-31 10:11:13,916 INFO - 264:	learn: 0.0393957	total: 39.1s	remaining: 1m
+2018-03-31 10:11:14,039 INFO - 265:	learn: 0.0393950	total: 39.2s	remaining: 1m
+2018-03-31 10:11:14,160 INFO - 266:	learn: 0.0393905	total: 39.3s	remaining: 1m
+2018-03-31 10:11:14,281 INFO - 267:	learn: 0.0393857	total: 39.5s	remaining: 59.9s
+2018-03-31 10:11:14,402 INFO - 268:	learn: 0.0393812	total: 39.6s	remaining: 59.7s
+2018-03-31 10:11:14,534 INFO - 269:	learn: 0.0393789	total: 39.7s	remaining: 59.6s
+2018-03-31 10:11:14,659 INFO - 270:	learn: 0.0393743	total: 39.8s	remaining: 59.4s
+2018-03-31 10:11:14,780 INFO - 271:	learn: 0.0393691	total: 40s	remaining: 59.2s
+2018-03-31 10:11:14,906 INFO - 272:	learn: 0.0393660	total: 40.1s	remaining: 59s
+2018-03-31 10:11:15,027 INFO - 273:	learn: 0.0393594	total: 40.2s	remaining: 58.8s
+2018-03-31 10:11:15,147 INFO - 274:	learn: 0.0393539	total: 40.3s	remaining: 58.7s
+2018-03-31 10:11:15,268 INFO - 275:	learn: 0.0393477	total: 40.4s	remaining: 58.5s
+2018-03-31 10:11:15,390 INFO - 276:	learn: 0.0393460	total: 40.6s	remaining: 58.3s
+2018-03-31 10:11:15,519 INFO - 277:	learn: 0.0393368	total: 40.7s	remaining: 58.1s
+2018-03-31 10:11:15,640 INFO - 278:	learn: 0.0393313	total: 40.8s	remaining: 57.9s
+2018-03-31 10:11:15,762 INFO - 279:	learn: 0.0393284	total: 40.9s	remaining: 57.8s
+2018-03-31 10:11:15,882 INFO - 280:	learn: 0.0393233	total: 41.1s	remaining: 57.6s
+2018-03-31 10:11:16,002 INFO - 281:	learn: 0.0393174	total: 41.2s	remaining: 57.4s
+2018-03-31 10:11:16,124 INFO - 282:	learn: 0.0393132	total: 41.3s	remaining: 57.2s
+2018-03-31 10:11:16,245 INFO - 283:	learn: 0.0393099	total: 41.4s	remaining: 57s
+2018-03-31 10:11:16,367 INFO - 284:	learn: 0.0393074	total: 41.5s	remaining: 56.9s
+2018-03-31 10:11:16,502 INFO - 285:	learn: 0.0393052	total: 41.7s	remaining: 56.7s
+2018-03-31 10:11:16,623 INFO - 286:	learn: 0.0393015	total: 41.8s	remaining: 56.5s
+2018-03-31 10:11:16,748 INFO - 287:	learn: 0.0392988	total: 41.9s	remaining: 56.3s
+2018-03-31 10:11:16,880 INFO - 288:	learn: 0.0392938	total: 42.1s	remaining: 56.2s
+2018-03-31 10:11:17,003 INFO - 289:	learn: 0.0392897	total: 42.2s	remaining: 56s
+2018-03-31 10:11:17,124 INFO - 290:	learn: 0.0392850	total: 42.3s	remaining: 55.8s
+2018-03-31 10:11:17,246 INFO - 291:	learn: 0.0392816	total: 42.4s	remaining: 55.6s
+2018-03-31 10:11:17,366 INFO - 292:	learn: 0.0392795	total: 42.5s	remaining: 55.5s
+2018-03-31 10:11:17,499 INFO - 293:	learn: 0.0392759	total: 42.7s	remaining: 55.3s
+2018-03-31 10:11:17,624 INFO - 294:	learn: 0.0392715	total: 42.8s	remaining: 55.1s
+2018-03-31 10:11:17,745 INFO - 295:	learn: 0.0392675	total: 42.9s	remaining: 55s
+2018-03-31 10:11:17,866 INFO - 296:	learn: 0.0392642	total: 43s	remaining: 54.8s
+2018-03-31 10:11:17,988 INFO - 297:	learn: 0.0392608	total: 43.2s	remaining: 54.6s
+2018-03-31 10:11:18,110 INFO - 298:	learn: 0.0392562	total: 43.3s	remaining: 54.4s
+2018-03-31 10:11:18,230 INFO - 299:	learn: 0.0392527	total: 43.4s	remaining: 54.3s
+2018-03-31 10:11:18,352 INFO - 300:	learn: 0.0392483	total: 43.5s	remaining: 54.1s
+2018-03-31 10:11:18,482 INFO - 301:	learn: 0.0392440	total: 43.7s	remaining: 53.9s
+2018-03-31 10:11:18,604 INFO - 302:	learn: 0.0392415	total: 43.8s	remaining: 53.7s
+2018-03-31 10:11:18,730 INFO - 303:	learn: 0.0392351	total: 43.9s	remaining: 53.6s
+2018-03-31 10:11:18,853 INFO - 304:	learn: 0.0392315	total: 44s	remaining: 53.4s
+2018-03-31 10:11:18,981 INFO - 305:	learn: 0.0392249	total: 44.2s	remaining: 53.2s
+2018-03-31 10:11:19,104 INFO - 306:	learn: 0.0392230	total: 44.3s	remaining: 53.1s
+2018-03-31 10:11:19,226 INFO - 307:	learn: 0.0392188	total: 44.4s	remaining: 52.9s
+2018-03-31 10:11:19,349 INFO - 308:	learn: 0.0392159	total: 44.5s	remaining: 52.7s
+2018-03-31 10:11:19,481 INFO - 309:	learn: 0.0392122	total: 44.7s	remaining: 52.6s
+2018-03-31 10:11:19,601 INFO - 310:	learn: 0.0392082	total: 44.8s	remaining: 52.4s
+2018-03-31 10:11:19,725 INFO - 311:	learn: 0.0392007	total: 44.9s	remaining: 52.2s
+2018-03-31 10:11:19,846 INFO - 312:	learn: 0.0391952	total: 45s	remaining: 52.1s
+2018-03-31 10:11:19,975 INFO - 313:	learn: 0.0391903	total: 45.1s	remaining: 51.9s
+2018-03-31 10:11:20,095 INFO - 314:	learn: 0.0391845	total: 45.3s	remaining: 51.7s
+2018-03-31 10:11:20,216 INFO - 315:	learn: 0.0391807	total: 45.4s	remaining: 51.6s
+2018-03-31 10:11:20,340 INFO - 316:	learn: 0.0391785	total: 45.5s	remaining: 51.4s
+2018-03-31 10:11:20,471 INFO - 317:	learn: 0.0391749	total: 45.6s	remaining: 51.2s
+2018-03-31 10:11:20,591 INFO - 318:	learn: 0.0391704	total: 45.8s	remaining: 51.1s
+2018-03-31 10:11:20,714 INFO - 319:	learn: 0.0391669	total: 45.9s	remaining: 50.9s
+2018-03-31 10:11:20,839 INFO - 320:	learn: 0.0391623	total: 46s	remaining: 50.7s
+2018-03-31 10:11:20,961 INFO - 321:	learn: 0.0391585	total: 46.1s	remaining: 50.6s
+2018-03-31 10:11:21,087 INFO - 322:	learn: 0.0391564	total: 46.3s	remaining: 50.4s
+2018-03-31 10:11:21,210 INFO - 323:	learn: 0.0391544	total: 46.4s	remaining: 50.2s
+2018-03-31 10:11:21,331 INFO - 324:	learn: 0.0391525	total: 46.5s	remaining: 50.1s
+2018-03-31 10:11:21,461 INFO - 325:	learn: 0.0391506	total: 46.6s	remaining: 49.9s
+2018-03-31 10:11:21,582 INFO - 326:	learn: 0.0391479	total: 46.8s	remaining: 49.8s
+2018-03-31 10:11:21,704 INFO - 327:	learn: 0.0391419	total: 46.9s	remaining: 49.6s
+2018-03-31 10:11:21,825 INFO - 328:	learn: 0.0391397	total: 47s	remaining: 49.4s
+2018-03-31 10:11:21,946 INFO - 329:	learn: 0.0391324	total: 47.1s	remaining: 49.3s
+2018-03-31 10:11:22,068 INFO - 330:	learn: 0.0391284	total: 47.2s	remaining: 49.1s
+2018-03-31 10:11:22,188 INFO - 331:	learn: 0.0391258	total: 47.4s	remaining: 48.9s
+2018-03-31 10:11:22,308 INFO - 332:	learn: 0.0391210	total: 47.5s	remaining: 48.8s
+2018-03-31 10:11:22,431 INFO - 333:	learn: 0.0391162	total: 47.6s	remaining: 48.6s
+2018-03-31 10:11:22,558 INFO - 334:	learn: 0.0391123	total: 47.7s	remaining: 48.4s
+2018-03-31 10:11:22,679 INFO - 335:	learn: 0.0391097	total: 47.8s	remaining: 48.3s
+2018-03-31 10:11:22,802 INFO - 336:	learn: 0.0391072	total: 48s	remaining: 48.1s
+2018-03-31 10:11:22,928 INFO - 337:	learn: 0.0391032	total: 48.1s	remaining: 48s
+2018-03-31 10:11:23,050 INFO - 338:	learn: 0.0390996	total: 48.2s	remaining: 47.8s
+2018-03-31 10:11:23,175 INFO - 339:	learn: 0.0390946	total: 48.3s	remaining: 47.6s
+2018-03-31 10:11:23,297 INFO - 340:	learn: 0.0390907	total: 48.5s	remaining: 47.5s
+2018-03-31 10:11:23,420 INFO - 341:	learn: 0.0390866	total: 48.6s	remaining: 47.3s
+2018-03-31 10:11:23,551 INFO - 342:	learn: 0.0390848	total: 48.7s	remaining: 47.2s
+2018-03-31 10:11:23,672 INFO - 343:	learn: 0.0390790	total: 48.8s	remaining: 47s
+2018-03-31 10:11:23,796 INFO - 344:	learn: 0.0390753	total: 49s	remaining: 46.8s
+2018-03-31 10:11:23,918 INFO - 345:	learn: 0.0390725	total: 49.1s	remaining: 46.7s
+2018-03-31 10:11:24,038 INFO - 346:	learn: 0.0390692	total: 49.2s	remaining: 46.5s
+2018-03-31 10:11:24,159 INFO - 347:	learn: 0.0390674	total: 49.3s	remaining: 46.3s
+2018-03-31 10:11:24,279 INFO - 348:	learn: 0.0390641	total: 49.4s	remaining: 46.2s
+2018-03-31 10:11:24,399 INFO - 349:	learn: 0.0390590	total: 49.6s	remaining: 46s
+2018-03-31 10:11:24,530 INFO - 350:	learn: 0.0390542	total: 49.7s	remaining: 45.9s
+2018-03-31 10:11:24,652 INFO - 351:	learn: 0.0390498	total: 49.8s	remaining: 45.7s
+2018-03-31 10:11:24,773 INFO - 352:	learn: 0.0390475	total: 49.9s	remaining: 45.6s
+2018-03-31 10:11:24,896 INFO - 353:	learn: 0.0390452	total: 50.1s	remaining: 45.4s
+2018-03-31 10:11:25,018 INFO - 354:	learn: 0.0390410	total: 50.2s	remaining: 45.2s
+2018-03-31 10:11:25,142 INFO - 355:	learn: 0.0390378	total: 50.3s	remaining: 45.1s
+2018-03-31 10:11:25,265 INFO - 356:	learn: 0.0390329	total: 50.4s	remaining: 44.9s
+2018-03-31 10:11:25,386 INFO - 357:	learn: 0.0390257	total: 50.6s	remaining: 44.8s
+2018-03-31 10:11:25,516 INFO - 358:	learn: 0.0390219	total: 50.7s	remaining: 44.6s
+2018-03-31 10:11:25,638 INFO - 359:	learn: 0.0390183	total: 50.8s	remaining: 44.5s
+2018-03-31 10:11:25,760 INFO - 360:	learn: 0.0390130	total: 50.9s	remaining: 44.3s
+2018-03-31 10:11:25,882 INFO - 361:	learn: 0.0390106	total: 51s	remaining: 44.1s
+2018-03-31 10:11:26,004 INFO - 362:	learn: 0.0390085	total: 51.2s	remaining: 44s
+2018-03-31 10:11:26,125 INFO - 363:	learn: 0.0390055	total: 51.3s	remaining: 43.8s
+2018-03-31 10:11:26,244 INFO - 364:	learn: 0.0390021	total: 51.4s	remaining: 43.7s
+2018-03-31 10:11:26,366 INFO - 365:	learn: 0.0390010	total: 51.5s	remaining: 43.5s
+2018-03-31 10:11:26,498 INFO - 366:	learn: 0.0389954	total: 51.7s	remaining: 43.4s
+2018-03-31 10:11:26,623 INFO - 367:	learn: 0.0389914	total: 51.8s	remaining: 43.2s
+2018-03-31 10:11:26,743 INFO - 368:	learn: 0.0389885	total: 51.9s	remaining: 43s
+2018-03-31 10:11:26,865 INFO - 369:	learn: 0.0389871	total: 52s	remaining: 42.9s
+2018-03-31 10:11:26,999 INFO - 370:	learn: 0.0389833	total: 52.2s	remaining: 42.7s
+2018-03-31 10:11:27,120 INFO - 371:	learn: 0.0389803	total: 52.3s	remaining: 42.6s
+2018-03-31 10:11:27,248 INFO - 372:	learn: 0.0389749	total: 52.4s	remaining: 42.4s
+2018-03-31 10:11:27,368 INFO - 373:	learn: 0.0389705	total: 52.5s	remaining: 42.3s
+2018-03-31 10:11:27,500 INFO - 374:	learn: 0.0389681	total: 52.7s	remaining: 42.1s
+2018-03-31 10:11:27,620 INFO - 375:	learn: 0.0389642	total: 52.8s	remaining: 42s
+2018-03-31 10:11:27,741 INFO - 376:	learn: 0.0389611	total: 52.9s	remaining: 41.8s
+2018-03-31 10:11:27,863 INFO - 377:	learn: 0.0389576	total: 53s	remaining: 41.7s
+2018-03-31 10:11:27,987 INFO - 378:	learn: 0.0389563	total: 53.1s	remaining: 41.5s
+2018-03-31 10:11:28,108 INFO - 379:	learn: 0.0389516	total: 53.3s	remaining: 41.4s
+2018-03-31 10:11:28,228 INFO - 380:	learn: 0.0389492	total: 53.4s	remaining: 41.2s
+2018-03-31 10:11:28,348 INFO - 381:	learn: 0.0389447	total: 53.5s	remaining: 41s
+2018-03-31 10:11:28,479 INFO - 382:	learn: 0.0389427	total: 53.6s	remaining: 40.9s
+2018-03-31 10:11:28,600 INFO - 383:	learn: 0.0389415	total: 53.8s	remaining: 40.7s
+2018-03-31 10:11:28,720 INFO - 384:	learn: 0.0389356	total: 53.9s	remaining: 40.6s
+2018-03-31 10:11:28,842 INFO - 385:	learn: 0.0389343	total: 54s	remaining: 40.4s
+2018-03-31 10:11:28,964 INFO - 386:	learn: 0.0389296	total: 54.1s	remaining: 40.3s
+2018-03-31 10:11:29,090 INFO - 387:	learn: 0.0389261	total: 54.2s	remaining: 40.1s
+2018-03-31 10:11:29,211 INFO - 388:	learn: 0.0389196	total: 54.4s	remaining: 40s
+2018-03-31 10:11:29,337 INFO - 389:	learn: 0.0389162	total: 54.5s	remaining: 39.8s
+2018-03-31 10:11:29,469 INFO - 390:	learn: 0.0389135	total: 54.6s	remaining: 39.7s
+2018-03-31 10:11:29,591 INFO - 391:	learn: 0.0389098	total: 54.8s	remaining: 39.5s
+2018-03-31 10:11:29,712 INFO - 392:	learn: 0.0389061	total: 54.9s	remaining: 39.4s
+2018-03-31 10:11:29,833 INFO - 393:	learn: 0.0389018	total: 55s	remaining: 39.2s
+2018-03-31 10:11:29,955 INFO - 394:	learn: 0.0388990	total: 55.1s	remaining: 39.1s
+2018-03-31 10:11:30,076 INFO - 395:	learn: 0.0388938	total: 55.2s	remaining: 38.9s
+2018-03-31 10:11:30,195 INFO - 396:	learn: 0.0388913	total: 55.4s	remaining: 38.8s
+2018-03-31 10:11:30,316 INFO - 397:	learn: 0.0388866	total: 55.5s	remaining: 38.6s
+2018-03-31 10:11:30,446 INFO - 398:	learn: 0.0388823	total: 55.6s	remaining: 38.5s
+2018-03-31 10:11:30,573 INFO - 399:	learn: 0.0388815	total: 55.7s	remaining: 38.3s
+2018-03-31 10:11:30,694 INFO - 400:	learn: 0.0388769	total: 55.9s	remaining: 38.2s
+2018-03-31 10:11:30,816 INFO - 401:	learn: 0.0388760	total: 56s	remaining: 38s
+2018-03-31 10:11:30,936 INFO - 402:	learn: 0.0388731	total: 56.1s	remaining: 37.9s
+2018-03-31 10:11:31,057 INFO - 403:	learn: 0.0388702	total: 56.2s	remaining: 37.7s
+2018-03-31 10:11:31,186 INFO - 404:	learn: 0.0388686	total: 56.3s	remaining: 37.6s
+2018-03-31 10:11:31,308 INFO - 405:	learn: 0.0388675	total: 56.5s	remaining: 37.4s
+2018-03-31 10:11:31,436 INFO - 406:	learn: 0.0388640	total: 56.6s	remaining: 37.3s
+2018-03-31 10:11:31,563 INFO - 407:	learn: 0.0388603	total: 56.7s	remaining: 37.1s
+2018-03-31 10:11:31,684 INFO - 408:	learn: 0.0388540	total: 56.8s	remaining: 37s
+2018-03-31 10:11:31,806 INFO - 409:	learn: 0.0388511	total: 57s	remaining: 36.8s
+2018-03-31 10:11:31,926 INFO - 410:	learn: 0.0388484	total: 57.1s	remaining: 36.7s
+2018-03-31 10:11:32,047 INFO - 411:	learn: 0.0388446	total: 57.2s	remaining: 36.5s
+2018-03-31 10:11:32,167 INFO - 412:	learn: 0.0388405	total: 57.3s	remaining: 36.4s
+2018-03-31 10:11:32,287 INFO - 413:	learn: 0.0388371	total: 57.4s	remaining: 36.2s
+2018-03-31 10:11:32,409 INFO - 414:	learn: 0.0388339	total: 57.6s	remaining: 36.1s
+2018-03-31 10:11:32,539 INFO - 415:	learn: 0.0388292	total: 57.7s	remaining: 35.9s
+2018-03-31 10:11:32,660 INFO - 416:	learn: 0.0388247	total: 57.8s	remaining: 35.8s
+2018-03-31 10:11:32,784 INFO - 417:	learn: 0.0388210	total: 57.9s	remaining: 35.6s
+2018-03-31 10:11:32,907 INFO - 418:	learn: 0.0388197	total: 58.1s	remaining: 35.5s
+2018-03-31 10:11:33,028 INFO - 419:	learn: 0.0388160	total: 58.2s	remaining: 35.3s
+2018-03-31 10:11:33,153 INFO - 420:	learn: 0.0388138	total: 58.3s	remaining: 35.2s
+2018-03-31 10:11:33,275 INFO - 421:	learn: 0.0388105	total: 58.4s	remaining: 35s
+2018-03-31 10:11:33,400 INFO - 422:	learn: 0.0388060	total: 58.6s	remaining: 34.9s
+2018-03-31 10:11:33,531 INFO - 423:	learn: 0.0388035	total: 58.7s	remaining: 34.7s
+2018-03-31 10:11:33,654 INFO - 424:	learn: 0.0388022	total: 58.8s	remaining: 34.6s
+2018-03-31 10:11:33,776 INFO - 425:	learn: 0.0387985	total: 58.9s	remaining: 34.4s
+2018-03-31 10:11:33,899 INFO - 426:	learn: 0.0387971	total: 59.1s	remaining: 34.3s
+2018-03-31 10:11:34,021 INFO - 427:	learn: 0.0387952	total: 59.2s	remaining: 34.1s
+2018-03-31 10:11:34,143 INFO - 428:	learn: 0.0387937	total: 59.3s	remaining: 34s
+2018-03-31 10:11:34,267 INFO - 429:	learn: 0.0387901	total: 59.4s	remaining: 33.9s
+2018-03-31 10:11:34,388 INFO - 430:	learn: 0.0387884	total: 59.5s	remaining: 33.7s
+2018-03-31 10:11:34,519 INFO - 431:	learn: 0.0387838	total: 59.7s	remaining: 33.6s
+2018-03-31 10:11:34,639 INFO - 432:	learn: 0.0387798	total: 59.8s	remaining: 33.4s
+2018-03-31 10:11:34,768 INFO - 433:	learn: 0.0387775	total: 59.9s	remaining: 33.3s
+2018-03-31 10:11:34,889 INFO - 434:	learn: 0.0387744	total: 1m	remaining: 33.1s
+2018-03-31 10:11:35,010 INFO - 435:	learn: 0.0387721	total: 1m	remaining: 33s
+2018-03-31 10:11:35,131 INFO - 436:	learn: 0.0387682	total: 1m	remaining: 32.8s
+2018-03-31 10:11:35,258 INFO - 437:	learn: 0.0387627	total: 1m	remaining: 32.7s
+2018-03-31 10:11:35,381 INFO - 438:	learn: 0.0387596	total: 1m	remaining: 32.5s
+2018-03-31 10:11:35,515 INFO - 439:	learn: 0.0387557	total: 1m	remaining: 32.4s
+2018-03-31 10:11:35,636 INFO - 440:	learn: 0.0387506	total: 1m	remaining: 32.3s
+2018-03-31 10:11:35,758 INFO - 441:	learn: 0.0387458	total: 1m	remaining: 32.1s
+2018-03-31 10:11:35,881 INFO - 442:	learn: 0.0387446	total: 1m 1s	remaining: 32s
+2018-03-31 10:11:36,001 INFO - 443:	learn: 0.0387389	total: 1m 1s	remaining: 31.8s
+2018-03-31 10:11:36,123 INFO - 444:	learn: 0.0387359	total: 1m 1s	remaining: 31.7s
+2018-03-31 10:11:36,243 INFO - 445:	learn: 0.0387317	total: 1m 1s	remaining: 31.5s
+2018-03-31 10:11:36,364 INFO - 446:	learn: 0.0387261	total: 1m 1s	remaining: 31.4s
+2018-03-31 10:11:36,495 INFO - 447:	learn: 0.0387232	total: 1m 1s	remaining: 31.2s
+2018-03-31 10:11:36,615 INFO - 448:	learn: 0.0387200	total: 1m 1s	remaining: 31.1s
+2018-03-31 10:11:36,738 INFO - 449:	learn: 0.0387167	total: 1m 1s	remaining: 30.9s
+2018-03-31 10:11:36,859 INFO - 450:	learn: 0.0387125	total: 1m 2s	remaining: 30.8s
+2018-03-31 10:11:36,980 INFO - 451:	learn: 0.0387098	total: 1m 2s	remaining: 30.7s
+2018-03-31 10:11:37,100 INFO - 452:	learn: 0.0387072	total: 1m 2s	remaining: 30.5s
+2018-03-31 10:11:37,220 INFO - 453:	learn: 0.0387039	total: 1m 2s	remaining: 30.4s
+2018-03-31 10:11:37,344 INFO - 454:	learn: 0.0387010	total: 1m 2s	remaining: 30.2s
+2018-03-31 10:11:37,479 INFO - 455:	learn: 0.0386961	total: 1m 2s	remaining: 30.1s
+2018-03-31 10:11:37,602 INFO - 456:	learn: 0.0386942	total: 1m 2s	remaining: 29.9s
+2018-03-31 10:11:37,724 INFO - 457:	learn: 0.0386914	total: 1m 2s	remaining: 29.8s
+2018-03-31 10:11:37,845 INFO - 458:	learn: 0.0386883	total: 1m 2s	remaining: 29.6s
+2018-03-31 10:11:37,966 INFO - 459:	learn: 0.0386819	total: 1m 3s	remaining: 29.5s
+2018-03-31 10:11:38,087 INFO - 460:	learn: 0.0386789	total: 1m 3s	remaining: 29.4s
+2018-03-31 10:11:38,210 INFO - 461:	learn: 0.0386752	total: 1m 3s	remaining: 29.2s
+2018-03-31 10:11:38,330 INFO - 462:	learn: 0.0386710	total: 1m 3s	remaining: 29.1s
+2018-03-31 10:11:38,464 INFO - 463:	learn: 0.0386681	total: 1m 3s	remaining: 28.9s
+2018-03-31 10:11:38,584 INFO - 464:	learn: 0.0386652	total: 1m 3s	remaining: 28.8s
+2018-03-31 10:11:38,708 INFO - 465:	learn: 0.0386610	total: 1m 3s	remaining: 28.6s
+2018-03-31 10:11:38,831 INFO - 466:	learn: 0.0386586	total: 1m 3s	remaining: 28.5s
+2018-03-31 10:11:38,952 INFO - 467:	learn: 0.0386557	total: 1m 4s	remaining: 28.4s
+2018-03-31 10:11:39,072 INFO - 468:	learn: 0.0386515	total: 1m 4s	remaining: 28.2s
+2018-03-31 10:11:39,193 INFO - 469:	learn: 0.0386485	total: 1m 4s	remaining: 28.1s
+2018-03-31 10:11:39,315 INFO - 470:	learn: 0.0386448	total: 1m 4s	remaining: 27.9s
+2018-03-31 10:11:39,443 INFO - 471:	learn: 0.0386412	total: 1m 4s	remaining: 27.8s
+2018-03-31 10:11:39,572 INFO - 472:	learn: 0.0386392	total: 1m 4s	remaining: 27.6s
+2018-03-31 10:11:39,693 INFO - 473:	learn: 0.0386351	total: 1m 4s	remaining: 27.5s
+2018-03-31 10:11:39,814 INFO - 474:	learn: 0.0386330	total: 1m 4s	remaining: 27.4s
+2018-03-31 10:11:39,936 INFO - 475:	learn: 0.0386298	total: 1m 5s	remaining: 27.2s
+2018-03-31 10:11:40,058 INFO - 476:	learn: 0.0386237	total: 1m 5s	remaining: 27.1s
+2018-03-31 10:11:40,179 INFO - 477:	learn: 0.0386188	total: 1m 5s	remaining: 26.9s
+2018-03-31 10:11:40,299 INFO - 478:	learn: 0.0386103	total: 1m 5s	remaining: 26.8s
+2018-03-31 10:11:40,419 INFO - 479:	learn: 0.0386070	total: 1m 5s	remaining: 26.6s
+2018-03-31 10:11:40,550 INFO - 480:	learn: 0.0386048	total: 1m 5s	remaining: 26.5s
+2018-03-31 10:11:40,674 INFO - 481:	learn: 0.0386009	total: 1m 5s	remaining: 26.4s
+2018-03-31 10:11:40,798 INFO - 482:	learn: 0.0386000	total: 1m 5s	remaining: 26.2s
+2018-03-31 10:11:40,919 INFO - 483:	learn: 0.0385956	total: 1m 6s	remaining: 26.1s
+2018-03-31 10:11:41,041 INFO - 484:	learn: 0.0385936	total: 1m 6s	remaining: 25.9s
+2018-03-31 10:11:41,163 INFO - 485:	learn: 0.0385896	total: 1m 6s	remaining: 25.8s
+2018-03-31 10:11:41,284 INFO - 486:	learn: 0.0385877	total: 1m 6s	remaining: 25.6s
+2018-03-31 10:11:41,408 INFO - 487:	learn: 0.0385854	total: 1m 6s	remaining: 25.5s
+2018-03-31 10:11:41,542 INFO - 488:	learn: 0.0385829	total: 1m 6s	remaining: 25.4s
+2018-03-31 10:11:41,666 INFO - 489:	learn: 0.0385807	total: 1m 6s	remaining: 25.2s
+2018-03-31 10:11:41,787 INFO - 490:	learn: 0.0385771	total: 1m 6s	remaining: 25.1s
+2018-03-31 10:11:41,909 INFO - 491:	learn: 0.0385718	total: 1m 7s	remaining: 24.9s
+2018-03-31 10:11:42,029 INFO - 492:	learn: 0.0385694	total: 1m 7s	remaining: 24.8s
+2018-03-31 10:11:42,149 INFO - 493:	learn: 0.0385648	total: 1m 7s	remaining: 24.7s
+2018-03-31 10:11:42,271 INFO - 494:	learn: 0.0385613	total: 1m 7s	remaining: 24.5s
+2018-03-31 10:11:42,392 INFO - 495:	learn: 0.0385562	total: 1m 7s	remaining: 24.4s
+2018-03-31 10:11:42,521 INFO - 496:	learn: 0.0385526	total: 1m 7s	remaining: 24.2s
+2018-03-31 10:11:42,643 INFO - 497:	learn: 0.0385493	total: 1m 7s	remaining: 24.1s
+2018-03-31 10:11:42,765 INFO - 498:	learn: 0.0385476	total: 1m 7s	remaining: 23.9s
+2018-03-31 10:11:42,885 INFO - 499:	learn: 0.0385456	total: 1m 8s	remaining: 23.8s
+2018-03-31 10:11:43,006 INFO - 500:	learn: 0.0385409	total: 1m 8s	remaining: 23.7s
+2018-03-31 10:11:43,128 INFO - 501:	learn: 0.0385380	total: 1m 8s	remaining: 23.5s
+2018-03-31 10:11:43,251 INFO - 502:	learn: 0.0385349	total: 1m 8s	remaining: 23.4s
+2018-03-31 10:11:43,371 INFO - 503:	learn: 0.0385311	total: 1m 8s	remaining: 23.2s
+2018-03-31 10:11:43,508 INFO - 504:	learn: 0.0385290	total: 1m 8s	remaining: 23.1s
+2018-03-31 10:11:43,633 INFO - 505:	learn: 0.0385268	total: 1m 8s	remaining: 23s
+2018-03-31 10:11:43,758 INFO - 506:	learn: 0.0385219	total: 1m 8s	remaining: 22.8s
+2018-03-31 10:11:43,879 INFO - 507:	learn: 0.0385169	total: 1m 9s	remaining: 22.7s
+2018-03-31 10:11:44,000 INFO - 508:	learn: 0.0385134	total: 1m 9s	remaining: 22.5s
+2018-03-31 10:11:44,122 INFO - 509:	learn: 0.0385084	total: 1m 9s	remaining: 22.4s
+2018-03-31 10:11:44,243 INFO - 510:	learn: 0.0385055	total: 1m 9s	remaining: 22.3s
+2018-03-31 10:11:44,364 INFO - 511:	learn: 0.0385033	total: 1m 9s	remaining: 22.1s
+2018-03-31 10:11:44,495 INFO - 512:	learn: 0.0384997	total: 1m 9s	remaining: 22s
+2018-03-31 10:11:44,615 INFO - 513:	learn: 0.0384950	total: 1m 9s	remaining: 21.8s
+2018-03-31 10:11:44,737 INFO - 514:	learn: 0.0384904	total: 1m 9s	remaining: 21.7s
+2018-03-31 10:11:44,859 INFO - 515:	learn: 0.0384877	total: 1m 9s	remaining: 21.6s
+2018-03-31 10:11:44,979 INFO - 516:	learn: 0.0384856	total: 1m 10s	remaining: 21.4s
+2018-03-31 10:11:45,100 INFO - 517:	learn: 0.0384819	total: 1m 10s	remaining: 21.3s
+2018-03-31 10:11:45,221 INFO - 518:	learn: 0.0384771	total: 1m 10s	remaining: 21.1s
+2018-03-31 10:11:45,342 INFO - 519:	learn: 0.0384743	total: 1m 10s	remaining: 21s
+2018-03-31 10:11:45,475 INFO - 520:	learn: 0.0384711	total: 1m 10s	remaining: 20.9s
+2018-03-31 10:11:45,602 INFO - 521:	learn: 0.0384690	total: 1m 10s	remaining: 20.7s
+2018-03-31 10:11:45,730 INFO - 522:	learn: 0.0384663	total: 1m 10s	remaining: 20.6s
+2018-03-31 10:11:45,852 INFO - 523:	learn: 0.0384638	total: 1m 10s	remaining: 20.5s
+2018-03-31 10:11:45,974 INFO - 524:	learn: 0.0384610	total: 1m 11s	remaining: 20.3s
+2018-03-31 10:11:46,095 INFO - 525:	learn: 0.0384589	total: 1m 11s	remaining: 20.2s
+2018-03-31 10:11:46,215 INFO - 526:	learn: 0.0384566	total: 1m 11s	remaining: 20s
+2018-03-31 10:11:46,336 INFO - 527:	learn: 0.0384533	total: 1m 11s	remaining: 19.9s
+2018-03-31 10:11:46,468 INFO - 528:	learn: 0.0384506	total: 1m 11s	remaining: 19.8s
+2018-03-31 10:11:46,588 INFO - 529:	learn: 0.0384454	total: 1m 11s	remaining: 19.6s
+2018-03-31 10:11:46,709 INFO - 530:	learn: 0.0384411	total: 1m 11s	remaining: 19.5s
+2018-03-31 10:11:46,830 INFO - 531:	learn: 0.0384370	total: 1m 11s	remaining: 19.3s
+2018-03-31 10:11:46,951 INFO - 532:	learn: 0.0384349	total: 1m 12s	remaining: 19.2s
+2018-03-31 10:11:47,073 INFO - 533:	learn: 0.0384306	total: 1m 12s	remaining: 19.1s
+2018-03-31 10:11:47,194 INFO - 534:	learn: 0.0384263	total: 1m 12s	remaining: 18.9s
+2018-03-31 10:11:47,315 INFO - 535:	learn: 0.0384243	total: 1m 12s	remaining: 18.8s
+2018-03-31 10:11:47,443 INFO - 536:	learn: 0.0384217	total: 1m 12s	remaining: 18.6s
+2018-03-31 10:11:47,570 INFO - 537:	learn: 0.0384185	total: 1m 12s	remaining: 18.5s
+2018-03-31 10:11:47,695 INFO - 538:	learn: 0.0384159	total: 1m 12s	remaining: 18.4s
+2018-03-31 10:11:47,822 INFO - 539:	learn: 0.0384106	total: 1m 12s	remaining: 18.2s
+2018-03-31 10:11:47,944 INFO - 540:	learn: 0.0384085	total: 1m 13s	remaining: 18.1s
+2018-03-31 10:11:48,065 INFO - 541:	learn: 0.0384064	total: 1m 13s	remaining: 18s
+2018-03-31 10:11:48,186 INFO - 542:	learn: 0.0384051	total: 1m 13s	remaining: 17.8s
+2018-03-31 10:11:48,308 INFO - 543:	learn: 0.0384035	total: 1m 13s	remaining: 17.7s
+2018-03-31 10:11:48,437 INFO - 544:	learn: 0.0383985	total: 1m 13s	remaining: 17.5s
+2018-03-31 10:11:48,559 INFO - 545:	learn: 0.0383950	total: 1m 13s	remaining: 17.4s
+2018-03-31 10:11:48,680 INFO - 546:	learn: 0.0383919	total: 1m 13s	remaining: 17.3s
+2018-03-31 10:11:48,803 INFO - 547:	learn: 0.0383869	total: 1m 13s	remaining: 17.1s
+2018-03-31 10:11:48,936 INFO - 548:	learn: 0.0383841	total: 1m 14s	remaining: 17s
+2018-03-31 10:11:49,056 INFO - 549:	learn: 0.0383806	total: 1m 14s	remaining: 16.9s
+2018-03-31 10:11:49,176 INFO - 550:	learn: 0.0383757	total: 1m 14s	remaining: 16.7s
+2018-03-31 10:11:49,297 INFO - 551:	learn: 0.0383723	total: 1m 14s	remaining: 16.6s
+2018-03-31 10:11:49,416 INFO - 552:	learn: 0.0383674	total: 1m 14s	remaining: 16.4s
+2018-03-31 10:11:49,549 INFO - 553:	learn: 0.0383651	total: 1m 14s	remaining: 16.3s
+2018-03-31 10:11:49,674 INFO - 554:	learn: 0.0383608	total: 1m 14s	remaining: 16.2s
+2018-03-31 10:11:49,800 INFO - 555:	learn: 0.0383569	total: 1m 14s	remaining: 16s
+2018-03-31 10:11:49,930 INFO - 556:	learn: 0.0383546	total: 1m 15s	remaining: 15.9s
+2018-03-31 10:11:50,051 INFO - 557:	learn: 0.0383525	total: 1m 15s	remaining: 15.8s
+2018-03-31 10:11:50,171 INFO - 558:	learn: 0.0383463	total: 1m 15s	remaining: 15.6s
+2018-03-31 10:11:50,292 INFO - 559:	learn: 0.0383433	total: 1m 15s	remaining: 15.5s
+2018-03-31 10:11:50,412 INFO - 560:	learn: 0.0383421	total: 1m 15s	remaining: 15.3s
+2018-03-31 10:11:50,543 INFO - 561:	learn: 0.0383395	total: 1m 15s	remaining: 15.2s
+2018-03-31 10:11:50,663 INFO - 562:	learn: 0.0383365	total: 1m 15s	remaining: 15.1s
+2018-03-31 10:11:50,785 INFO - 563:	learn: 0.0383346	total: 1m 15s	remaining: 14.9s
+2018-03-31 10:11:50,906 INFO - 564:	learn: 0.0383322	total: 1m 16s	remaining: 14.8s
+2018-03-31 10:11:51,027 INFO - 565:	learn: 0.0383280	total: 1m 16s	remaining: 14.7s
+2018-03-31 10:11:51,147 INFO - 566:	learn: 0.0383233	total: 1m 16s	remaining: 14.5s
+2018-03-31 10:11:51,267 INFO - 567:	learn: 0.0383201	total: 1m 16s	remaining: 14.4s
+2018-03-31 10:11:51,388 INFO - 568:	learn: 0.0383163	total: 1m 16s	remaining: 14.3s
+2018-03-31 10:11:51,520 INFO - 569:	learn: 0.0383131	total: 1m 16s	remaining: 14.1s
+2018-03-31 10:11:51,640 INFO - 570:	learn: 0.0383084	total: 1m 16s	remaining: 14s
+2018-03-31 10:11:51,769 INFO - 571:	learn: 0.0383033	total: 1m 16s	remaining: 13.8s
+2018-03-31 10:11:51,896 INFO - 572:	learn: 0.0383000	total: 1m 17s	remaining: 13.7s
+2018-03-31 10:11:52,017 INFO - 573:	learn: 0.0382951	total: 1m 17s	remaining: 13.6s
+2018-03-31 10:11:52,137 INFO - 574:	learn: 0.0382907	total: 1m 17s	remaining: 13.4s
+2018-03-31 10:11:52,258 INFO - 575:	learn: 0.0382877	total: 1m 17s	remaining: 13.3s
+2018-03-31 10:11:52,378 INFO - 576:	learn: 0.0382853	total: 1m 17s	remaining: 13.2s
+2018-03-31 10:11:52,509 INFO - 577:	learn: 0.0382826	total: 1m 17s	remaining: 13s
+2018-03-31 10:11:52,631 INFO - 578:	learn: 0.0382814	total: 1m 17s	remaining: 12.9s
+2018-03-31 10:11:52,753 INFO - 579:	learn: 0.0382793	total: 1m 17s	remaining: 12.8s
+2018-03-31 10:11:52,874 INFO - 580:	learn: 0.0382751	total: 1m 17s	remaining: 12.6s
+2018-03-31 10:11:52,993 INFO - 581:	learn: 0.0382721	total: 1m 18s	remaining: 12.5s
+2018-03-31 10:11:53,113 INFO - 582:	learn: 0.0382672	total: 1m 18s	remaining: 12.3s
+2018-03-31 10:11:53,232 INFO - 583:	learn: 0.0382644	total: 1m 18s	remaining: 12.2s
+2018-03-31 10:11:53,355 INFO - 584:	learn: 0.0382599	total: 1m 18s	remaining: 12.1s
+2018-03-31 10:11:53,485 INFO - 585:	learn: 0.0382581	total: 1m 18s	remaining: 11.9s
+2018-03-31 10:11:53,607 INFO - 586:	learn: 0.0382545	total: 1m 18s	remaining: 11.8s
+2018-03-31 10:11:53,728 INFO - 587:	learn: 0.0382504	total: 1m 18s	remaining: 11.7s
+2018-03-31 10:11:53,859 INFO - 588:	learn: 0.0382497	total: 1m 18s	remaining: 11.5s
+2018-03-31 10:11:53,980 INFO - 589:	learn: 0.0382473	total: 1m 19s	remaining: 11.4s
+2018-03-31 10:11:54,102 INFO - 590:	learn: 0.0382450	total: 1m 19s	remaining: 11.3s
+2018-03-31 10:11:54,222 INFO - 591:	learn: 0.0382432	total: 1m 19s	remaining: 11.1s
+2018-03-31 10:11:54,345 INFO - 592:	learn: 0.0382417	total: 1m 19s	remaining: 11s
+2018-03-31 10:11:54,474 INFO - 593:	learn: 0.0382391	total: 1m 19s	remaining: 10.9s
+2018-03-31 10:11:54,597 INFO - 594:	learn: 0.0382372	total: 1m 19s	remaining: 10.7s
+2018-03-31 10:11:54,718 INFO - 595:	learn: 0.0382322	total: 1m 19s	remaining: 10.6s
+2018-03-31 10:11:54,839 INFO - 596:	learn: 0.0382280	total: 1m 19s	remaining: 10.4s
+2018-03-31 10:11:54,961 INFO - 597:	learn: 0.0382235	total: 1m 20s	remaining: 10.3s
+2018-03-31 10:11:55,080 INFO - 598:	learn: 0.0382202	total: 1m 20s	remaining: 10.2s
+2018-03-31 10:11:55,200 INFO - 599:	learn: 0.0382175	total: 1m 20s	remaining: 10s
+2018-03-31 10:11:55,321 INFO - 600:	learn: 0.0382160	total: 1m 20s	remaining: 9.9s
+2018-03-31 10:11:55,447 INFO - 601:	learn: 0.0382125	total: 1m 20s	remaining: 9.77s
+2018-03-31 10:11:55,572 INFO - 602:	learn: 0.0382096	total: 1m 20s	remaining: 9.63s
+2018-03-31 10:11:55,693 INFO - 603:	learn: 0.0382050	total: 1m 20s	remaining: 9.5s
+2018-03-31 10:11:55,814 INFO - 604:	learn: 0.0382030	total: 1m 20s	remaining: 9.36s
+2018-03-31 10:11:55,940 INFO - 605:	learn: 0.0382014	total: 1m 21s	remaining: 9.23s
+2018-03-31 10:11:56,062 INFO - 606:	learn: 0.0381949	total: 1m 21s	remaining: 9.09s
+2018-03-31 10:11:56,182 INFO - 607:	learn: 0.0381921	total: 1m 21s	remaining: 8.96s
+2018-03-31 10:11:56,302 INFO - 608:	learn: 0.0381886	total: 1m 21s	remaining: 8.82s
+2018-03-31 10:11:56,425 INFO - 609:	learn: 0.0381824	total: 1m 21s	remaining: 8.69s
+2018-03-31 10:11:56,555 INFO - 610:	learn: 0.0381778	total: 1m 21s	remaining: 8.55s
+2018-03-31 10:11:56,676 INFO - 611:	learn: 0.0381773	total: 1m 21s	remaining: 8.42s
+2018-03-31 10:11:56,797 INFO - 612:	learn: 0.0381734	total: 1m 21s	remaining: 8.29s
+2018-03-31 10:11:56,917 INFO - 613:	learn: 0.0381695	total: 1m 22s	remaining: 8.15s
+2018-03-31 10:11:57,038 INFO - 614:	learn: 0.0381671	total: 1m 22s	remaining: 8.02s
+2018-03-31 10:11:57,160 INFO - 615:	learn: 0.0381650	total: 1m 22s	remaining: 7.88s
+2018-03-31 10:11:57,281 INFO - 616:	learn: 0.0381598	total: 1m 22s	remaining: 7.75s
+2018-03-31 10:11:57,401 INFO - 617:	learn: 0.0381566	total: 1m 22s	remaining: 7.61s
+2018-03-31 10:11:57,532 INFO - 618:	learn: 0.0381541	total: 1m 22s	remaining: 7.48s
+2018-03-31 10:11:57,654 INFO - 619:	learn: 0.0381515	total: 1m 22s	remaining: 7.34s
+2018-03-31 10:11:57,775 INFO - 620:	learn: 0.0381477	total: 1m 22s	remaining: 7.21s
+2018-03-31 10:11:57,901 INFO - 621:	learn: 0.0381440	total: 1m 23s	remaining: 7.07s
+2018-03-31 10:11:58,032 INFO - 622:	learn: 0.0381423	total: 1m 23s	remaining: 6.94s
+2018-03-31 10:11:58,151 INFO - 623:	learn: 0.0381405	total: 1m 23s	remaining: 6.8s
+2018-03-31 10:11:58,272 INFO - 624:	learn: 0.0381363	total: 1m 23s	remaining: 6.67s
+2018-03-31 10:11:58,392 INFO - 625:	learn: 0.0381337	total: 1m 23s	remaining: 6.54s
+2018-03-31 10:11:58,524 INFO - 626:	learn: 0.0381319	total: 1m 23s	remaining: 6.4s
+2018-03-31 10:11:58,646 INFO - 627:	learn: 0.0381287	total: 1m 23s	remaining: 6.27s
+2018-03-31 10:11:58,767 INFO - 628:	learn: 0.0381254	total: 1m 23s	remaining: 6.13s
+2018-03-31 10:11:58,887 INFO - 629:	learn: 0.0381227	total: 1m 24s	remaining: 6s
+2018-03-31 10:11:59,009 INFO - 630:	learn: 0.0381202	total: 1m 24s	remaining: 5.87s
+2018-03-31 10:11:59,130 INFO - 631:	learn: 0.0381180	total: 1m 24s	remaining: 5.73s
+2018-03-31 10:11:59,252 INFO - 632:	learn: 0.0381170	total: 1m 24s	remaining: 5.6s
+2018-03-31 10:11:59,372 INFO - 633:	learn: 0.0381121	total: 1m 24s	remaining: 5.46s
+2018-03-31 10:11:59,504 INFO - 634:	learn: 0.0381115	total: 1m 24s	remaining: 5.33s
+2018-03-31 10:11:59,624 INFO - 635:	learn: 0.0381084	total: 1m 24s	remaining: 5.2s
+2018-03-31 10:11:59,750 INFO - 636:	learn: 0.0381056	total: 1m 24s	remaining: 5.06s
+2018-03-31 10:11:59,873 INFO - 637:	learn: 0.0381048	total: 1m 24s	remaining: 4.93s
+2018-03-31 10:12:00,000 INFO - 638:	learn: 0.0381006	total: 1m 25s	remaining: 4.79s
+2018-03-31 10:12:00,125 INFO - 639:	learn: 0.0380970	total: 1m 25s	remaining: 4.66s
+2018-03-31 10:12:00,247 INFO - 640:	learn: 0.0380940	total: 1m 25s	remaining: 4.53s
+2018-03-31 10:12:00,368 INFO - 641:	learn: 0.0380914	total: 1m 25s	remaining: 4.39s
+2018-03-31 10:12:00,499 INFO - 642:	learn: 0.0380898	total: 1m 25s	remaining: 4.26s
+2018-03-31 10:12:00,634 INFO - 643:	learn: 0.0380886	total: 1m 25s	remaining: 4.13s
+2018-03-31 10:12:00,763 INFO - 644:	learn: 0.0380855	total: 1m 25s	remaining: 3.99s
+2018-03-31 10:12:00,883 INFO - 645:	learn: 0.0380815	total: 1m 25s	remaining: 3.86s
+2018-03-31 10:12:01,003 INFO - 646:	learn: 0.0380781	total: 1m 26s	remaining: 3.73s
+2018-03-31 10:12:01,124 INFO - 647:	learn: 0.0380764	total: 1m 26s	remaining: 3.59s
+2018-03-31 10:12:01,248 INFO - 648:	learn: 0.0380726	total: 1m 26s	remaining: 3.46s
+2018-03-31 10:12:01,371 INFO - 649:	learn: 0.0380705	total: 1m 26s	remaining: 3.33s
+2018-03-31 10:12:01,502 INFO - 650:	learn: 0.0380689	total: 1m 26s	remaining: 3.19s
+2018-03-31 10:12:01,623 INFO - 651:	learn: 0.0380670	total: 1m 26s	remaining: 3.06s
+2018-03-31 10:12:01,743 INFO - 652:	learn: 0.0380654	total: 1m 26s	remaining: 2.93s
+2018-03-31 10:12:01,864 INFO - 653:	learn: 0.0380636	total: 1m 26s	remaining: 2.79s
+2018-03-31 10:12:01,984 INFO - 654:	learn: 0.0380601	total: 1m 27s	remaining: 2.66s
+2018-03-31 10:12:02,114 INFO - 655:	learn: 0.0380575	total: 1m 27s	remaining: 2.53s
+2018-03-31 10:12:02,235 INFO - 656:	learn: 0.0380552	total: 1m 27s	remaining: 2.39s
+2018-03-31 10:12:02,355 INFO - 657:	learn: 0.0380518	total: 1m 27s	remaining: 2.26s
+2018-03-31 10:12:02,486 INFO - 658:	learn: 0.0380497	total: 1m 27s	remaining: 2.13s
+2018-03-31 10:12:02,607 INFO - 659:	learn: 0.0380463	total: 1m 27s	remaining: 1.99s
+2018-03-31 10:12:02,730 INFO - 660:	learn: 0.0380439	total: 1m 27s	remaining: 1.86s
+2018-03-31 10:12:02,850 INFO - 661:	learn: 0.0380398	total: 1m 27s	remaining: 1.73s
+2018-03-31 10:12:02,972 INFO - 662:	learn: 0.0380372	total: 1m 28s	remaining: 1.59s
+2018-03-31 10:12:03,094 INFO - 663:	learn: 0.0380344	total: 1m 28s	remaining: 1.46s
+2018-03-31 10:12:03,216 INFO - 664:	learn: 0.0380315	total: 1m 28s	remaining: 1.33s
+2018-03-31 10:12:03,340 INFO - 665:	learn: 0.0380262	total: 1m 28s	remaining: 1.2s
+2018-03-31 10:12:03,469 INFO - 666:	learn: 0.0380228	total: 1m 28s	remaining: 1.06s
+2018-03-31 10:12:03,591 INFO - 667:	learn: 0.0380181	total: 1m 28s	remaining: 929ms
+2018-03-31 10:12:03,712 INFO - 668:	learn: 0.0380148	total: 1m 28s	remaining: 797ms
+2018-03-31 10:12:03,833 INFO - 669:	learn: 0.0380107	total: 1m 28s	remaining: 664ms
+2018-03-31 10:12:03,956 INFO - 670:	learn: 0.0380078	total: 1m 29s	remaining: 531ms
+2018-03-31 10:12:04,084 INFO - 671:	learn: 0.0380054	total: 1m 29s	remaining: 398ms
+2018-03-31 10:12:04,217 INFO - 672:	learn: 0.0380033	total: 1m 29s	remaining: 265ms
+2018-03-31 10:12:04,338 INFO - 673:	learn: 0.0379988	total: 1m 29s	remaining: 133ms
+2018-03-31 10:12:04,470 INFO - 674:	learn: 0.0379960	total: 1m 29s	remaining: 0us
+2018-03-31 10:12:06,744 INFO - 
+2018-03-31 10:12:06,745 INFO - Start predicting for month 10
+2018-03-31 10:12:06,759 INFO - Start predicting test data set.
+2018-03-31 10:12:44,152 INFO - ParcelId    201610  201611  201612
+2018-03-31 10:12:44,152 INFO - 0  10754147  0.032022       0       0
+2018-03-31 10:12:44,153 INFO - 1  10759547  0.017031       0       0
+2018-03-31 10:12:44,153 INFO - 2  10843547  0.027199       0       0
+2018-03-31 10:12:44,153 INFO - 3  10859147  0.046981       0       0
+2018-03-31 10:12:44,153 INFO - 4  10879947  0.004955       0       0
+2018-03-31 10:12:44,153 INFO - 
+2018-03-31 10:12:44,154 INFO - Start predicting for month 11
+2018-03-31 10:12:44,171 INFO - Start predicting test data set.
+2018-03-31 10:13:20,615 INFO - ParcelId    201610    201611  201612
+2018-03-31 10:13:20,615 INFO - 0  10754147  0.032022  0.030763       0
+2018-03-31 10:13:20,615 INFO - 1  10759547  0.017031  0.022265       0
+2018-03-31 10:13:20,615 INFO - 2  10843547  0.027199  0.025912       0
+2018-03-31 10:13:20,616 INFO - 3  10859147  0.046981  0.048567       0
+2018-03-31 10:13:20,616 INFO - 4  10879947  0.004955  0.004566       0
+2018-03-31 10:13:20,616 INFO - 
+2018-03-31 10:13:20,616 INFO - Start predicting for month 12
+2018-03-31 10:13:20,634 INFO - Start predicting test data set.
+2018-03-31 10:13:57,111 INFO - ParcelId    201610    201611    201612
+2018-03-31 10:13:57,112 INFO - 0  10754147  0.032022  0.030763  0.033073
+2018-03-31 10:13:57,112 INFO - 1  10759547  0.017031  0.022265  0.032779
+2018-03-31 10:13:57,112 INFO - 2  10843547  0.027199  0.025912  0.019723
+2018-03-31 10:13:57,112 INFO - 3  10859147  0.046981  0.048567  0.053014
+2018-03-31 10:13:57,113 INFO - 4  10879947  0.004955  0.004566  0.010104
+2018-03-31 10:13:57,113 INFO - Read in data.
+2018-03-31 10:14:16,124 INFO - Binding to float32
+2018-03-31 10:14:45,792 INFO - Binding to float32
+2018-03-31 10:15:01,169 INFO - File sample shape: (2985217, 4)
+2018-03-31 10:15:01,170 INFO - Read_in train set shape: (167888, 60)
+2018-03-31 10:15:01,170 INFO - Read_in test set shape: (2985217, 57)
+2018-03-31 10:15:01,564 INFO - Preprocessing.
+2018-03-31 10:15:24,405 INFO - Outlier upper bound is 0.20045000000000002
+2018-03-31 10:15:24,405 INFO - Outlier lower bound is -0.18655
+2018-03-31 10:18:34,787 INFO - (156529, 107)
+2018-03-31 10:18:49,826 INFO - (2985217, 104)
+2018-03-31 10:19:14,318 INFO - airconditioningtypeid  basementsqft  bathroomcnt  bedroomcnt  \
+2018-03-31 10:19:14,319 INFO - 0                    1.0           0.0          2.0         3.0
+2018-03-31 10:19:14,319 INFO - 1                    5.0           0.0          3.5         4.0
+2018-03-31 10:19:14,319 INFO - 2                    1.0           0.0          3.0         2.0
+2018-03-31 10:19:14,319 INFO - 3                    1.0           0.0          2.0         2.0
+2018-03-31 10:19:14,319 INFO - 4                    5.0           0.0          2.5         4.0
+2018-03-31 10:19:14,319 INFO - 
+2018-03-31 10:19:14,320 INFO - buildingclasstypeid  buildingqualitytypeid  calculatedbathnbr  decktypeid  \
+2018-03-31 10:19:14,320 INFO - 0                  0.0                    4.0                2.0         0.0
+2018-03-31 10:19:14,320 INFO - 1                  0.0                    0.0                3.5         0.0
+2018-03-31 10:19:14,320 INFO - 2                  0.0                    4.0                3.0         0.0
+2018-03-31 10:19:14,320 INFO - 3                  0.0                    4.0                2.0         0.0
+2018-03-31 10:19:14,320 INFO - 4                  0.0                    0.0                2.5         0.0
+2018-03-31 10:19:14,320 INFO - 
+2018-03-31 10:19:14,321 INFO - finishedfloor1squarefeet  calculatedfinishedsquarefeet  ...    \
+2018-03-31 10:19:14,321 INFO - 0                       0.0                      7.428927  ...
+2018-03-31 10:19:14,321 INFO - 1                       0.0                      7.724447  ...
+2018-03-31 10:19:14,321 INFO - 2                       0.0                      7.703910  ...
+2018-03-31 10:19:14,321 INFO - 3                       0.0                      6.732211  ...
+2018-03-31 10:19:14,321 INFO - 4                       0.0                      7.733246  ...
+2018-03-31 10:19:14,321 INFO - 
+2018-03-31 10:19:14,322 INFO - landtaxvaluedollarcnt_d_taxvaluedollarcnt  \
+2018-03-31 10:19:14,322 INFO - 0                                   0.659178
+2018-03-31 10:19:14,322 INFO - 1                                   0.408299
+2018-03-31 10:19:14,322 INFO - 2                                   0.482978
+2018-03-31 10:19:14,322 INFO - 3                                   0.299583
+2018-03-31 10:19:14,322 INFO - 4                                   0.609772
+2018-03-31 10:19:14,323 INFO - 
+2018-03-31 10:19:14,323 INFO - taxamount_d_structuretaxvaluedollarcnt  \
+2018-03-31 10:19:14,323 INFO - 0                                0.054873
+2018-03-31 10:19:14,323 INFO - 1                                0.029305
+2018-03-31 10:19:14,323 INFO - 2                                0.185251
+2018-03-31 10:19:14,323 INFO - 3                                0.017775
+2018-03-31 10:19:14,323 INFO - 4                                0.032369
+2018-03-31 10:19:14,323 INFO - 
+2018-03-31 10:19:14,324 INFO - structuretaxvaluedollarcnt_d_landtaxvaluedollarcnt  \
+2018-03-31 10:19:14,324 INFO - 0                                           0.517042
+2018-03-31 10:19:14,324 INFO - 1                                           1.449185
+2018-03-31 10:19:14,324 INFO - 2                                           1.070486
+2018-03-31 10:19:14,324 INFO - 3                                           2.337968
+2018-03-31 10:19:14,324 INFO - 4                                           0.639957
+2018-03-31 10:19:14,324 INFO - 
+2018-03-31 10:19:14,325 INFO - bedroomcnt_d_bathroomcnt  calculatedfinishedsquarefeet_d_roomcnt  \
+2018-03-31 10:19:14,325 INFO - 0                  1.500000                                   0.000
+2018-03-31 10:19:14,325 INFO - 1                  1.142857                                   0.000
+2018-03-31 10:19:14,325 INFO - 2                  0.666667                                   0.000
+2018-03-31 10:19:14,325 INFO - 3                  1.000000                                   0.000
+2018-03-31 10:19:14,325 INFO - 4                  1.600000                                 285.375
+2018-03-31 10:19:14,325 INFO - 
+2018-03-31 10:19:14,325 INFO - roomcnt_d_bedroomcnt  latitude_m_longitude  latitude_a_longitude  year  \
+2018-03-31 10:19:14,326 INFO - 0                   0.0          -4061.904297            -84.207542  2016
+2018-03-31 10:19:14,326 INFO - 1                   0.0          -3961.982178            -84.009430  2016
+2018-03-31 10:19:14,326 INFO - 2                   0.0          -4034.059570            -84.038727  2016
+2018-03-31 10:19:14,326 INFO - 3                   0.0          -3993.614746            -84.553200  2016
+2018-03-31 10:19:14,326 INFO - 4                   2.0          -3941.268311            -84.214584  2016
+2018-03-31 10:19:14,326 INFO - 
+2018-03-31 10:19:14,326 INFO - month
+2018-03-31 10:19:14,327 INFO - 0      1
+2018-03-31 10:19:14,327 INFO - 1      1
+2018-03-31 10:19:14,327 INFO - 2      1
+2018-03-31 10:19:14,327 INFO - 3      1
+2018-03-31 10:19:14,327 INFO - 4      1
+2018-03-31 10:19:14,327 INFO - 
+2018-03-31 10:19:14,327 INFO - [5 rows x 106 columns]
+2018-03-31 10:19:14,333 INFO - airconditioningtypeid  basementsqft  bathroomcnt  bedroomcnt  \
+2018-03-31 10:19:14,333 INFO - 0                    5.0           0.0          0.0         0.0
+2018-03-31 10:19:14,333 INFO - 1                    5.0           0.0          0.0         0.0
+2018-03-31 10:19:14,334 INFO - 2                    5.0           0.0          0.0         0.0
+2018-03-31 10:19:14,334 INFO - 3                    5.0           0.0          0.0         0.0
+2018-03-31 10:19:14,334 INFO - 4                    5.0           0.0          0.0         0.0
+2018-03-31 10:19:14,334 INFO - 
+2018-03-31 10:19:14,335 INFO - buildingclasstypeid  buildingqualitytypeid  calculatedbathnbr  decktypeid  \
+2018-03-31 10:19:14,335 INFO - 0                  0.0                    0.0                0.0         0.0
+2018-03-31 10:19:14,335 INFO - 1                  0.0                    0.0                0.0         0.0
+2018-03-31 10:19:14,335 INFO - 2                  5.0                    0.0                0.0         0.0
+2018-03-31 10:19:14,335 INFO - 3                  3.0                    6.0                0.0         0.0
+2018-03-31 10:19:14,336 INFO - 4                  4.0                    0.0                0.0         0.0
+2018-03-31 10:19:14,336 INFO - 
+2018-03-31 10:19:14,336 INFO - finishedfloor1squarefeet  calculatedfinishedsquarefeet  \
+2018-03-31 10:19:14,336 INFO - 0                       0.0                     -2.302585
+2018-03-31 10:19:14,336 INFO - 1                       0.0                     -2.302585
+2018-03-31 10:19:14,336 INFO - 2                       0.0                     11.198571
+2018-03-31 10:19:14,337 INFO - 3                       0.0                      8.530702
+2018-03-31 10:19:14,337 INFO - 4                       0.0                      7.482119
+2018-03-31 10:19:14,337 INFO - 
+2018-03-31 10:19:14,337 INFO - ...           calculatedfinishedsquarefeet_d_lotsizesquarefeet  \
+2018-03-31 10:19:14,337 INFO - 0          ...                                                   0.000000
+2018-03-31 10:19:14,338 INFO - 1          ...                                                   0.000000
+2018-03-31 10:19:14,338 INFO - 2          ...                                                   1.157581
+2018-03-31 10:19:14,338 INFO - 3          ...                                                   0.673847
+2018-03-31 10:19:14,338 INFO - 4          ...                                                   0.208647
+2018-03-31 10:19:14,338 INFO - 
+2018-03-31 10:19:14,338 INFO - taxvaluedollarcnt_d_taxamount  landtaxvaluedollarcnt_d_taxvaluedollarcnt  \
+2018-03-31 10:19:14,339 INFO - 0                       0.001503                                   1.000000
+2018-03-31 10:19:14,339 INFO - 1                       4.594028                                   1.000000
+2018-03-31 10:19:14,339 INFO - 2                      68.986320                                   0.539577
+2018-03-31 10:19:14,339 INFO - 3                      80.677956                                   0.506112
+2018-03-31 10:19:14,339 INFO - 4                      76.871254                                   0.552941
+2018-03-31 10:19:14,340 INFO - 
+2018-03-31 10:19:14,340 INFO - taxamount_d_structuretaxvaluedollarcnt  \
+2018-03-31 10:19:14,340 INFO - 0                                0.032491
+2018-03-31 10:19:14,340 INFO - 1                                0.032491
+2018-03-31 10:19:14,340 INFO - 2                                0.031483
+2018-03-31 10:19:14,340 INFO - 3                                0.025097
+2018-03-31 10:19:14,341 INFO - 4                                0.029099
+2018-03-31 10:19:14,341 INFO - 
+2018-03-31 10:19:14,341 INFO - structuretaxvaluedollarcnt_d_landtaxvaluedollarcnt  \
+2018-03-31 10:19:14,341 INFO - 0                                       20482.888672
+2018-03-31 10:19:14,341 INFO - 1                                           6.699593
+2018-03-31 10:19:14,341 INFO - 2                                           0.853304
+2018-03-31 10:19:14,342 INFO - 3                                           0.975847
+2018-03-31 10:19:14,342 INFO - 4                                           0.808510
+2018-03-31 10:19:14,342 INFO - 
+2018-03-31 10:19:14,342 INFO - bedroomcnt_d_bathroomcnt  calculatedfinishedsquarefeet_d_roomcnt  \
+2018-03-31 10:19:14,342 INFO - 0                       0.0                                     0.0
+2018-03-31 10:19:14,342 INFO - 1                       0.0                                     0.0
+2018-03-31 10:19:14,343 INFO - 2                       0.0                                     0.0
+2018-03-31 10:19:14,343 INFO - 3                       0.0                                     0.0
+2018-03-31 10:19:14,343 INFO - 4                       0.0                                     0.0
+2018-03-31 10:19:14,343 INFO - 
+2018-03-31 10:19:14,343 INFO - roomcnt_d_bedroomcnt  latitude_m_longitude  latitude_a_longitude
+2018-03-31 10:19:14,344 INFO - 0                   0.0          -4051.377197            -84.509644
+2018-03-31 10:19:14,344 INFO - 1                   0.0          -4049.920898            -84.484924
+2018-03-31 10:19:14,344 INFO - 2                   0.0          -4024.157715            -84.405273
+2018-03-31 10:19:14,344 INFO - 3                   0.0          -4044.496338            -84.288345
+2018-03-31 10:19:14,344 INFO - 4                   0.0          -4048.104492            -84.191650
+2018-03-31 10:19:14,344 INFO - 
+2018-03-31 10:19:14,345 INFO - [5 rows x 104 columns]
+2018-03-31 10:19:14,345 INFO - Writing Train and Testing file
+2018-03-31 10:27:03,263 INFO - After pre-processing, train set shape: (156529, 106)
+2018-03-31 10:27:03,263 INFO - After pre-processing, test set shape: (2985217, 104)
+2018-03-31 10:27:03,364 INFO - 
+2018-03-31 10:27:03,364 INFO - x_Training set has 125223 rows, 106 columns.
+2018-03-31 10:27:03,364 INFO - x_Test set has 31306 rows, 106 columns.
+2018-03-31 10:27:03,365 INFO - 
+2018-03-31 10:27:06,318 INFO - 0:	learn: 0.0418438	total: 166ms	remaining: 1m 52s
+2018-03-31 10:27:06,557 INFO - 1:	learn: 0.0416242	total: 406ms	remaining: 2m 16s
+2018-03-31 10:27:06,718 INFO - 2:	learn: 0.0414606	total: 566ms	remaining: 2m 6s
+2018-03-31 10:27:06,943 INFO - 3:	learn: 0.0413320	total: 791ms	remaining: 2m 12s
+2018-03-31 10:27:07,146 INFO - 4:	learn: 0.0412513	total: 994ms	remaining: 2m 13s
+2018-03-31 10:27:07,303 INFO - 5:	learn: 0.0411784	total: 1.15s	remaining: 2m 8s
+2018-03-31 10:27:07,498 INFO - 6:	learn: 0.0411231	total: 1.34s	remaining: 2m 8s
+2018-03-31 10:27:07,657 INFO - 7:	learn: 0.0410774	total: 1.5s	remaining: 2m 5s
+2018-03-31 10:27:07,895 INFO - 8:	learn: 0.0410390	total: 1.74s	remaining: 2m 8s
+2018-03-31 10:27:08,058 INFO - 9:	learn: 0.0410046	total: 1.9s	remaining: 2m 6s
+2018-03-31 10:27:08,254 INFO - 10:	learn: 0.0409760	total: 2.1s	remaining: 2m 6s
+2018-03-31 10:27:08,488 INFO - 11:	learn: 0.0409546	total: 2.33s	remaining: 2m 8s
+2018-03-31 10:27:08,712 INFO - 12:	learn: 0.0409333	total: 2.56s	remaining: 2m 10s
+2018-03-31 10:27:08,900 INFO - 13:	learn: 0.0409128	total: 2.75s	remaining: 2m 9s
+2018-03-31 10:27:09,060 INFO - 14:	learn: 0.0408937	total: 2.91s	remaining: 2m 7s
+2018-03-31 10:27:09,219 INFO - 15:	learn: 0.0408785	total: 3.06s	remaining: 2m 6s
+2018-03-31 10:27:09,429 INFO - 16:	learn: 0.0408641	total: 3.27s	remaining: 2m 6s
+2018-03-31 10:27:09,633 INFO - 17:	learn: 0.0408460	total: 3.48s	remaining: 2m 6s
+2018-03-31 10:27:09,791 INFO - 18:	learn: 0.0408267	total: 3.64s	remaining: 2m 5s
+2018-03-31 10:27:10,015 INFO - 19:	learn: 0.0408042	total: 3.86s	remaining: 2m 6s
+2018-03-31 10:27:10,218 INFO - 20:	learn: 0.0407950	total: 4.06s	remaining: 2m 6s
+2018-03-31 10:27:10,379 INFO - 21:	learn: 0.0407833	total: 4.22s	remaining: 2m 5s
+2018-03-31 10:27:10,588 INFO - 22:	learn: 0.0407696	total: 4.43s	remaining: 2m 5s
+2018-03-31 10:27:10,756 INFO - 23:	learn: 0.0407578	total: 4.6s	remaining: 2m 4s
+2018-03-31 10:27:10,967 INFO - 24:	learn: 0.0407453	total: 4.81s	remaining: 2m 5s
+2018-03-31 10:27:11,200 INFO - 25:	learn: 0.0407381	total: 5.04s	remaining: 2m 5s
+2018-03-31 10:27:11,403 INFO - 26:	learn: 0.0407273	total: 5.25s	remaining: 2m 5s
+2018-03-31 10:27:11,603 INFO - 27:	learn: 0.0407088	total: 5.45s	remaining: 2m 5s
+2018-03-31 10:27:11,764 INFO - 28:	learn: 0.0406986	total: 5.61s	remaining: 2m 4s
+2018-03-31 10:27:11,921 INFO - 29:	learn: 0.0406836	total: 5.76s	remaining: 2m 3s
+2018-03-31 10:27:12,088 INFO - 30:	learn: 0.0406693	total: 5.93s	remaining: 2m 3s
+2018-03-31 10:27:12,247 INFO - 31:	learn: 0.0406621	total: 6.09s	remaining: 2m 2s
+2018-03-31 10:27:12,428 INFO - 32:	learn: 0.0406525	total: 6.27s	remaining: 2m 1s
+2018-03-31 10:27:12,674 INFO - 33:	learn: 0.0406475	total: 6.52s	remaining: 2m 2s
+2018-03-31 10:27:12,849 INFO - 34:	learn: 0.0406348	total: 6.69s	remaining: 2m 2s
+2018-03-31 10:27:13,008 INFO - 35:	learn: 0.0406242	total: 6.85s	remaining: 2m 1s
+2018-03-31 10:27:13,167 INFO - 36:	learn: 0.0406148	total: 7.01s	remaining: 2m
+2018-03-31 10:27:13,332 INFO - 37:	learn: 0.0406088	total: 7.17s	remaining: 2m
+2018-03-31 10:27:13,529 INFO - 38:	learn: 0.0405987	total: 7.37s	remaining: 2m
+2018-03-31 10:27:13,772 INFO - 39:	learn: 0.0405904	total: 7.61s	remaining: 2m
+2018-03-31 10:27:14,008 INFO - 40:	learn: 0.0405748	total: 7.85s	remaining: 2m 1s
+2018-03-31 10:27:14,200 INFO - 41:	learn: 0.0405608	total: 8.04s	remaining: 2m 1s
+2018-03-31 10:27:14,369 INFO - 42:	learn: 0.0405526	total: 8.21s	remaining: 2m
+2018-03-31 10:27:14,605 INFO - 43:	learn: 0.0405459	total: 8.44s	remaining: 2m 1s
+2018-03-31 10:27:14,790 INFO - 44:	learn: 0.0405353	total: 8.63s	remaining: 2m
+2018-03-31 10:27:14,954 INFO - 45:	learn: 0.0405294	total: 8.79s	remaining: 2m
+2018-03-31 10:27:15,177 INFO - 46:	learn: 0.0405239	total: 9.02s	remaining: 2m
+2018-03-31 10:27:15,335 INFO - 47:	learn: 0.0405172	total: 9.17s	remaining: 1m 59s
+2018-03-31 10:27:15,525 INFO - 48:	learn: 0.0405143	total: 9.36s	remaining: 1m 59s
+2018-03-31 10:27:15,684 INFO - 49:	learn: 0.0405029	total: 9.52s	remaining: 1m 59s
+2018-03-31 10:27:15,920 INFO - 50:	learn: 0.0404961	total: 9.76s	remaining: 1m 59s
+2018-03-31 10:27:16,101 INFO - 51:	learn: 0.0404905	total: 9.94s	remaining: 1m 59s
+2018-03-31 10:27:16,260 INFO - 52:	learn: 0.0404834	total: 10.1s	remaining: 1m 58s
+2018-03-31 10:27:16,436 INFO - 53:	learn: 0.0404781	total: 10.3s	remaining: 1m 58s
+2018-03-31 10:27:16,620 INFO - 54:	learn: 0.0404697	total: 10.5s	remaining: 1m 57s
+2018-03-31 10:27:16,858 INFO - 55:	learn: 0.0404652	total: 10.7s	remaining: 1m 58s
+2018-03-31 10:27:17,075 INFO - 56:	learn: 0.0404577	total: 10.9s	remaining: 1m 58s
+2018-03-31 10:27:17,301 INFO - 57:	learn: 0.0404522	total: 11.1s	remaining: 1m 58s
+2018-03-31 10:27:17,474 INFO - 58:	learn: 0.0404487	total: 11.3s	remaining: 1m 58s
+2018-03-31 10:27:17,657 INFO - 59:	learn: 0.0404417	total: 11.5s	remaining: 1m 57s
+2018-03-31 10:27:17,870 INFO - 60:	learn: 0.0404364	total: 11.7s	remaining: 1m 57s
+2018-03-31 10:27:18,107 INFO - 61:	learn: 0.0404291	total: 11.9s	remaining: 1m 58s
+2018-03-31 10:27:18,274 INFO - 62:	learn: 0.0404230	total: 12.1s	remaining: 1m 57s
+2018-03-31 10:27:18,458 INFO - 63:	learn: 0.0404173	total: 12.3s	remaining: 1m 57s
+2018-03-31 10:27:18,644 INFO - 64:	learn: 0.0404112	total: 12.5s	remaining: 1m 57s
+2018-03-31 10:27:18,812 INFO - 65:	learn: 0.0404025	total: 12.6s	remaining: 1m 56s
+2018-03-31 10:27:18,989 INFO - 66:	learn: 0.0403956	total: 12.8s	remaining: 1m 56s
+2018-03-31 10:27:19,152 INFO - 67:	learn: 0.0403897	total: 13s	remaining: 1m 55s
+2018-03-31 10:27:19,341 INFO - 68:	learn: 0.0403823	total: 13.2s	remaining: 1m 55s
+2018-03-31 10:27:19,526 INFO - 69:	learn: 0.0403788	total: 13.4s	remaining: 1m 55s
+2018-03-31 10:27:19,763 INFO - 70:	learn: 0.0403708	total: 13.6s	remaining: 1m 55s
+2018-03-31 10:27:19,940 INFO - 71:	learn: 0.0403623	total: 13.8s	remaining: 1m 55s
+2018-03-31 10:27:20,111 INFO - 72:	learn: 0.0403566	total: 13.9s	remaining: 1m 55s
+2018-03-31 10:27:20,268 INFO - 73:	learn: 0.0403471	total: 14.1s	remaining: 1m 54s
+2018-03-31 10:27:20,428 INFO - 74:	learn: 0.0403436	total: 14.3s	remaining: 1m 54s
+2018-03-31 10:27:20,568 INFO - 75:	learn: 0.0403368	total: 14.4s	remaining: 1m 53s
+2018-03-31 10:27:20,698 INFO - 76:	learn: 0.0403316	total: 14.5s	remaining: 1m 52s
+2018-03-31 10:27:20,823 INFO - 77:	learn: 0.0403260	total: 14.7s	remaining: 1m 52s
+2018-03-31 10:27:20,952 INFO - 78:	learn: 0.0403234	total: 14.8s	remaining: 1m 51s
+2018-03-31 10:27:21,079 INFO - 79:	learn: 0.0403126	total: 14.9s	remaining: 1m 50s
+2018-03-31 10:27:21,204 INFO - 80:	learn: 0.0403091	total: 15s	remaining: 1m 50s
+2018-03-31 10:27:21,332 INFO - 81:	learn: 0.0403016	total: 15.2s	remaining: 1m 49s
+2018-03-31 10:27:21,470 INFO - 82:	learn: 0.0402986	total: 15.3s	remaining: 1m 49s
+2018-03-31 10:27:21,600 INFO - 83:	learn: 0.0402929	total: 15.4s	remaining: 1m 48s
+2018-03-31 10:27:21,727 INFO - 84:	learn: 0.0402889	total: 15.6s	remaining: 1m 47s
+2018-03-31 10:27:21,853 INFO - 85:	learn: 0.0402828	total: 15.7s	remaining: 1m 47s
+2018-03-31 10:27:21,981 INFO - 86:	learn: 0.0402768	total: 15.8s	remaining: 1m 46s
+2018-03-31 10:27:22,108 INFO - 87:	learn: 0.0402736	total: 15.9s	remaining: 1m 46s
+2018-03-31 10:27:22,237 INFO - 88:	learn: 0.0402690	total: 16.1s	remaining: 1m 45s
+2018-03-31 10:27:22,366 INFO - 89:	learn: 0.0402643	total: 16.2s	remaining: 1m 45s
+2018-03-31 10:27:22,506 INFO - 90:	learn: 0.0402608	total: 16.3s	remaining: 1m 44s
+2018-03-31 10:27:22,638 INFO - 91:	learn: 0.0402524	total: 16.5s	remaining: 1m 44s
+2018-03-31 10:27:22,767 INFO - 92:	learn: 0.0402467	total: 16.6s	remaining: 1m 43s
+2018-03-31 10:27:22,893 INFO - 93:	learn: 0.0402415	total: 16.7s	remaining: 1m 43s
+2018-03-31 10:27:23,020 INFO - 94:	learn: 0.0402354	total: 16.8s	remaining: 1m 42s
+2018-03-31 10:27:23,150 INFO - 95:	learn: 0.0402308	total: 17s	remaining: 1m 42s
+2018-03-31 10:27:23,278 INFO - 96:	learn: 0.0402249	total: 17.1s	remaining: 1m 41s
+2018-03-31 10:27:23,405 INFO - 97:	learn: 0.0402197	total: 17.2s	remaining: 1m 41s
+2018-03-31 10:27:23,542 INFO - 98:	learn: 0.0402114	total: 17.4s	remaining: 1m 41s
+2018-03-31 10:27:23,668 INFO - 99:	learn: 0.0402022	total: 17.5s	remaining: 1m 40s
+2018-03-31 10:27:23,796 INFO - 100:	learn: 0.0401962	total: 17.6s	remaining: 1m 40s
+2018-03-31 10:27:23,930 INFO - 101:	learn: 0.0401936	total: 17.8s	remaining: 1m 39s
+2018-03-31 10:27:24,059 INFO - 102:	learn: 0.0401859	total: 17.9s	remaining: 1m 39s
+2018-03-31 10:27:24,185 INFO - 103:	learn: 0.0401780	total: 18s	remaining: 1m 38s
+2018-03-31 10:27:24,313 INFO - 104:	learn: 0.0401723	total: 18.1s	remaining: 1m 38s
+2018-03-31 10:27:24,449 INFO - 105:	learn: 0.0401641	total: 18.3s	remaining: 1m 38s
+2018-03-31 10:27:24,578 INFO - 106:	learn: 0.0401568	total: 18.4s	remaining: 1m 37s
+2018-03-31 10:27:24,714 INFO - 107:	learn: 0.0401504	total: 18.5s	remaining: 1m 37s
+2018-03-31 10:27:24,846 INFO - 108:	learn: 0.0401458	total: 18.7s	remaining: 1m 36s
+2018-03-31 10:27:24,974 INFO - 109:	learn: 0.0401415	total: 18.8s	remaining: 1m 36s
+2018-03-31 10:27:25,101 INFO - 110:	learn: 0.0401354	total: 18.9s	remaining: 1m 36s
+2018-03-31 10:27:25,226 INFO - 111:	learn: 0.0401284	total: 19.1s	remaining: 1m 35s
+2018-03-31 10:27:25,351 INFO - 112:	learn: 0.0401246	total: 19.2s	remaining: 1m 35s
+2018-03-31 10:27:25,489 INFO - 113:	learn: 0.0401202	total: 19.3s	remaining: 1m 35s
+2018-03-31 10:27:25,615 INFO - 114:	learn: 0.0401087	total: 19.4s	remaining: 1m 34s
+2018-03-31 10:27:25,742 INFO - 115:	learn: 0.0401041	total: 19.6s	remaining: 1m 34s
+2018-03-31 10:27:25,868 INFO - 116:	learn: 0.0401005	total: 19.7s	remaining: 1m 33s
+2018-03-31 10:27:25,993 INFO - 117:	learn: 0.0400924	total: 19.8s	remaining: 1m 33s
+2018-03-31 10:27:26,118 INFO - 118:	learn: 0.0400868	total: 19.9s	remaining: 1m 33s
+2018-03-31 10:27:26,244 INFO - 119:	learn: 0.0400846	total: 20.1s	remaining: 1m 32s
+2018-03-31 10:27:26,370 INFO - 120:	learn: 0.0400754	total: 20.2s	remaining: 1m 32s
+2018-03-31 10:27:26,504 INFO - 121:	learn: 0.0400694	total: 20.3s	remaining: 1m 32s
+2018-03-31 10:27:26,632 INFO - 122:	learn: 0.0400649	total: 20.5s	remaining: 1m 31s
+2018-03-31 10:27:26,760 INFO - 123:	learn: 0.0400583	total: 20.6s	remaining: 1m 31s
+2018-03-31 10:27:26,891 INFO - 124:	learn: 0.0400535	total: 20.7s	remaining: 1m 31s
+2018-03-31 10:27:27,017 INFO - 125:	learn: 0.0400472	total: 20.8s	remaining: 1m 30s
+2018-03-31 10:27:27,141 INFO - 126:	learn: 0.0400402	total: 21s	remaining: 1m 30s
+2018-03-31 10:27:27,265 INFO - 127:	learn: 0.0400320	total: 21.1s	remaining: 1m 30s
+2018-03-31 10:27:27,389 INFO - 128:	learn: 0.0400282	total: 21.2s	remaining: 1m 29s
+2018-03-31 10:27:27,523 INFO - 129:	learn: 0.0400231	total: 21.3s	remaining: 1m 29s
+2018-03-31 10:27:27,648 INFO - 130:	learn: 0.0400161	total: 21.5s	remaining: 1m 29s
+2018-03-31 10:27:27,775 INFO - 131:	learn: 0.0400105	total: 21.6s	remaining: 1m 28s
+2018-03-31 10:27:27,903 INFO - 132:	learn: 0.0400057	total: 21.7s	remaining: 1m 28s
+2018-03-31 10:27:28,027 INFO - 133:	learn: 0.0400011	total: 21.8s	remaining: 1m 28s
+2018-03-31 10:27:28,148 INFO - 134:	learn: 0.0399959	total: 22s	remaining: 1m 27s
+2018-03-31 10:27:28,273 INFO - 135:	learn: 0.0399879	total: 22.1s	remaining: 1m 27s
+2018-03-31 10:27:28,401 INFO - 136:	learn: 0.0399863	total: 22.2s	remaining: 1m 27s
+2018-03-31 10:27:28,539 INFO - 137:	learn: 0.0399836	total: 22.4s	remaining: 1m 27s
+2018-03-31 10:27:28,665 INFO - 138:	learn: 0.0399771	total: 22.5s	remaining: 1m 26s
+2018-03-31 10:27:28,793 INFO - 139:	learn: 0.0399747	total: 22.6s	remaining: 1m 26s
+2018-03-31 10:27:28,921 INFO - 140:	learn: 0.0399715	total: 22.7s	remaining: 1m 26s
+2018-03-31 10:27:29,051 INFO - 141:	learn: 0.0399678	total: 22.9s	remaining: 1m 25s
+2018-03-31 10:27:29,179 INFO - 142:	learn: 0.0399656	total: 23s	remaining: 1m 25s
+2018-03-31 10:27:29,304 INFO - 143:	learn: 0.0399627	total: 23.1s	remaining: 1m 25s
+2018-03-31 10:27:29,431 INFO - 144:	learn: 0.0399591	total: 23.3s	remaining: 1m 24s
+2018-03-31 10:27:29,565 INFO - 145:	learn: 0.0399527	total: 23.4s	remaining: 1m 24s
+2018-03-31 10:27:29,691 INFO - 146:	learn: 0.0399489	total: 23.5s	remaining: 1m 24s
+2018-03-31 10:27:29,815 INFO - 147:	learn: 0.0399444	total: 23.6s	remaining: 1m 24s
+2018-03-31 10:27:29,944 INFO - 148:	learn: 0.0399413	total: 23.8s	remaining: 1m 23s
+2018-03-31 10:27:30,071 INFO - 149:	learn: 0.0399331	total: 23.9s	remaining: 1m 23s
+2018-03-31 10:27:30,194 INFO - 150:	learn: 0.0399244	total: 24s	remaining: 1m 23s
+2018-03-31 10:27:30,319 INFO - 151:	learn: 0.0399205	total: 24.1s	remaining: 1m 23s
+2018-03-31 10:27:30,454 INFO - 152:	learn: 0.0399131	total: 24.3s	remaining: 1m 22s
+2018-03-31 10:27:30,584 INFO - 153:	learn: 0.0399120	total: 24.4s	remaining: 1m 22s
+2018-03-31 10:27:30,708 INFO - 154:	learn: 0.0399054	total: 24.5s	remaining: 1m 22s
+2018-03-31 10:27:30,834 INFO - 155:	learn: 0.0399005	total: 24.7s	remaining: 1m 22s
+2018-03-31 10:27:30,961 INFO - 156:	learn: 0.0398974	total: 24.8s	remaining: 1m 21s
+2018-03-31 10:27:31,094 INFO - 157:	learn: 0.0398909	total: 24.9s	remaining: 1m 21s
+2018-03-31 10:27:31,221 INFO - 158:	learn: 0.0398836	total: 25s	remaining: 1m 21s
+2018-03-31 10:27:31,349 INFO - 159:	learn: 0.0398757	total: 25.2s	remaining: 1m 21s
+2018-03-31 10:27:31,491 INFO - 160:	learn: 0.0398728	total: 25.3s	remaining: 1m 20s
+2018-03-31 10:27:31,622 INFO - 161:	learn: 0.0398678	total: 25.4s	remaining: 1m 20s
+2018-03-31 10:27:31,753 INFO - 162:	learn: 0.0398664	total: 25.6s	remaining: 1m 20s
+2018-03-31 10:27:31,881 INFO - 163:	learn: 0.0398623	total: 25.7s	remaining: 1m 20s
+2018-03-31 10:27:32,009 INFO - 164:	learn: 0.0398570	total: 25.8s	remaining: 1m 19s
+2018-03-31 10:27:32,140 INFO - 165:	learn: 0.0398543	total: 26s	remaining: 1m 19s
+2018-03-31 10:27:32,269 INFO - 166:	learn: 0.0398513	total: 26.1s	remaining: 1m 19s
+2018-03-31 10:27:32,400 INFO - 167:	learn: 0.0398476	total: 26.2s	remaining: 1m 19s
+2018-03-31 10:27:32,542 INFO - 168:	learn: 0.0398446	total: 26.4s	remaining: 1m 18s
+2018-03-31 10:27:32,674 INFO - 169:	learn: 0.0398418	total: 26.5s	remaining: 1m 18s
+2018-03-31 10:27:32,807 INFO - 170:	learn: 0.0398384	total: 26.6s	remaining: 1m 18s
+2018-03-31 10:27:32,938 INFO - 171:	learn: 0.0398359	total: 26.8s	remaining: 1m 18s
+2018-03-31 10:27:33,073 INFO - 172:	learn: 0.0398280	total: 26.9s	remaining: 1m 18s
+2018-03-31 10:27:33,206 INFO - 173:	learn: 0.0398257	total: 27s	remaining: 1m 17s
+2018-03-31 10:27:33,335 INFO - 174:	learn: 0.0398229	total: 27.1s	remaining: 1m 17s
+2018-03-31 10:27:33,475 INFO - 175:	learn: 0.0398190	total: 27.3s	remaining: 1m 17s
+2018-03-31 10:27:33,604 INFO - 176:	learn: 0.0398131	total: 27.4s	remaining: 1m 17s
+2018-03-31 10:27:33,738 INFO - 177:	learn: 0.0398086	total: 27.6s	remaining: 1m 16s
+2018-03-31 10:27:33,867 INFO - 178:	learn: 0.0398046	total: 27.7s	remaining: 1m 16s
+2018-03-31 10:27:33,996 INFO - 179:	learn: 0.0397994	total: 27.8s	remaining: 1m 16s
+2018-03-31 10:27:34,126 INFO - 180:	learn: 0.0397877	total: 27.9s	remaining: 1m 16s
+2018-03-31 10:27:34,255 INFO - 181:	learn: 0.0397844	total: 28.1s	remaining: 1m 16s
+2018-03-31 10:27:34,385 INFO - 182:	learn: 0.0397747	total: 28.2s	remaining: 1m 15s
+2018-03-31 10:27:34,528 INFO - 183:	learn: 0.0397719	total: 28.3s	remaining: 1m 15s
+2018-03-31 10:27:34,657 INFO - 184:	learn: 0.0397669	total: 28.5s	remaining: 1m 15s
+2018-03-31 10:27:34,787 INFO - 185:	learn: 0.0397634	total: 28.6s	remaining: 1m 15s
+2018-03-31 10:27:34,920 INFO - 186:	learn: 0.0397583	total: 28.7s	remaining: 1m 14s
+2018-03-31 10:27:35,053 INFO - 187:	learn: 0.0397503	total: 28.9s	remaining: 1m 14s
+2018-03-31 10:27:35,187 INFO - 188:	learn: 0.0397437	total: 29s	remaining: 1m 14s
+2018-03-31 10:27:41,098 INFO - 189:	learn: 0.0397412	total: 29.1s	remaining: 1m 14s
+2018-03-31 10:27:41,137 INFO - 190:	learn: 0.0397354	total: 29.3s	remaining: 1m 14s
+2018-03-31 10:27:41,137 INFO - 191:	learn: 0.0397342	total: 29.4s	remaining: 1m 13s
+2018-03-31 10:27:41,137 INFO - 192:	learn: 0.0397287	total: 29.5s	remaining: 1m 13s
+2018-03-31 10:27:41,138 INFO - 193:	learn: 0.0397232	total: 29.7s	remaining: 1m 13s
+2018-03-31 10:27:41,138 INFO - 194:	learn: 0.0397171	total: 29.8s	remaining: 1m 13s
+2018-03-31 10:27:41,138 INFO - 195:	learn: 0.0397116	total: 29.9s	remaining: 1m 13s
+2018-03-31 10:27:41,138 INFO - 196:	learn: 0.0397064	total: 30.1s	remaining: 1m 12s
+2018-03-31 10:27:41,139 INFO - 197:	learn: 0.0397000	total: 30.2s	remaining: 1m 12s
+2018-03-31 10:27:41,139 INFO - 198:	learn: 0.0396966	total: 30.3s	remaining: 1m 12s
+2018-03-31 10:27:41,139 INFO - 199:	learn: 0.0396864	total: 30.5s	remaining: 1m 12s
+2018-03-31 10:27:41,139 INFO - 200:	learn: 0.0396790	total: 30.6s	remaining: 1m 12s
+2018-03-31 10:27:41,140 INFO - 201:	learn: 0.0396750	total: 30.7s	remaining: 1m 11s
+2018-03-31 10:27:41,140 INFO - 202:	learn: 0.0396685	total: 30.9s	remaining: 1m 11s
+2018-03-31 10:27:41,140 INFO - 203:	learn: 0.0396635	total: 31s	remaining: 1m 11s
+2018-03-31 10:27:41,140 INFO - 204:	learn: 0.0396580	total: 31.1s	remaining: 1m 11s
+2018-03-31 10:27:41,141 INFO - 205:	learn: 0.0396525	total: 31.3s	remaining: 1m 11s
+2018-03-31 10:27:41,141 INFO - 206:	learn: 0.0396476	total: 31.4s	remaining: 1m 10s
+2018-03-31 10:27:41,141 INFO - 207:	learn: 0.0396433	total: 31.5s	remaining: 1m 10s
+2018-03-31 10:27:41,141 INFO - 208:	learn: 0.0396378	total: 31.7s	remaining: 1m 10s
+2018-03-31 10:27:41,142 INFO - 209:	learn: 0.0396341	total: 31.8s	remaining: 1m 10s
+2018-03-31 10:27:41,142 INFO - 210:	learn: 0.0396302	total: 31.9s	remaining: 1m 10s
+2018-03-31 10:27:41,142 INFO - 211:	learn: 0.0396261	total: 32s	remaining: 1m 9s
+2018-03-31 10:27:41,142 INFO - 212:	learn: 0.0396208	total: 32.2s	remaining: 1m 9s
+2018-03-31 10:27:41,142 INFO - 213:	learn: 0.0396174	total: 32.3s	remaining: 1m 9s
+2018-03-31 10:27:41,143 INFO - 214:	learn: 0.0396125	total: 32.4s	remaining: 1m 9s
+2018-03-31 10:27:41,143 INFO - 215:	learn: 0.0396105	total: 32.6s	remaining: 1m 9s
+2018-03-31 10:27:41,143 INFO - 216:	learn: 0.0396055	total: 32.7s	remaining: 1m 9s
+2018-03-31 10:27:41,143 INFO - 217:	learn: 0.0396028	total: 32.8s	remaining: 1m 8s
+2018-03-31 10:27:41,144 INFO - 218:	learn: 0.0395997	total: 33s	remaining: 1m 8s
+2018-03-31 10:27:41,144 INFO - 219:	learn: 0.0395967	total: 33.1s	remaining: 1m 8s
+2018-03-31 10:27:41,144 INFO - 220:	learn: 0.0395925	total: 33.2s	remaining: 1m 8s
+2018-03-31 10:27:41,145 INFO - 221:	learn: 0.0395883	total: 33.4s	remaining: 1m 8s
+2018-03-31 10:27:41,145 INFO - 222:	learn: 0.0395840	total: 33.5s	remaining: 1m 7s
+2018-03-31 10:27:41,145 INFO - 223:	learn: 0.0395822	total: 33.6s	remaining: 1m 7s
+2018-03-31 10:27:41,145 INFO - 224:	learn: 0.0395771	total: 33.8s	remaining: 1m 7s
+2018-03-31 10:27:41,146 INFO - 225:	learn: 0.0395729	total: 33.9s	remaining: 1m 7s
+2018-03-31 10:27:41,146 INFO - 226:	learn: 0.0395688	total: 34s	remaining: 1m 7s
+2018-03-31 10:27:41,146 INFO - 227:	learn: 0.0395650	total: 34.2s	remaining: 1m 6s
+2018-03-31 10:27:41,147 INFO - 228:	learn: 0.0395610	total: 34.3s	remaining: 1m 6s
+2018-03-31 10:27:41,147 INFO - 229:	learn: 0.0395552	total: 34.4s	remaining: 1m 6s
+2018-03-31 10:27:41,147 INFO - 230:	learn: 0.0395512	total: 34.6s	remaining: 1m 6s
+2018-03-31 10:27:41,148 INFO - 231:	learn: 0.0395470	total: 34.7s	remaining: 1m 6s
+2018-03-31 10:27:41,148 INFO - 232:	learn: 0.0395420	total: 34.8s	remaining: 1m 6s
+2018-03-31 10:27:41,162 INFO - 233:	learn: 0.0395382	total: 35s	remaining: 1m 5s
+2018-03-31 10:27:41,288 INFO - 234:	learn: 0.0395330	total: 35.1s	remaining: 1m 5s
+2018-03-31 10:27:41,462 INFO - 235:	learn: 0.0395301	total: 35.3s	remaining: 1m 5s
+2018-03-31 10:27:41,616 INFO - 236:	learn: 0.0395240	total: 35.4s	remaining: 1m 5s
+2018-03-31 10:27:41,745 INFO - 237:	learn: 0.0395222	total: 35.5s	remaining: 1m 5s
+2018-03-31 10:27:41,866 INFO - 238:	learn: 0.0395205	total: 35.7s	remaining: 1m 5s
+2018-03-31 10:27:41,986 INFO - 239:	learn: 0.0395160	total: 35.8s	remaining: 1m 4s
+2018-03-31 10:27:42,107 INFO - 240:	learn: 0.0395133	total: 35.9s	remaining: 1m 4s
+2018-03-31 10:27:42,228 INFO - 241:	learn: 0.0395097	total: 36s	remaining: 1m 4s
+2018-03-31 10:27:42,350 INFO - 242:	learn: 0.0395030	total: 36.2s	remaining: 1m 4s
+2018-03-31 10:27:42,478 INFO - 243:	learn: 0.0394979	total: 36.3s	remaining: 1m 4s
+2018-03-31 10:27:42,599 INFO - 244:	learn: 0.0394938	total: 36.4s	remaining: 1m 3s
+2018-03-31 10:27:42,720 INFO - 245:	learn: 0.0394878	total: 36.5s	remaining: 1m 3s
+2018-03-31 10:27:42,840 INFO - 246:	learn: 0.0394821	total: 36.6s	remaining: 1m 3s
+2018-03-31 10:27:42,961 INFO - 247:	learn: 0.0394769	total: 36.8s	remaining: 1m 3s
+2018-03-31 10:27:43,084 INFO - 248:	learn: 0.0394751	total: 36.9s	remaining: 1m 3s
+2018-03-31 10:27:43,205 INFO - 249:	learn: 0.0394705	total: 37s	remaining: 1m 2s
+2018-03-31 10:27:43,326 INFO - 250:	learn: 0.0394647	total: 37.1s	remaining: 1m 2s
+2018-03-31 10:27:43,460 INFO - 251:	learn: 0.0394564	total: 37.3s	remaining: 1m 2s
+2018-03-31 10:27:43,581 INFO - 252:	learn: 0.0394495	total: 37.4s	remaining: 1m 2s
+2018-03-31 10:27:43,709 INFO - 253:	learn: 0.0394453	total: 37.5s	remaining: 1m 2s
+2018-03-31 10:27:43,829 INFO - 254:	learn: 0.0394421	total: 37.6s	remaining: 1m 1s
+2018-03-31 10:27:43,950 INFO - 255:	learn: 0.0394382	total: 37.8s	remaining: 1m 1s
+2018-03-31 10:27:44,071 INFO - 256:	learn: 0.0394343	total: 37.9s	remaining: 1m 1s
+2018-03-31 10:27:44,191 INFO - 257:	learn: 0.0394299	total: 38s	remaining: 1m 1s
+2018-03-31 10:27:44,311 INFO - 258:	learn: 0.0394229	total: 38.1s	remaining: 1m 1s
+2018-03-31 10:27:44,432 INFO - 259:	learn: 0.0394166	total: 38.2s	remaining: 1m 1s
+2018-03-31 10:27:44,559 INFO - 260:	learn: 0.0394104	total: 38.4s	remaining: 1m
+2018-03-31 10:27:44,685 INFO - 261:	learn: 0.0394091	total: 38.5s	remaining: 1m
+2018-03-31 10:27:44,808 INFO - 262:	learn: 0.0394063	total: 38.6s	remaining: 1m
+2018-03-31 10:27:44,929 INFO - 263:	learn: 0.0394013	total: 38.7s	remaining: 1m
+2018-03-31 10:27:45,048 INFO - 264:	learn: 0.0393957	total: 38.8s	remaining: 1m
+2018-03-31 10:27:45,172 INFO - 265:	learn: 0.0393950	total: 39s	remaining: 59.9s
+2018-03-31 10:27:45,295 INFO - 266:	learn: 0.0393905	total: 39.1s	remaining: 59.7s
+2018-03-31 10:27:45,419 INFO - 267:	learn: 0.0393857	total: 39.2s	remaining: 59.6s
+2018-03-31 10:27:45,556 INFO - 268:	learn: 0.0393812	total: 39.4s	remaining: 59.4s
+2018-03-31 10:27:45,678 INFO - 269:	learn: 0.0393789	total: 39.5s	remaining: 59.2s
+2018-03-31 10:27:45,804 INFO - 270:	learn: 0.0393743	total: 39.6s	remaining: 59s
+2018-03-31 10:27:45,925 INFO - 271:	learn: 0.0393691	total: 39.7s	remaining: 58.9s
+2018-03-31 10:27:46,046 INFO - 272:	learn: 0.0393660	total: 39.8s	remaining: 58.7s
+2018-03-31 10:27:46,166 INFO - 273:	learn: 0.0393594	total: 40s	remaining: 58.5s
+2018-03-31 10:27:46,288 INFO - 274:	learn: 0.0393539	total: 40.1s	remaining: 58.3s
+2018-03-31 10:27:46,409 INFO - 275:	learn: 0.0393477	total: 40.2s	remaining: 58.1s
+2018-03-31 10:27:46,538 INFO - 276:	learn: 0.0393460	total: 40.3s	remaining: 58s
+2018-03-31 10:27:46,659 INFO - 277:	learn: 0.0393368	total: 40.5s	remaining: 57.8s
+2018-03-31 10:27:46,779 INFO - 278:	learn: 0.0393313	total: 40.6s	remaining: 57.6s
+2018-03-31 10:27:46,901 INFO - 279:	learn: 0.0393284	total: 40.7s	remaining: 57.4s
+2018-03-31 10:27:47,021 INFO - 280:	learn: 0.0393233	total: 40.8s	remaining: 57.2s
+2018-03-31 10:27:47,143 INFO - 281:	learn: 0.0393174	total: 40.9s	remaining: 57.1s
+2018-03-31 10:27:47,264 INFO - 282:	learn: 0.0393132	total: 41.1s	remaining: 56.9s
+2018-03-31 10:27:47,384 INFO - 283:	learn: 0.0393099	total: 41.2s	remaining: 56.7s
+2018-03-31 10:27:47,519 INFO - 284:	learn: 0.0393074	total: 41.3s	remaining: 56.5s
+2018-03-31 10:27:47,646 INFO - 285:	learn: 0.0393052	total: 41.4s	remaining: 56.4s
+2018-03-31 10:27:47,769 INFO - 286:	learn: 0.0393015	total: 41.6s	remaining: 56.2s
+2018-03-31 10:27:47,895 INFO - 287:	learn: 0.0392988	total: 41.7s	remaining: 56s
+2018-03-31 10:27:48,015 INFO - 288:	learn: 0.0392938	total: 41.8s	remaining: 55.8s
+2018-03-31 10:27:48,135 INFO - 289:	learn: 0.0392897	total: 41.9s	remaining: 55.7s
+2018-03-31 10:27:48,255 INFO - 290:	learn: 0.0392850	total: 42s	remaining: 55.5s
+2018-03-31 10:27:48,377 INFO - 291:	learn: 0.0392816	total: 42.2s	remaining: 55.3s
+2018-03-31 10:27:48,507 INFO - 292:	learn: 0.0392795	total: 42.3s	remaining: 55.1s
+2018-03-31 10:27:48,628 INFO - 293:	learn: 0.0392759	total: 42.4s	remaining: 55s
+2018-03-31 10:27:48,749 INFO - 294:	learn: 0.0392715	total: 42.5s	remaining: 54.8s
+2018-03-31 10:27:48,871 INFO - 295:	learn: 0.0392675	total: 42.7s	remaining: 54.6s
+2018-03-31 10:27:48,994 INFO - 296:	learn: 0.0392642	total: 42.8s	remaining: 54.5s
+2018-03-31 10:27:49,115 INFO - 297:	learn: 0.0392608	total: 42.9s	remaining: 54.3s
+2018-03-31 10:27:49,236 INFO - 298:	learn: 0.0392562	total: 43s	remaining: 54.1s
+2018-03-31 10:27:49,357 INFO - 299:	learn: 0.0392527	total: 43.1s	remaining: 53.9s
+2018-03-31 10:27:49,489 INFO - 300:	learn: 0.0392483	total: 43.3s	remaining: 53.8s
+2018-03-31 10:27:49,614 INFO - 301:	learn: 0.0392440	total: 43.4s	remaining: 53.6s
+2018-03-31 10:27:49,736 INFO - 302:	learn: 0.0392415	total: 43.5s	remaining: 53.4s
+2018-03-31 10:27:49,860 INFO - 303:	learn: 0.0392351	total: 43.7s	remaining: 53.3s
+2018-03-31 10:27:49,991 INFO - 304:	learn: 0.0392315	total: 43.8s	remaining: 53.1s
+2018-03-31 10:27:50,112 INFO - 305:	learn: 0.0392249	total: 43.9s	remaining: 52.9s
+2018-03-31 10:27:50,236 INFO - 306:	learn: 0.0392230	total: 44s	remaining: 52.8s
+2018-03-31 10:27:50,356 INFO - 307:	learn: 0.0392188	total: 44.1s	remaining: 52.6s
+2018-03-31 10:27:50,485 INFO - 308:	learn: 0.0392159	total: 44.3s	remaining: 52.4s
+2018-03-31 10:27:50,605 INFO - 309:	learn: 0.0392122	total: 44.4s	remaining: 52.3s
+2018-03-31 10:27:50,726 INFO - 310:	learn: 0.0392082	total: 44.5s	remaining: 52.1s
+2018-03-31 10:27:50,847 INFO - 311:	learn: 0.0392007	total: 44.6s	remaining: 51.9s
+2018-03-31 10:27:50,968 INFO - 312:	learn: 0.0391952	total: 44.8s	remaining: 51.8s
+2018-03-31 10:27:51,087 INFO - 313:	learn: 0.0391903	total: 44.9s	remaining: 51.6s
+2018-03-31 10:27:51,207 INFO - 314:	learn: 0.0391845	total: 45s	remaining: 51.4s
+2018-03-31 10:27:51,327 INFO - 315:	learn: 0.0391807	total: 45.1s	remaining: 51.3s
+2018-03-31 10:27:51,457 INFO - 316:	learn: 0.0391785	total: 45.2s	remaining: 51.1s
+2018-03-31 10:27:51,577 INFO - 317:	learn: 0.0391749	total: 45.4s	remaining: 50.9s
+2018-03-31 10:27:51,701 INFO - 318:	learn: 0.0391704	total: 45.5s	remaining: 50.8s
+2018-03-31 10:27:51,822 INFO - 319:	learn: 0.0391669	total: 45.6s	remaining: 50.6s
+2018-03-31 10:27:51,941 INFO - 320:	learn: 0.0391623	total: 45.7s	remaining: 50.4s
+2018-03-31 10:27:52,065 INFO - 321:	learn: 0.0391585	total: 45.9s	remaining: 50.3s
+2018-03-31 10:27:52,185 INFO - 322:	learn: 0.0391564	total: 46s	remaining: 50.1s
+2018-03-31 10:27:52,306 INFO - 323:	learn: 0.0391544	total: 46.1s	remaining: 49.9s
+2018-03-31 10:27:52,429 INFO - 324:	learn: 0.0391525	total: 46.2s	remaining: 49.8s
+2018-03-31 10:27:52,557 INFO - 325:	learn: 0.0391506	total: 46.3s	remaining: 49.6s
+2018-03-31 10:27:52,679 INFO - 326:	learn: 0.0391479	total: 46.5s	remaining: 49.5s
+2018-03-31 10:27:52,801 INFO - 327:	learn: 0.0391419	total: 46.6s	remaining: 49.3s
+2018-03-31 10:27:52,922 INFO - 328:	learn: 0.0391397	total: 46.7s	remaining: 49.1s
+2018-03-31 10:27:53,043 INFO - 329:	learn: 0.0391324	total: 46.8s	remaining: 49s
+2018-03-31 10:27:53,162 INFO - 330:	learn: 0.0391284	total: 46.9s	remaining: 48.8s
+2018-03-31 10:27:53,282 INFO - 331:	learn: 0.0391258	total: 47.1s	remaining: 48.6s
+2018-03-31 10:27:53,402 INFO - 332:	learn: 0.0391210	total: 47.2s	remaining: 48.5s
+2018-03-31 10:27:53,531 INFO - 333:	learn: 0.0391162	total: 47.3s	remaining: 48.3s
+2018-03-31 10:27:53,652 INFO - 334:	learn: 0.0391123	total: 47.4s	remaining: 48.1s
+2018-03-31 10:27:53,775 INFO - 335:	learn: 0.0391097	total: 47.6s	remaining: 48s
+2018-03-31 10:27:53,896 INFO - 336:	learn: 0.0391072	total: 47.7s	remaining: 47.8s
+2018-03-31 10:27:54,019 INFO - 337:	learn: 0.0391032	total: 47.8s	remaining: 47.7s
+2018-03-31 10:27:54,141 INFO - 338:	learn: 0.0390996	total: 47.9s	remaining: 47.5s
+2018-03-31 10:27:54,261 INFO - 339:	learn: 0.0390946	total: 48s	remaining: 47.3s
+2018-03-31 10:27:54,382 INFO - 340:	learn: 0.0390907	total: 48.2s	remaining: 47.2s
+2018-03-31 10:27:54,512 INFO - 341:	learn: 0.0390866	total: 48.3s	remaining: 47s
+2018-03-31 10:27:54,633 INFO - 342:	learn: 0.0390848	total: 48.4s	remaining: 46.9s
+2018-03-31 10:27:54,753 INFO - 343:	learn: 0.0390790	total: 48.5s	remaining: 46.7s
+2018-03-31 10:27:54,875 INFO - 344:	learn: 0.0390753	total: 48.7s	remaining: 46.5s
+2018-03-31 10:27:54,995 INFO - 345:	learn: 0.0390725	total: 48.8s	remaining: 46.4s
+2018-03-31 10:27:55,116 INFO - 346:	learn: 0.0390692	total: 48.9s	remaining: 46.2s
+2018-03-31 10:27:55,236 INFO - 347:	learn: 0.0390674	total: 49s	remaining: 46.1s
+2018-03-31 10:27:55,356 INFO - 348:	learn: 0.0390641	total: 49.1s	remaining: 45.9s
+2018-03-31 10:27:55,485 INFO - 349:	learn: 0.0390590	total: 49.3s	remaining: 45.7s
+2018-03-31 10:27:55,604 INFO - 350:	learn: 0.0390542	total: 49.4s	remaining: 45.6s
+2018-03-31 10:27:55,732 INFO - 351:	learn: 0.0390498	total: 49.5s	remaining: 45.4s
+2018-03-31 10:27:55,851 INFO - 352:	learn: 0.0390475	total: 49.6s	remaining: 45.3s
+2018-03-31 10:27:55,970 INFO - 353:	learn: 0.0390452	total: 49.8s	remaining: 45.1s
+2018-03-31 10:27:56,095 INFO - 354:	learn: 0.0390410	total: 49.9s	remaining: 45s
+2018-03-31 10:27:56,215 INFO - 355:	learn: 0.0390378	total: 50s	remaining: 44.8s
+2018-03-31 10:27:56,335 INFO - 356:	learn: 0.0390329	total: 50.1s	remaining: 44.6s
+2018-03-31 10:27:56,465 INFO - 357:	learn: 0.0390257	total: 50.2s	remaining: 44.5s
+2018-03-31 10:27:56,587 INFO - 358:	learn: 0.0390219	total: 50.4s	remaining: 44.3s
+2018-03-31 10:27:56,708 INFO - 359:	learn: 0.0390183	total: 50.5s	remaining: 44.2s
+2018-03-31 10:27:56,828 INFO - 360:	learn: 0.0390130	total: 50.6s	remaining: 44s
+2018-03-31 10:27:56,948 INFO - 361:	learn: 0.0390106	total: 50.7s	remaining: 43.9s
+2018-03-31 10:27:57,070 INFO - 362:	learn: 0.0390085	total: 50.9s	remaining: 43.7s
+2018-03-31 10:27:57,189 INFO - 363:	learn: 0.0390055	total: 51s	remaining: 43.5s
+2018-03-31 10:27:57,310 INFO - 364:	learn: 0.0390021	total: 51.1s	remaining: 43.4s
+2018-03-31 10:27:57,434 INFO - 365:	learn: 0.0390010	total: 51.2s	remaining: 43.2s
+2018-03-31 10:27:57,561 INFO - 366:	learn: 0.0389954	total: 51.3s	remaining: 43.1s
+2018-03-31 10:27:57,682 INFO - 367:	learn: 0.0389914	total: 51.5s	remaining: 42.9s
+2018-03-31 10:27:57,810 INFO - 368:	learn: 0.0389885	total: 51.6s	remaining: 42.8s
+2018-03-31 10:27:57,935 INFO - 369:	learn: 0.0389871	total: 51.7s	remaining: 42.6s
+2018-03-31 10:27:58,058 INFO - 370:	learn: 0.0389833	total: 51.8s	remaining: 42.5s
+2018-03-31 10:27:58,181 INFO - 371:	learn: 0.0389803	total: 52s	remaining: 42.3s
+2018-03-31 10:27:58,302 INFO - 372:	learn: 0.0389749	total: 52.1s	remaining: 42.2s
+2018-03-31 10:27:58,422 INFO - 373:	learn: 0.0389705	total: 52.2s	remaining: 42s
+2018-03-31 10:27:58,553 INFO - 374:	learn: 0.0389681	total: 52.3s	remaining: 41.9s
+2018-03-31 10:27:58,677 INFO - 375:	learn: 0.0389642	total: 52.5s	remaining: 41.7s
+2018-03-31 10:27:58,797 INFO - 376:	learn: 0.0389611	total: 52.6s	remaining: 41.6s
+2018-03-31 10:27:58,917 INFO - 377:	learn: 0.0389576	total: 52.7s	remaining: 41.4s
+2018-03-31 10:27:59,039 INFO - 378:	learn: 0.0389563	total: 52.8s	remaining: 41.3s
+2018-03-31 10:27:59,160 INFO - 379:	learn: 0.0389516	total: 52.9s	remaining: 41.1s
+2018-03-31 10:27:59,281 INFO - 380:	learn: 0.0389492	total: 53.1s	remaining: 40.9s
+2018-03-31 10:27:59,400 INFO - 381:	learn: 0.0389447	total: 53.2s	remaining: 40.8s
+2018-03-31 10:27:59,530 INFO - 382:	learn: 0.0389427	total: 53.3s	remaining: 40.6s
+2018-03-31 10:27:59,650 INFO - 383:	learn: 0.0389415	total: 53.4s	remaining: 40.5s
+2018-03-31 10:27:59,770 INFO - 384:	learn: 0.0389356	total: 53.5s	remaining: 40.3s
+2018-03-31 10:27:59,891 INFO - 385:	learn: 0.0389343	total: 53.7s	remaining: 40.2s
+2018-03-31 10:28:00,016 INFO - 386:	learn: 0.0389296	total: 53.8s	remaining: 40s
+2018-03-31 10:28:00,138 INFO - 387:	learn: 0.0389261	total: 53.9s	remaining: 39.9s
+2018-03-31 10:28:00,264 INFO - 388:	learn: 0.0389196	total: 54s	remaining: 39.7s
+2018-03-31 10:28:00,385 INFO - 389:	learn: 0.0389162	total: 54.2s	remaining: 39.6s
+2018-03-31 10:28:00,519 INFO - 390:	learn: 0.0389135	total: 54.3s	remaining: 39.4s
+2018-03-31 10:28:00,659 INFO - 391:	learn: 0.0389098	total: 54.4s	remaining: 39.3s
+2018-03-31 10:28:00,785 INFO - 392:	learn: 0.0389061	total: 54.6s	remaining: 39.1s
+2018-03-31 10:28:00,906 INFO - 393:	learn: 0.0389018	total: 54.7s	remaining: 39s
+2018-03-31 10:28:01,027 INFO - 394:	learn: 0.0388990	total: 54.8s	remaining: 38.8s
+2018-03-31 10:28:01,147 INFO - 395:	learn: 0.0388938	total: 54.9s	remaining: 38.7s
+2018-03-31 10:28:01,268 INFO - 396:	learn: 0.0388913	total: 55s	remaining: 38.5s
+2018-03-31 10:28:01,388 INFO - 397:	learn: 0.0388866	total: 55.2s	remaining: 38.4s
+2018-03-31 10:28:01,519 INFO - 398:	learn: 0.0388823	total: 55.3s	remaining: 38.2s
+2018-03-31 10:28:01,640 INFO - 399:	learn: 0.0388815	total: 55.4s	remaining: 38.1s
+2018-03-31 10:28:01,762 INFO - 400:	learn: 0.0388769	total: 55.5s	remaining: 37.9s
+2018-03-31 10:28:01,884 INFO - 401:	learn: 0.0388760	total: 55.7s	remaining: 37.8s
+2018-03-31 10:28:02,003 INFO - 402:	learn: 0.0388731	total: 55.8s	remaining: 37.6s
+2018-03-31 10:28:02,129 INFO - 403:	learn: 0.0388702	total: 55.9s	remaining: 37.5s
+2018-03-31 10:28:02,254 INFO - 404:	learn: 0.0388686	total: 56s	remaining: 37.4s
+2018-03-31 10:28:02,378 INFO - 405:	learn: 0.0388675	total: 56.2s	remaining: 37.2s
+2018-03-31 10:28:02,510 INFO - 406:	learn: 0.0388640	total: 56.3s	remaining: 37.1s
+2018-03-31 10:28:02,632 INFO - 407:	learn: 0.0388603	total: 56.4s	remaining: 36.9s
+2018-03-31 10:28:02,753 INFO - 408:	learn: 0.0388540	total: 56.5s	remaining: 36.8s
+2018-03-31 10:28:02,874 INFO - 409:	learn: 0.0388511	total: 56.6s	remaining: 36.6s
+2018-03-31 10:28:02,993 INFO - 410:	learn: 0.0388484	total: 56.8s	remaining: 36.5s
+2018-03-31 10:28:03,115 INFO - 411:	learn: 0.0388446	total: 56.9s	remaining: 36.3s
+2018-03-31 10:28:03,234 INFO - 412:	learn: 0.0388405	total: 57s	remaining: 36.2s
+2018-03-31 10:28:03,358 INFO - 413:	learn: 0.0388371	total: 57.1s	remaining: 36s
+2018-03-31 10:28:03,488 INFO - 414:	learn: 0.0388339	total: 57.3s	remaining: 35.9s
+2018-03-31 10:28:03,609 INFO - 415:	learn: 0.0388292	total: 57.4s	remaining: 35.7s
+2018-03-31 10:28:03,730 INFO - 416:	learn: 0.0388247	total: 57.5s	remaining: 35.6s
+2018-03-31 10:28:03,852 INFO - 417:	learn: 0.0388210	total: 57.6s	remaining: 35.4s
+2018-03-31 10:28:03,974 INFO - 418:	learn: 0.0388197	total: 57.7s	remaining: 35.3s
+2018-03-31 10:28:04,096 INFO - 419:	learn: 0.0388160	total: 57.9s	remaining: 35.1s
+2018-03-31 10:28:04,221 INFO - 420:	learn: 0.0388138	total: 58s	remaining: 35s
+2018-03-31 10:28:04,344 INFO - 421:	learn: 0.0388105	total: 58.1s	remaining: 34.8s
+2018-03-31 10:28:04,475 INFO - 422:	learn: 0.0388060	total: 58.2s	remaining: 34.7s
+2018-03-31 10:28:04,597 INFO - 423:	learn: 0.0388035	total: 58.4s	remaining: 34.6s
+2018-03-31 10:28:04,723 INFO - 424:	learn: 0.0388022	total: 58.5s	remaining: 34.4s
+2018-03-31 10:28:04,845 INFO - 425:	learn: 0.0387985	total: 58.6s	remaining: 34.3s
+2018-03-31 10:28:04,972 INFO - 426:	learn: 0.0387971	total: 58.7s	remaining: 34.1s
+2018-03-31 10:28:05,093 INFO - 427:	learn: 0.0387952	total: 58.9s	remaining: 34s
+2018-03-31 10:28:05,216 INFO - 428:	learn: 0.0387937	total: 59s	remaining: 33.8s
+2018-03-31 10:28:05,336 INFO - 429:	learn: 0.0387901	total: 59.1s	remaining: 33.7s
+2018-03-31 10:28:05,467 INFO - 430:	learn: 0.0387884	total: 59.2s	remaining: 33.5s
+2018-03-31 10:28:05,588 INFO - 431:	learn: 0.0387838	total: 59.4s	remaining: 33.4s
+2018-03-31 10:28:05,708 INFO - 432:	learn: 0.0387798	total: 59.5s	remaining: 33.2s
+2018-03-31 10:28:05,828 INFO - 433:	learn: 0.0387775	total: 59.6s	remaining: 33.1s
+2018-03-31 10:28:05,948 INFO - 434:	learn: 0.0387744	total: 59.7s	remaining: 32.9s
+2018-03-31 10:28:06,070 INFO - 435:	learn: 0.0387721	total: 59.8s	remaining: 32.8s
+2018-03-31 10:28:06,195 INFO - 436:	learn: 0.0387682	total: 60s	remaining: 32.7s
+2018-03-31 10:28:06,317 INFO - 437:	learn: 0.0387627	total: 1m	remaining: 32.5s
+2018-03-31 10:28:06,452 INFO - 438:	learn: 0.0387596	total: 1m	remaining: 32.4s
+2018-03-31 10:28:06,576 INFO - 439:	learn: 0.0387557	total: 1m	remaining: 32.2s
+2018-03-31 10:28:06,697 INFO - 440:	learn: 0.0387506	total: 1m	remaining: 32.1s
+2018-03-31 10:28:06,819 INFO - 441:	learn: 0.0387458	total: 1m	remaining: 31.9s
+2018-03-31 10:28:06,943 INFO - 442:	learn: 0.0387446	total: 1m	remaining: 31.8s
+2018-03-31 10:28:07,064 INFO - 443:	learn: 0.0387389	total: 1m	remaining: 31.6s
+2018-03-31 10:28:07,186 INFO - 444:	learn: 0.0387359	total: 1m	remaining: 31.5s
+2018-03-31 10:28:07,307 INFO - 445:	learn: 0.0387317	total: 1m 1s	remaining: 31.4s
+2018-03-31 10:28:07,431 INFO - 446:	learn: 0.0387261	total: 1m 1s	remaining: 31.2s
+2018-03-31 10:28:07,560 INFO - 447:	learn: 0.0387232	total: 1m 1s	remaining: 31.1s
+2018-03-31 10:28:07,680 INFO - 448:	learn: 0.0387200	total: 1m 1s	remaining: 30.9s
+2018-03-31 10:28:07,800 INFO - 449:	learn: 0.0387167	total: 1m 1s	remaining: 30.8s
+2018-03-31 10:28:07,921 INFO - 450:	learn: 0.0387125	total: 1m 1s	remaining: 30.6s
+2018-03-31 10:28:08,043 INFO - 451:	learn: 0.0387098	total: 1m 1s	remaining: 30.5s
+2018-03-31 10:28:08,163 INFO - 452:	learn: 0.0387072	total: 1m 1s	remaining: 30.3s
+2018-03-31 10:28:08,289 INFO - 453:	learn: 0.0387039	total: 1m 2s	remaining: 30.2s
+2018-03-31 10:28:08,409 INFO - 454:	learn: 0.0387010	total: 1m 2s	remaining: 30.1s
+2018-03-31 10:28:08,547 INFO - 455:	learn: 0.0386961	total: 1m 2s	remaining: 29.9s
+2018-03-31 10:28:08,668 INFO - 456:	learn: 0.0386942	total: 1m 2s	remaining: 29.8s
+2018-03-31 10:28:08,790 INFO - 457:	learn: 0.0386914	total: 1m 2s	remaining: 29.6s
+2018-03-31 10:28:08,911 INFO - 458:	learn: 0.0386883	total: 1m 2s	remaining: 29.5s
+2018-03-31 10:28:09,031 INFO - 459:	learn: 0.0386819	total: 1m 2s	remaining: 29.3s
+2018-03-31 10:28:09,151 INFO - 460:	learn: 0.0386789	total: 1m 2s	remaining: 29.2s
+2018-03-31 10:28:09,272 INFO - 461:	learn: 0.0386752	total: 1m 3s	remaining: 29.1s
+2018-03-31 10:28:09,392 INFO - 462:	learn: 0.0386710	total: 1m 3s	remaining: 28.9s
+2018-03-31 10:28:09,523 INFO - 463:	learn: 0.0386681	total: 1m 3s	remaining: 28.8s
+2018-03-31 10:28:09,644 INFO - 464:	learn: 0.0386652	total: 1m 3s	remaining: 28.6s
+2018-03-31 10:28:09,766 INFO - 465:	learn: 0.0386610	total: 1m 3s	remaining: 28.5s
+2018-03-31 10:28:09,888 INFO - 466:	learn: 0.0386586	total: 1m 3s	remaining: 28.3s
+2018-03-31 10:28:10,009 INFO - 467:	learn: 0.0386557	total: 1m 3s	remaining: 28.2s
+2018-03-31 10:28:10,128 INFO - 468:	learn: 0.0386515	total: 1m 3s	remaining: 28.1s
+2018-03-31 10:28:10,249 INFO - 469:	learn: 0.0386485	total: 1m 4s	remaining: 27.9s
+2018-03-31 10:28:10,376 INFO - 470:	learn: 0.0386448	total: 1m 4s	remaining: 27.8s
+2018-03-31 10:28:10,513 INFO - 471:	learn: 0.0386412	total: 1m 4s	remaining: 27.6s
+2018-03-31 10:28:10,630 INFO - 472:	learn: 0.0386392	total: 1m 4s	remaining: 27.5s
+2018-03-31 10:28:10,751 INFO - 473:	learn: 0.0386351	total: 1m 4s	remaining: 27.4s
+2018-03-31 10:28:10,871 INFO - 474:	learn: 0.0386330	total: 1m 4s	remaining: 27.2s
+2018-03-31 10:28:10,993 INFO - 475:	learn: 0.0386298	total: 1m 4s	remaining: 27.1s
+2018-03-31 10:28:11,114 INFO - 476:	learn: 0.0386237	total: 1m 4s	remaining: 26.9s
+2018-03-31 10:28:11,235 INFO - 477:	learn: 0.0386188	total: 1m 4s	remaining: 26.8s
+2018-03-31 10:28:11,355 INFO - 478:	learn: 0.0386103	total: 1m 5s	remaining: 26.6s
+2018-03-31 10:28:11,488 INFO - 479:	learn: 0.0386070	total: 1m 5s	remaining: 26.5s
+2018-03-31 10:28:11,608 INFO - 480:	learn: 0.0386048	total: 1m 5s	remaining: 26.4s
+2018-03-31 10:28:11,729 INFO - 481:	learn: 0.0386009	total: 1m 5s	remaining: 26.2s
+2018-03-31 10:28:11,852 INFO - 482:	learn: 0.0386000	total: 1m 5s	remaining: 26.1s
+2018-03-31 10:28:11,972 INFO - 483:	learn: 0.0385956	total: 1m 5s	remaining: 25.9s
+2018-03-31 10:28:12,094 INFO - 484:	learn: 0.0385936	total: 1m 5s	remaining: 25.8s
+2018-03-31 10:28:12,215 INFO - 485:	learn: 0.0385896	total: 1m 5s	remaining: 25.7s
+2018-03-31 10:28:12,340 INFO - 486:	learn: 0.0385877	total: 1m 6s	remaining: 25.5s
+2018-03-31 10:28:12,472 INFO - 487:	learn: 0.0385854	total: 1m 6s	remaining: 25.4s
+2018-03-31 10:28:12,597 INFO - 488:	learn: 0.0385829	total: 1m 6s	remaining: 25.2s
+2018-03-31 10:28:12,718 INFO - 489:	learn: 0.0385807	total: 1m 6s	remaining: 25.1s
+2018-03-31 10:28:12,839 INFO - 490:	learn: 0.0385771	total: 1m 6s	remaining: 25s
+2018-03-31 10:28:12,959 INFO - 491:	learn: 0.0385718	total: 1m 6s	remaining: 24.8s
+2018-03-31 10:28:13,079 INFO - 492:	learn: 0.0385694	total: 1m 6s	remaining: 24.7s
+2018-03-31 10:28:13,200 INFO - 493:	learn: 0.0385648	total: 1m 6s	remaining: 24.5s
+2018-03-31 10:28:13,321 INFO - 494:	learn: 0.0385613	total: 1m 7s	remaining: 24.4s
+2018-03-31 10:28:13,449 INFO - 495:	learn: 0.0385562	total: 1m 7s	remaining: 24.3s
+2018-03-31 10:28:13,575 INFO - 496:	learn: 0.0385526	total: 1m 7s	remaining: 24.1s
+2018-03-31 10:28:13,699 INFO - 497:	learn: 0.0385493	total: 1m 7s	remaining: 24s
+2018-03-31 10:28:13,820 INFO - 498:	learn: 0.0385476	total: 1m 7s	remaining: 23.8s
+2018-03-31 10:28:13,940 INFO - 499:	learn: 0.0385456	total: 1m 7s	remaining: 23.7s
+2018-03-31 10:28:14,060 INFO - 500:	learn: 0.0385409	total: 1m 7s	remaining: 23.6s
+2018-03-31 10:28:14,183 INFO - 501:	learn: 0.0385380	total: 1m 7s	remaining: 23.4s
+2018-03-31 10:28:14,308 INFO - 502:	learn: 0.0385349	total: 1m 8s	remaining: 23.3s
+2018-03-31 10:28:14,432 INFO - 503:	learn: 0.0385311	total: 1m 8s	remaining: 23.1s
+2018-03-31 10:28:14,575 INFO - 504:	learn: 0.0385290	total: 1m 8s	remaining: 23s
+2018-03-31 10:28:14,703 INFO - 505:	learn: 0.0385268	total: 1m 8s	remaining: 22.9s
+2018-03-31 10:28:14,826 INFO - 506:	learn: 0.0385219	total: 1m 8s	remaining: 22.7s
+2018-03-31 10:28:14,946 INFO - 507:	learn: 0.0385169	total: 1m 8s	remaining: 22.6s
+2018-03-31 10:28:15,067 INFO - 508:	learn: 0.0385134	total: 1m 8s	remaining: 22.4s
+2018-03-31 10:28:15,189 INFO - 509:	learn: 0.0385084	total: 1m 8s	remaining: 22.3s
+2018-03-31 10:28:15,308 INFO - 510:	learn: 0.0385055	total: 1m 9s	remaining: 22.2s
+2018-03-31 10:28:15,428 INFO - 511:	learn: 0.0385033	total: 1m 9s	remaining: 22s
+2018-03-31 10:28:15,559 INFO - 512:	learn: 0.0384997	total: 1m 9s	remaining: 21.9s
+2018-03-31 10:28:15,680 INFO - 513:	learn: 0.0384950	total: 1m 9s	remaining: 21.7s
+2018-03-31 10:28:15,803 INFO - 514:	learn: 0.0384904	total: 1m 9s	remaining: 21.6s
+2018-03-31 10:28:15,926 INFO - 515:	learn: 0.0384877	total: 1m 9s	remaining: 21.5s
+2018-03-31 10:28:16,047 INFO - 516:	learn: 0.0384856	total: 1m 9s	remaining: 21.3s
+2018-03-31 10:28:16,170 INFO - 517:	learn: 0.0384819	total: 1m 9s	remaining: 21.2s
+2018-03-31 10:28:16,291 INFO - 518:	learn: 0.0384771	total: 1m 10s	remaining: 21.1s
+2018-03-31 10:28:16,412 INFO - 519:	learn: 0.0384743	total: 1m 10s	remaining: 20.9s
+2018-03-31 10:28:16,542 INFO - 520:	learn: 0.0384711	total: 1m 10s	remaining: 20.8s
+2018-03-31 10:28:16,672 INFO - 521:	learn: 0.0384690	total: 1m 10s	remaining: 20.6s
+2018-03-31 10:28:16,803 INFO - 522:	learn: 0.0384663	total: 1m 10s	remaining: 20.5s
+2018-03-31 10:28:16,927 INFO - 523:	learn: 0.0384638	total: 1m 10s	remaining: 20.4s
+2018-03-31 10:28:17,049 INFO - 524:	learn: 0.0384610	total: 1m 10s	remaining: 20.2s
+2018-03-31 10:28:17,171 INFO - 525:	learn: 0.0384589	total: 1m 10s	remaining: 20.1s
+2018-03-31 10:28:17,291 INFO - 526:	learn: 0.0384566	total: 1m 11s	remaining: 19.9s
+2018-03-31 10:28:17,413 INFO - 527:	learn: 0.0384533	total: 1m 11s	remaining: 19.8s
+2018-03-31 10:28:17,542 INFO - 528:	learn: 0.0384506	total: 1m 11s	remaining: 19.7s
+2018-03-31 10:28:17,663 INFO - 529:	learn: 0.0384454	total: 1m 11s	remaining: 19.5s
+2018-03-31 10:28:17,784 INFO - 530:	learn: 0.0384411	total: 1m 11s	remaining: 19.4s
+2018-03-31 10:28:17,905 INFO - 531:	learn: 0.0384370	total: 1m 11s	remaining: 19.3s
+2018-03-31 10:28:18,027 INFO - 532:	learn: 0.0384349	total: 1m 11s	remaining: 19.1s
+2018-03-31 10:28:18,149 INFO - 533:	learn: 0.0384306	total: 1m 11s	remaining: 19s
+2018-03-31 10:28:18,271 INFO - 534:	learn: 0.0384263	total: 1m 12s	remaining: 18.8s
+2018-03-31 10:28:18,392 INFO - 535:	learn: 0.0384243	total: 1m 12s	remaining: 18.7s
+2018-03-31 10:28:18,524 INFO - 536:	learn: 0.0384217	total: 1m 12s	remaining: 18.6s
+2018-03-31 10:28:18,649 INFO - 537:	learn: 0.0384185	total: 1m 12s	remaining: 18.4s
+2018-03-31 10:28:18,778 INFO - 538:	learn: 0.0384159	total: 1m 12s	remaining: 18.3s
+2018-03-31 10:28:18,901 INFO - 539:	learn: 0.0384106	total: 1m 12s	remaining: 18.2s
+2018-03-31 10:28:19,023 INFO - 540:	learn: 0.0384085	total: 1m 12s	remaining: 18s
+2018-03-31 10:28:19,146 INFO - 541:	learn: 0.0384064	total: 1m 12s	remaining: 17.9s
+2018-03-31 10:28:19,266 INFO - 542:	learn: 0.0384051	total: 1m 13s	remaining: 17.7s
+2018-03-31 10:28:19,387 INFO - 543:	learn: 0.0384035	total: 1m 13s	remaining: 17.6s
+2018-03-31 10:28:19,517 INFO - 544:	learn: 0.0383985	total: 1m 13s	remaining: 17.5s
+2018-03-31 10:28:19,639 INFO - 545:	learn: 0.0383950	total: 1m 13s	remaining: 17.3s
+2018-03-31 10:28:19,760 INFO - 546:	learn: 0.0383919	total: 1m 13s	remaining: 17.2s
+2018-03-31 10:28:19,888 INFO - 547:	learn: 0.0383869	total: 1m 13s	remaining: 17.1s
+2018-03-31 10:28:20,010 INFO - 548:	learn: 0.0383841	total: 1m 13s	remaining: 16.9s
+2018-03-31 10:28:20,131 INFO - 549:	learn: 0.0383806	total: 1m 13s	remaining: 16.8s
+2018-03-31 10:28:20,252 INFO - 550:	learn: 0.0383757	total: 1m 13s	remaining: 16.7s
+2018-03-31 10:28:20,372 INFO - 551:	learn: 0.0383723	total: 1m 14s	remaining: 16.5s
+2018-03-31 10:28:20,502 INFO - 552:	learn: 0.0383674	total: 1m 14s	remaining: 16.4s
+2018-03-31 10:28:20,622 INFO - 553:	learn: 0.0383651	total: 1m 14s	remaining: 16.2s
+2018-03-31 10:28:20,748 INFO - 554:	learn: 0.0383608	total: 1m 14s	remaining: 16.1s
+2018-03-31 10:28:20,873 INFO - 555:	learn: 0.0383569	total: 1m 14s	remaining: 16s
+2018-03-31 10:28:20,994 INFO - 556:	learn: 0.0383546	total: 1m 14s	remaining: 15.8s
+2018-03-31 10:28:21,115 INFO - 557:	learn: 0.0383525	total: 1m 14s	remaining: 15.7s
+2018-03-31 10:28:21,235 INFO - 558:	learn: 0.0383463	total: 1m 14s	remaining: 15.6s
+2018-03-31 10:28:21,355 INFO - 559:	learn: 0.0383433	total: 1m 15s	remaining: 15.4s
+2018-03-31 10:28:21,484 INFO - 560:	learn: 0.0383421	total: 1m 15s	remaining: 15.3s
+2018-03-31 10:28:21,606 INFO - 561:	learn: 0.0383395	total: 1m 15s	remaining: 15.2s
+2018-03-31 10:28:21,727 INFO - 562:	learn: 0.0383365	total: 1m 15s	remaining: 15s
+2018-03-31 10:28:21,849 INFO - 563:	learn: 0.0383346	total: 1m 15s	remaining: 14.9s
+2018-03-31 10:28:21,970 INFO - 564:	learn: 0.0383322	total: 1m 15s	remaining: 14.7s
+2018-03-31 10:28:22,090 INFO - 565:	learn: 0.0383280	total: 1m 15s	remaining: 14.6s
+2018-03-31 10:28:22,210 INFO - 566:	learn: 0.0383233	total: 1m 15s	remaining: 14.5s
+2018-03-31 10:28:22,330 INFO - 567:	learn: 0.0383201	total: 1m 16s	remaining: 14.3s
+2018-03-31 10:28:22,461 INFO - 568:	learn: 0.0383163	total: 1m 16s	remaining: 14.2s
+2018-03-31 10:28:22,586 INFO - 569:	learn: 0.0383131	total: 1m 16s	remaining: 14.1s
+2018-03-31 10:28:22,707 INFO - 570:	learn: 0.0383084	total: 1m 16s	remaining: 13.9s
+2018-03-31 10:28:22,833 INFO - 571:	learn: 0.0383033	total: 1m 16s	remaining: 13.8s
+2018-03-31 10:28:22,961 INFO - 572:	learn: 0.0383000	total: 1m 16s	remaining: 13.7s
+2018-03-31 10:28:23,081 INFO - 573:	learn: 0.0382951	total: 1m 16s	remaining: 13.5s
+2018-03-31 10:28:23,201 INFO - 574:	learn: 0.0382907	total: 1m 16s	remaining: 13.4s
+2018-03-31 10:28:23,320 INFO - 575:	learn: 0.0382877	total: 1m 17s	remaining: 13.2s
+2018-03-31 10:28:23,447 INFO - 576:	learn: 0.0382853	total: 1m 17s	remaining: 13.1s
+2018-03-31 10:28:23,570 INFO - 577:	learn: 0.0382826	total: 1m 17s	remaining: 13s
+2018-03-31 10:28:23,694 INFO - 578:	learn: 0.0382814	total: 1m 17s	remaining: 12.8s
+2018-03-31 10:28:23,815 INFO - 579:	learn: 0.0382793	total: 1m 17s	remaining: 12.7s
+2018-03-31 10:28:23,936 INFO - 580:	learn: 0.0382751	total: 1m 17s	remaining: 12.6s
+2018-03-31 10:28:24,055 INFO - 581:	learn: 0.0382721	total: 1m 17s	remaining: 12.4s
+2018-03-31 10:28:24,175 INFO - 582:	learn: 0.0382672	total: 1m 17s	remaining: 12.3s
+2018-03-31 10:28:24,294 INFO - 583:	learn: 0.0382644	total: 1m 18s	remaining: 12.2s
+2018-03-31 10:28:24,414 INFO - 584:	learn: 0.0382599	total: 1m 18s	remaining: 12s
+2018-03-31 10:28:24,546 INFO - 585:	learn: 0.0382581	total: 1m 18s	remaining: 11.9s
+2018-03-31 10:28:24,666 INFO - 586:	learn: 0.0382545	total: 1m 18s	remaining: 11.8s
+2018-03-31 10:28:24,789 INFO - 587:	learn: 0.0382504	total: 1m 18s	remaining: 11.6s
+2018-03-31 10:28:24,917 INFO - 588:	learn: 0.0382497	total: 1m 18s	remaining: 11.5s
+2018-03-31 10:28:25,041 INFO - 589:	learn: 0.0382473	total: 1m 18s	remaining: 11.3s
+2018-03-31 10:28:25,166 INFO - 590:	learn: 0.0382450	total: 1m 18s	remaining: 11.2s
+2018-03-31 10:28:25,284 INFO - 591:	learn: 0.0382432	total: 1m 19s	remaining: 11.1s
+2018-03-31 10:28:25,406 INFO - 592:	learn: 0.0382417	total: 1m 19s	remaining: 10.9s
+2018-03-31 10:28:25,537 INFO - 593:	learn: 0.0382391	total: 1m 19s	remaining: 10.8s
+2018-03-31 10:28:25,659 INFO - 594:	learn: 0.0382372	total: 1m 19s	remaining: 10.7s
+2018-03-31 10:28:25,778 INFO - 595:	learn: 0.0382322	total: 1m 19s	remaining: 10.5s
+2018-03-31 10:28:25,900 INFO - 596:	learn: 0.0382280	total: 1m 19s	remaining: 10.4s
+2018-03-31 10:28:26,021 INFO - 597:	learn: 0.0382235	total: 1m 19s	remaining: 10.3s
+2018-03-31 10:28:26,140 INFO - 598:	learn: 0.0382202	total: 1m 19s	remaining: 10.1s
+2018-03-31 10:28:26,261 INFO - 599:	learn: 0.0382175	total: 1m 19s	remaining: 10s
+2018-03-31 10:28:26,381 INFO - 600:	learn: 0.0382160	total: 1m 20s	remaining: 9.86s
+2018-03-31 10:28:26,512 INFO - 601:	learn: 0.0382125	total: 1m 20s	remaining: 9.73s
+2018-03-31 10:28:26,633 INFO - 602:	learn: 0.0382096	total: 1m 20s	remaining: 9.6s
+2018-03-31 10:28:26,754 INFO - 603:	learn: 0.0382050	total: 1m 20s	remaining: 9.46s
+2018-03-31 10:28:26,879 INFO - 604:	learn: 0.0382030	total: 1m 20s	remaining: 9.33s
+2018-03-31 10:28:26,999 INFO - 605:	learn: 0.0382014	total: 1m 20s	remaining: 9.19s
+2018-03-31 10:28:27,125 INFO - 606:	learn: 0.0381949	total: 1m 20s	remaining: 9.06s
+2018-03-31 10:28:27,246 INFO - 607:	learn: 0.0381921	total: 1m 20s	remaining: 8.92s
+2018-03-31 10:28:27,364 INFO - 608:	learn: 0.0381886	total: 1m 21s	remaining: 8.79s
+2018-03-31 10:28:27,494 INFO - 609:	learn: 0.0381824	total: 1m 21s	remaining: 8.65s
+2018-03-31 10:28:27,614 INFO - 610:	learn: 0.0381778	total: 1m 21s	remaining: 8.52s
+2018-03-31 10:28:27,735 INFO - 611:	learn: 0.0381773	total: 1m 21s	remaining: 8.39s
+2018-03-31 10:28:27,855 INFO - 612:	learn: 0.0381734	total: 1m 21s	remaining: 8.25s
+2018-03-31 10:28:27,976 INFO - 613:	learn: 0.0381695	total: 1m 21s	remaining: 8.12s
+2018-03-31 10:28:28,096 INFO - 614:	learn: 0.0381671	total: 1m 21s	remaining: 7.98s
+2018-03-31 10:28:28,218 INFO - 615:	learn: 0.0381650	total: 1m 21s	remaining: 7.85s
+2018-03-31 10:28:28,337 INFO - 616:	learn: 0.0381598	total: 1m 22s	remaining: 7.71s
+2018-03-31 10:28:28,467 INFO - 617:	learn: 0.0381566	total: 1m 22s	remaining: 7.58s
+2018-03-31 10:28:28,587 INFO - 618:	learn: 0.0381541	total: 1m 22s	remaining: 7.45s
+2018-03-31 10:28:28,709 INFO - 619:	learn: 0.0381515	total: 1m 22s	remaining: 7.31s
+2018-03-31 10:28:28,829 INFO - 620:	learn: 0.0381477	total: 1m 22s	remaining: 7.18s
+2018-03-31 10:28:28,953 INFO - 621:	learn: 0.0381440	total: 1m 22s	remaining: 7.04s
+2018-03-31 10:28:29,073 INFO - 622:	learn: 0.0381423	total: 1m 22s	remaining: 6.91s
+2018-03-31 10:28:29,195 INFO - 623:	learn: 0.0381405	total: 1m 22s	remaining: 6.78s
+2018-03-31 10:28:29,314 INFO - 624:	learn: 0.0381363	total: 1m 23s	remaining: 6.64s
+2018-03-31 10:28:29,439 INFO - 625:	learn: 0.0381337	total: 1m 23s	remaining: 6.51s
+2018-03-31 10:28:29,566 INFO - 626:	learn: 0.0381319	total: 1m 23s	remaining: 6.38s
+2018-03-31 10:28:29,685 INFO - 627:	learn: 0.0381287	total: 1m 23s	remaining: 6.24s
+2018-03-31 10:28:29,807 INFO - 628:	learn: 0.0381254	total: 1m 23s	remaining: 6.11s
+2018-03-31 10:28:29,928 INFO - 629:	learn: 0.0381227	total: 1m 23s	remaining: 5.97s
+2018-03-31 10:28:30,052 INFO - 630:	learn: 0.0381202	total: 1m 23s	remaining: 5.84s
+2018-03-31 10:28:30,173 INFO - 631:	learn: 0.0381180	total: 1m 23s	remaining: 5.71s
+2018-03-31 10:28:30,294 INFO - 632:	learn: 0.0381170	total: 1m 24s	remaining: 5.58s
+2018-03-31 10:28:30,414 INFO - 633:	learn: 0.0381121	total: 1m 24s	remaining: 5.44s
+2018-03-31 10:28:30,546 INFO - 634:	learn: 0.0381115	total: 1m 24s	remaining: 5.31s
+2018-03-31 10:28:30,667 INFO - 635:	learn: 0.0381084	total: 1m 24s	remaining: 5.17s
+2018-03-31 10:28:30,788 INFO - 636:	learn: 0.0381056	total: 1m 24s	remaining: 5.04s
+2018-03-31 10:28:30,910 INFO - 637:	learn: 0.0381048	total: 1m 24s	remaining: 4.91s
+2018-03-31 10:28:31,050 INFO - 638:	learn: 0.0381006	total: 1m 24s	remaining: 4.78s
+2018-03-31 10:28:31,175 INFO - 639:	learn: 0.0380970	total: 1m 24s	remaining: 4.64s
+2018-03-31 10:28:31,298 INFO - 640:	learn: 0.0380940	total: 1m 25s	remaining: 4.51s
+2018-03-31 10:28:31,419 INFO - 641:	learn: 0.0380914	total: 1m 25s	remaining: 4.38s
+2018-03-31 10:28:31,547 INFO - 642:	learn: 0.0380898	total: 1m 25s	remaining: 4.24s
+2018-03-31 10:28:31,667 INFO - 643:	learn: 0.0380886	total: 1m 25s	remaining: 4.11s
+2018-03-31 10:28:31,790 INFO - 644:	learn: 0.0380855	total: 1m 25s	remaining: 3.98s
+2018-03-31 10:28:31,910 INFO - 645:	learn: 0.0380815	total: 1m 25s	remaining: 3.84s
+2018-03-31 10:28:32,030 INFO - 646:	learn: 0.0380781	total: 1m 25s	remaining: 3.71s
+2018-03-31 10:28:32,150 INFO - 647:	learn: 0.0380764	total: 1m 25s	remaining: 3.58s
+2018-03-31 10:28:32,270 INFO - 648:	learn: 0.0380726	total: 1m 25s	remaining: 3.44s
+2018-03-31 10:28:32,391 INFO - 649:	learn: 0.0380705	total: 1m 26s	remaining: 3.31s
+2018-03-31 10:28:32,525 INFO - 650:	learn: 0.0380689	total: 1m 26s	remaining: 3.18s
+2018-03-31 10:28:32,646 INFO - 651:	learn: 0.0380670	total: 1m 26s	remaining: 3.05s
+2018-03-31 10:28:32,766 INFO - 652:	learn: 0.0380654	total: 1m 26s	remaining: 2.91s
+2018-03-31 10:28:32,888 INFO - 653:	learn: 0.0380636	total: 1m 26s	remaining: 2.78s
+2018-03-31 10:28:33,007 INFO - 654:	learn: 0.0380601	total: 1m 26s	remaining: 2.65s
+2018-03-31 10:28:33,132 INFO - 655:	learn: 0.0380575	total: 1m 26s	remaining: 2.52s
+2018-03-31 10:28:33,260 INFO - 656:	learn: 0.0380552	total: 1m 26s	remaining: 2.38s
+2018-03-31 10:28:33,382 INFO - 657:	learn: 0.0380518	total: 1m 27s	remaining: 2.25s
+2018-03-31 10:28:33,511 INFO - 658:	learn: 0.0380497	total: 1m 27s	remaining: 2.12s
+2018-03-31 10:28:33,632 INFO - 659:	learn: 0.0380463	total: 1m 27s	remaining: 1.99s
+2018-03-31 10:28:33,753 INFO - 660:	learn: 0.0380439	total: 1m 27s	remaining: 1.85s
+2018-03-31 10:28:33,873 INFO - 661:	learn: 0.0380398	total: 1m 27s	remaining: 1.72s
+2018-03-31 10:28:33,994 INFO - 662:	learn: 0.0380372	total: 1m 27s	remaining: 1.59s
+2018-03-31 10:28:34,116 INFO - 663:	learn: 0.0380344	total: 1m 27s	remaining: 1.46s
+2018-03-31 10:28:34,239 INFO - 664:	learn: 0.0380315	total: 1m 27s	remaining: 1.32s
+2018-03-31 10:28:34,359 INFO - 665:	learn: 0.0380262	total: 1m 28s	remaining: 1.19s
+2018-03-31 10:28:34,490 INFO - 666:	learn: 0.0380228	total: 1m 28s	remaining: 1.06s
+2018-03-31 10:28:34,610 INFO - 667:	learn: 0.0380181	total: 1m 28s	remaining: 926ms
+2018-03-31 10:28:34,730 INFO - 668:	learn: 0.0380148	total: 1m 28s	remaining: 793ms
+2018-03-31 10:28:34,851 INFO - 669:	learn: 0.0380107	total: 1m 28s	remaining: 661ms
+2018-03-31 10:28:34,973 INFO - 670:	learn: 0.0380078	total: 1m 28s	remaining: 529ms
+2018-03-31 10:28:35,096 INFO - 671:	learn: 0.0380054	total: 1m 28s	remaining: 397ms
+2018-03-31 10:28:35,223 INFO - 672:	learn: 0.0380033	total: 1m 28s	remaining: 264ms
+2018-03-31 10:28:35,348 INFO - 673:	learn: 0.0379988	total: 1m 29s	remaining: 132ms
+2018-03-31 10:28:35,480 INFO - 674:	learn: 0.0379960	total: 1m 29s	remaining: 0us
+2018-03-31 10:28:37,751 INFO - 
+2018-03-31 10:28:37,752 INFO - Start predicting for month 10
+2018-03-31 10:28:37,765 INFO - Start predicting test data set.
+2018-03-31 10:29:15,171 INFO - ParcelId    201710  201711  201712
+2018-03-31 10:29:15,171 INFO - 0  10754147  0.032224       0       0
+2018-03-31 10:29:15,171 INFO - 1  10759547  0.017031       0       0
+2018-03-31 10:29:15,171 INFO - 2  10843547  0.028960       0       0
+2018-03-31 10:29:15,171 INFO - 3  10859147  0.046473       0       0
+2018-03-31 10:29:15,172 INFO - 4  10879947  0.004279       0       0
+2018-03-31 10:29:15,172 INFO - 
+2018-03-31 10:29:15,172 INFO - Start predicting for month 11
+2018-03-31 10:29:15,191 INFO - Start predicting test data set.
+2018-03-31 10:29:51,508 INFO - ParcelId    201710    201711  201712
+2018-03-31 10:29:51,509 INFO - 0  10754147  0.032224  0.030965       0
+2018-03-31 10:29:51,509 INFO - 1  10759547  0.017031  0.022265       0
+2018-03-31 10:29:51,509 INFO - 2  10843547  0.028960  0.030599       0
+2018-03-31 10:29:51,509 INFO - 3  10859147  0.046473  0.048059       0
+2018-03-31 10:29:51,510 INFO - 4  10879947  0.004279  0.004177       0
+2018-03-31 10:29:51,510 INFO - 
+2018-03-31 10:29:51,510 INFO - Start predicting for month 12
+2018-03-31 10:29:51,528 INFO - Start predicting test data set.
+2018-03-31 10:30:27,980 INFO - ParcelId    201710    201711    201712
+2018-03-31 10:30:27,980 INFO - 0  10754147  0.032224  0.030965  0.032841
+2018-03-31 10:30:27,981 INFO - 1  10759547  0.017031  0.022265  0.032779
+2018-03-31 10:30:27,981 INFO - 2  10843547  0.028960  0.030599  0.025804
+2018-03-31 10:30:27,981 INFO - 3  10859147  0.046473  0.048059  0.053175
+2018-03-31 10:30:27,981 INFO - 4  10879947  0.004279  0.004177  0.009281
+2018-03-31 10:30:29,472 INFO - (2985217, 7)
+2018-03-31 10:30:29,476 INFO - ParcelId    201610    201611    201612    201710    201711    201712
+2018-03-31 10:30:29,476 INFO - 0  10754147  0.032022  0.030763  0.033073  0.032224  0.030965  0.032841
+2018-03-31 10:30:29,476 INFO - 1  10759547  0.017031  0.022265  0.032779  0.017031  0.022265  0.032779
+2018-03-31 10:30:29,477 INFO - 2  10843547  0.027199  0.025912  0.019723  0.028960  0.030599  0.025804
+2018-03-31 10:30:29,477 INFO - 3  10859147  0.046981  0.048567  0.053014  0.046473  0.048059  0.053175
+2018-03-31 10:30:29,477 INFO - 4  10879947  0.004955  0.004566  0.010104  0.004279  0.004177  0.009281
+2018-03-31 10:31:38,518 INFO - Time used: 34.38075026671092 min.
+2018-03-31 10:31:38,519 INFO - Done with Traning and Testing Files
+2018-03-31 10:31:38,744 INFO - 
+################################################################################
+
+2018-03-31 10:31:38,744 INFO - Waiting for container to complete...
+2018-03-31 10:31:39,071 INFO - Persisting outputs...
+2018-03-31 10:33:40,901 INFO - [success] Finishing execution in 2217 seconds for TaskInstance <TaskInstance: adityagrao12/projects/capstone/9 (id: QzKgPStavJKFYyBKaTucoZ)
+2018-03-31 10:33:40,919 INFO - Creating data module for output...
+2018-03-31 10:33:40,957 INFO - Data module created for output.

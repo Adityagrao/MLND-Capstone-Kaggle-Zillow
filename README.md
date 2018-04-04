@@ -5,9 +5,14 @@
 
 Zillow Prize, a competition with a one million dollar grand prize, is challenging the data science community to help push the accuracy of the Zestimate even further. Winning algorithms stand to impact the home values of 110M homes across the U.S.
 
+## Usage
+- Proposal PDF contains the Project Proposal for Udacity
+- Analysis Notebook contians Data Analysis for the project
+- Run `code/main.py` and `code/test.py`
+
 ## Installation
 - Download the dataset from [Here](https://www.kaggle.com/c/zillow-prize-1/data)
-- Update the correct data link for the files (code/main.py) (code/test.py)
+- Update the correct data link for the files `code/main.py` `code/test.py`
 - To run using NN run code/test.py
 - To run using Catboost run code/main.py
 
@@ -21,3 +26,7 @@ Zillow Prize, a competition with a one million dollar grand prize, is challengin
 - Seaborn
 - Python 3.6
 
+## Results 
+- Catboost gave a score of 0.0651283
+- MLP gave a score of 0.0654378
+![](https://i.gyazo.com/df9b52436d465412dafd5b87470f409e.png)
